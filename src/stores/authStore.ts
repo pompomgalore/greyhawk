@@ -1,8 +1,8 @@
 import { ref, type Ref } from 'vue'
 import { defineStore } from 'pinia'
 
-export const useUserStore = defineStore<
-  'user',
+export const useAuthStore = defineStore<
+  'auth',
   {
     user: Ref<{
       name: string
@@ -11,17 +11,17 @@ export const useUserStore = defineStore<
     onLogout: () => void
     onCreateAccount: () => void
   }
->('user', () => {
+>('auth', () => {
   const user = ref<{ name: string } | null>(null)
 
   const onLogin = () => {
-    user.value = { name: 'Jane Doe' }
+    user.value = { name: 'Etienne' }
   }
   const onLogout = () => {
     user.value = null
   }
   const onCreateAccount = () => {
-    user.value = { name: 'Jane Doe' }
+    user.value = { name: 'Etienne' }
   }
 
   return { user, onLogin, onLogout, onCreateAccount }

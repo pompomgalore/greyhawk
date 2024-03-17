@@ -1,7 +1,60 @@
-@import './base.css';
+@import url('https://fonts.googleapis.com/css2?family=Lexend&display=swap');
 
-#app {
+:root {
+  --color-primary: #7b1fa2;
+  --color-secondary: #595959;
+
+  --color-info: #01579b;
+  --color-success: #1b5e20;
+  --color-warning: #e65100;
+  --color-error: #c62828;
+
+  --color-white: #f8f8f8;
+  --color-light: #a6a6a6;
+  --color-black: #222222;
+  --color-dark: #595959;
+
+  --color-background: var(--color-white);
+  --color-text: var(--color-black);
+
+  --font-size: 16px;
+  --line-height: 20px;
+  --border-width: 2px;
+  --border-radius: 4px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
   margin: 0;
-  padding: 0;
-  align-items: stretch;
+}
+
+body {
+  font-size: var(--font-size);
+  line-height: var(--line-height);
+  color: var(--color-text);
+  background: var(--color-background);
+
+  font-family:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    'Fira Sans',
+    'Droid Sans',
+    'Helvetica Neue',
+    sans-serif;
+
+  font-weight: 500;
+  font-style: normal;
+
+  font-optical-sizing: auto;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }

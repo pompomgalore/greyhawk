@@ -4,70 +4,54 @@ import { userEvent, expect, within } from '@storybook/test'
 import LayoutHeader from './LayoutHeader.vue'
 
 const meta = {
-  /* 👇 The title prop is optional.
-   * See https://storybook.js.org/docs/configure/#configure-story-loading
-   * to learn how to generate automatic titles
-   */
   title: 'Layout/Header',
   component: LayoutHeader,
-  render: (args: any) => ({
-    components: { LayoutHeader },
-    setup() {
-      return { args }
-    },
-    template: '<layout-header :user="args.user" />'
-  }),
-  parameters: {
-    // More on how to position stories at: https://storybook.js.org/docs/configure/story-layout
-    layout: 'fullscreen'
-  },
-  // This component will have an automatically generated docsPage entry: https://storybook.js.org/docs/writing-docs/autodocs
   tags: ['autodocs']
 } satisfies Meta<typeof LayoutHeader>
 
 export default meta
 type Story = StoryObj<typeof meta>
 
-// More on interaction testing: https://storybook.js.org/docs/writing-tests/interaction-testing
-
-function getButtons(canvasElement: HTMLElement) {
+function queryLoginButton(canvasElement: HTMLElement) {
   const canvas = within(canvasElement)
-  return {
-    loginButton: canvas.getByRole('button', { name: /Log in/i }),
-    logoutButton: canvas.getByRole('button', { name: /Log out/i })
-  }
+  return canvas.queryByRole('button', { name: /Log in/i })
 }
 
-export const LoggedIn: Story = {
-  args: {
-    user: {
-      name: 'Etienne'
-    }
-  },
-  play: async ({ canvasElement }) => {
-    const { loginButton, logoutButton } = getButtons(canvasElement)
-
-    await expect(loginButton).toBeInTheDocument()
-    await expect(logoutButton).not.toBeInTheDocument()
-
-    await userEvent.click(loginButton)
-    await expect(loginButton).not.toBeInTheDocument()
-    await expect(logoutButton).toBeInTheDocument()
-  }
+function queryLogoutButton(canvasElement: HTMLElement) {
+  const canvas = within(canvasElement)
+  return canvas.queryByRole('button', { name: /Log out/i })
 }
 
-export const LoggedOut: Story = {
-  args: {
-    user: null
-  },
+function expectLoginButton(canvasElement: HTMLElement) {
+  const loginButton = queryLoginButton(canvasElement)
+  return expect(loginButton)
+}
+
+function expectLogoutButton(canvasElement: HTMLElement) {
+  const logoutButton = queryLogoutButton(canvasElement)
+  return expect(logoutButton)
+}
+
+function clickLoginButton(canvasElement: HTMLElement) {
+  const loginButton = queryLoginButton(canvasElement)
+  return userEvent.click(loginButton)
+}
+
+function clickLogoutButton(canvasElement: HTMLElement) {
+  const logoutButton = queryLogoutButton(canvasElement)
+  return userEvent.click(logoutButton)
+}
+
+export const Header: Story = {
   play: async ({ canvasElement }) => {
-    const { loginButton, logoutButton } = getButtons(canvasElement)
+    await expectLoginButton(canvasElement).toBeInTheDocument()
+    await clickLoginButton(canvasElement)
+    await expectLoginButton(canvasElement).not.toBeInTheDocument()
 
-    await expect(loginButton).toBeInTheDocument()
-    await expect(logoutButton).not.toBeInTheDocument()
+    await expectLogoutButton(canvasElement).toBeInTheDocument()
+    await clickLogoutButton(canvasElement)
+    await expectLogoutButton(canvasElement).not.toBeInTheDocument()
 
-    await userEvent.click(loginButton)
-    await expect(loginButton).not.toBeInTheDocument()
-    await expect(logoutButton).toBeInTheDocument()
+    await expectLoginButton(canvasElement).toBeInTheDocument()
   }
 }

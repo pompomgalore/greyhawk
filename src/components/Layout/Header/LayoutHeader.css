@@ -1,5 +1,5 @@
 .layout-header {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: var(--border-width) solid var(--color-light);
   padding: 1rem 1.618rem;
   display: flex;
   align-items: center;
@@ -7,7 +7,7 @@
 }
 
 .layout-header-title {
-  font-size: 24px;
+  font-size: 20px;
 }
 
 .layout-header-nav {
