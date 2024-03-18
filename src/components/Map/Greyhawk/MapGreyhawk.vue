@@ -1,13 +1,14 @@
 <template>
   <div class="map-container" ref="containerRef">
-    <map-greyhawk-vector class="map-image" ref="imageRef" />
+    <!-- <map-greyhawk-vector class="map-image" ref="imageRef" /> -->
+    <img src="../../../assets/grehawk-plain.svg" class="map-image" ref="imageRef" />
   </div>
 </template>
 
 <script lang="ts" setup>
 import Panzoom from '@panzoom/panzoom'
 import { ref, onMounted } from 'vue'
-import MapGreyhawkVector from './MapGreyhawkVector.vue'
+// import MapGreyhawkVector from './MapGreyhawkVector.vue'
 import './MapGreyhawk.css'
 const containerRef = ref<HTMLDivElement>()
 const imageRef = ref<SVGSVGElement>()
