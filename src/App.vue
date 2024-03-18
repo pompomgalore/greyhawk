@@ -2,7 +2,7 @@
   <layout-header class="app-header" />
 
   <main class="app-main">
-    <RouterView />
+    <router-view />
   </main>
 </template>
 

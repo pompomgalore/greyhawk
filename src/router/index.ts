@@ -1,4 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
+import MapView from '../views/MapView.vue'
 import RootView from '../views/RootView.vue'
 
 export const routes = [
@@ -6,6 +7,11 @@ export const routes = [
     path: '/',
     name: 'root',
     component: RootView
+  },
+  {
+    path: '/map',
+    name: 'map',
+    component: MapView
   }
 ]
 
