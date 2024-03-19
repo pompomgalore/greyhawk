@@ -1,4 +1,5 @@
 .layout-header {
+  width: 100%;
   border-bottom: var(--border-width) solid var(--color-light);
   padding: 1rem 1.618rem;
   display: flex;
@@ -13,5 +14,5 @@
 .layout-header-nav {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 1.618rem;
 }

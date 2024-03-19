@@ -1,17 +1,7 @@
-import { ref, type Ref } from 'vue'
+import { ref } from 'vue'
 import { defineStore } from 'pinia'
 
-export const useAuthStore = defineStore<
-  'auth',
-  {
-    user: Ref<{
-      name: string
-    } | null>
-    onLogin: () => void
-    onLogout: () => void
-    onCreateAccount: () => void
-  }
->('auth', () => {
+export const useAuthStore = defineStore('auth', () => {
   const user = ref<{ name: string } | null>(null)
 
   const onLogin = () => {

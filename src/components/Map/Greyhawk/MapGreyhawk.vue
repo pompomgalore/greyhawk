@@ -1,7 +1,7 @@
 <template>
   <div class="map-container" ref="containerRef">
     <!-- <map-greyhawk-vector class="map-image" ref="imageRef" /> -->
-    <img src="../../../assets/grehawk-plain.svg" class="map-image" ref="imageRef" />
+    <img src="../../../assets/darlene.svg" class="map-image" ref="imageRef" />
   </div>
 </template>
 
