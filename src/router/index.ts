@@ -1,7 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import MapView from '../views/MapView.vue'
 import RootView from '../views/RootView.vue'
-import GridView from '@/views/GridView.vue'
 
 export const routes = [
   {
@@ -13,11 +12,6 @@ export const routes = [
     path: '/map',
     name: 'map',
     component: MapView
-  },
-  {
-    path: '/grid',
-    name: 'grid',
-    component: GridView
   }
 ]
 
