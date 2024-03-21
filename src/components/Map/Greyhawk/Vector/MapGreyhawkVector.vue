@@ -17,12 +17,12 @@
     <SwampFill />
     <HillsFill />
     <MountainFill />
-    <DesertPlainsWastesFill />
+    <PlainsFill />
     <ForestFill />
     <SnowFill />
 
     <!-- <ForestContours />
-    <DesertPlainsWastesContours />
+    <PlainsContours />
     <MountainContours />
     <HillsContours />
     <FeaturesContours /> -->
@@ -49,11 +49,11 @@ import GroundFill from './Groups/04_Ground_Fill.vue'
 import SwampFill from './Groups/05_Swamp_Fill.vue'
 import HillsFill from './Groups/06_Hills_Fill.vue'
 import MountainFill from './Groups/07_Mountain_Fill.vue'
-import DesertPlainsWastesFill from './Groups/08_Desert_Plains_Wastes.vue'
+import PlainsFill from './Groups/08_Plains_Fill.vue'
 import ForestFill from './Groups/09_Forest_Fill.vue'
 import SnowFill from './Groups/10_Snow_Fill.vue'
 // import ForestContours from './Groups/11_Forest_Contours.vue'
-// import DesertPlainsWastesContours from './Groups/12_Desert_Plains_Wastes_Contours.vue'
+// import PlainsContours from './Groups/12_Plains_Contours.vue'
 // import MountainContours from './Groups/13_Mountain_Contours.vue'
 // import HillsContours from './Groups/14_Hills_Contours.vue'
 // import FeaturesContours from './Groups/15_Features_Contours.vue'
@@ -69,3 +69,4 @@ import SettlementNames from './Groups/24_Settlement_Names.vue'
 
 import './MapGreyhawkVector.css'
 </script>
+./Groups/08_Plains_Fill.vue
