@@ -31,8 +31,8 @@ const panzoom = ref<PanzoomObject>()
 onMounted(() => {
   if (containerRef.value && contentRef.value) {
     panzoom.value = Panzoom(contentRef.value, {
-      // animate: false,
-      // duration: 0,
+      animate: false,
+      duration: 0,
       maxScale: 12,
       minScale: 0.1,
       cursor: 'grab',

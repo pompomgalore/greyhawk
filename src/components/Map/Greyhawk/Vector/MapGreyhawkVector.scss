@@ -1,9 +1,15 @@
 #map-greyhawk-vector {
   clip-rule: evenodd;
   fill-rule: evenodd;
+
   image-rendering: optimizeQuality;
   shape-rendering: geometricPrecision;
   text-rendering: geometricPrecision;
+
+  // image-rendering: optimizeSpeed;
+  // shape-rendering: optimizeSpeed;
+  // text-rendering: optimizeSpeed;
+
   stroke-width: 8;
   stroke-linejoin: round;
   stroke-linecap: round;
@@ -113,12 +119,23 @@
   }
 
   .map-hills-contours {
-    stroke: color-mix(in hsl, var(--map-brown), black);
     fill: none;
   }
 
+  #map-hills-contours-1 {
+    stroke: color-mix(in hsl, var(--map-brown), black 33%);
+    .map-hills-contours-fill {
+      stroke: none;
+      fill: color-mix(in hsl, var(--map-brown), var(--map-yellow-subtle) 67%);
+    }
+  }
+
   #map-hills-contours-2 {
-    fill: var(--map-brown-subtle);
+    stroke: color-mix(in hsl, var(--map-green), black 33%);
+    .map-hills-contours-fill {
+      stroke: none;
+      fill: color-mix(in hsl, var(--map-green-subtle), var(--map-yellow-subtle) 50%);
+    }
   }
 
   @font-face {
