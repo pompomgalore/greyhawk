@@ -651,4 +651,9 @@
       <circle id="circle116" cx="22000" cy="17000" r="37.76" class="fil0 str0" />
     </g>
   </g>
+  <g transform="translate(11865.11 3731.84)">
+    <circle cx="22000" cy="17000" r="54.69" class="fil0 str0" />
+    <circle cx="22000" cy="17000" r="37.76" class="fil0 str0" />
+    <circle cx="22000" cy="17000" r="45.93" class="fil0 str1" />
+  </g>
 </template>

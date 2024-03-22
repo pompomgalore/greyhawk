@@ -4,115 +4,121 @@
   image-rendering: optimizeQuality;
   shape-rendering: geometricPrecision;
   text-rendering: geometricPrecision;
+  stroke-width: 8;
+  stroke-linejoin: round;
+  stroke-linecap: round;
 
-  --map-brown: #a17164;
-  --map-green: #85925e;
-  --map-blue: #5a7675;
-  --map-yellow: #dfc3a1;
+  --map-brown-subtle: #847172;
+  --map-green-subtle: #80a36f;
+  --map-blue-subtle: #839898;
+  --map-yellow-subtle: #d4bfa8;
 
-  --map-brown-light: #847172;
-  --map-green-light: #80a36f;
-  --map-blue-light: #839898;
-  --map-yellow-light: #d4bfa8;
+  --map-brown-strong: #bd7155;
+  --map-green-strong: #8a804c;
+  --map-blue-strong: #305452;
+  --map-yellow-strong: #e9c79a;
 
-  --map-brown-dark: #bd7155;
-  --map-green-dark: #8a804c;
-  --map-blue-dark: #305452;
-  --map-yellow-dark: #e9c79a;
+  --map-brown: color-mix(in hsl, var(--map-brown-subtle), var(--map-brown-strong));
+  --map-green: color-mix(in hsl, var(--map-green-subtle), var(--map-green-strong));
+  --map-blue: color-mix(in hsl, var(--map-blue-subtle), var(--map-blue-strong));
+  --map-yellow: color-mix(in hsl, var(--map-yellow-subtle), var(--map-yellow-strong));
 
   .map-water-fill {
-    fill: var(--map-blue-light);
+    fill: var(--map-blue-subtle);
   }
 
-  .map-water-contours {
-    fill: var(--map-blue);
-    stroke: var(--map-blue-dark);
-    stroke-width: 6.94;
-    stroke-linejoin: round;
-  }
-
+  // .map-water-contours { stroke: var(--map-blue-strong); }
   .map-water-contours-1 {
-    fill-opacity: 0.17;
+    fill: color-mix(in hsl, var(--map-blue-subtle), var(--map-blue) 17%);
   }
-
   .map-water-contours-2 {
-    fill-opacity: 0.33;
+    fill: color-mix(in hsl, var(--map-blue-subtle), var(--map-blue) 33%);
   }
-
   .map-water-contours-3 {
-    fill-opacity: 0.5;
+    fill: color-mix(in hsl, var(--map-blue-subtle), var(--map-blue) 50%);
   }
-
   .map-water-contours-4 {
-    fill-opacity: 0.67;
+    fill: color-mix(in hsl, var(--map-blue-subtle), var(--map-blue) 67%);
   }
-
   .map-water-contours-5 {
-    fill-opacity: 0.83;
+    fill: color-mix(in hsl, var(--map-blue-subtle), var(--map-blue) 83%);
   }
-
   .map-water-contours-6 {
-    fill-opacity: 1;
+    fill: var(--map-blue);
   }
 
   .map-river-shadow {
-    fill: #5a7675;
-    fill-opacity: 0.67;
+    fill: var(--map-blue-strong);
   }
 
   .map-ground-shadow {
-    fill: black;
-    fill-opacity: 0.33;
+    fill: var(--map-blue-strong);
   }
 
   .map-ground-fill {
-    fill: var(--map-yellow-light);
+    fill: var(--map-yellow-subtle);
   }
 
   .map-swamp-fill {
-    fill: var(--map-green);
-    fill-opacity: 0.5;
+    fill: color-mix(in hsl, var(--map-green-strong), var(--map-yellow-subtle) 67%);
   }
 
   .map-hills-fill {
-    fill: var(--map-brown);
-    fill-opacity: 0.5;
+    fill: color-mix(in hsl, var(--map-brown-subtle), var(--map-yellow-subtle) 67%);
   }
 
   .map-mountain-fill-1 {
-    fill: var(--map-brown);
+    fill: color-mix(in hsl, var(--map-brown), var(--map-yellow-subtle));
   }
 
   .map-mountain-fill-2 {
-    fill: var(--map-brown-dark);
+    fill: color-mix(in hsl, var(--map-brown-strong), var(--map-brown));
   }
 
   .map-mountain-fill-3 {
-    fill: white;
-    fill-opacity: 0.17;
+    fill: rgba(white, 0.5);
   }
 
   .map-plains-fill-1 {
-    fill: var(--map-yellow-dark);
-    fill-opacity: 0.33;
+    fill: color-mix(in hsl, var(--map-yellow-subtle), var(--map-yellow-strong) 33%);
   }
 
   .map-plains-fill-2 {
-    fill: var(--map-yellow-dark);
-    fill-opacity: 0.67;
+    fill: color-mix(in hsl, var(--map-yellow-subtle), var(--map-yellow-strong) 67%);
   }
 
   .map-plains-fill-3 {
-    fill: var(--map-yellow-dark);
+    fill: var(--map-yellow-strong);
   }
 
   .map-forest-fill {
-    fill: var(--map-green);
+    fill: color-mix(in hsl, var(--map-green-subtle), var(--map-yellow-subtle) 33%);
   }
 
   .map-snow-fill {
-    fill: white;
-    fill-opacity: 0.33;
+    fill: color-mix(in hsl, rgba(white, 0.5), var(--map-yellow-subtle));
+  }
+
+  .map-forest-contours {
+    fill: color-mix(in hsl, var(--map-green), black);
+  }
+
+  .map-plains-contours {
+    stroke: color-mix(in hsl, var(--map-yellow), black);
+    fill: none;
+  }
+
+  .map-mountain-contours {
+    fill: color-mix(in hsl, var(--map-brown), black);
+  }
+
+  .map-hills-contours {
+    stroke: color-mix(in hsl, var(--map-brown), black);
+    fill: none;
+  }
+
+  #map-hills-contours-2 {
+    fill: var(--map-brown-subtle);
   }
 
   @font-face {

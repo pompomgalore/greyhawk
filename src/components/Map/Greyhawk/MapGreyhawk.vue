@@ -22,26 +22,24 @@ const contentRef = ref<HTMLDivElement>()
 
 const panzoom = ref<PanzoomObject>()
 
-const onPanzoomChange = (() =>
-  // event: CustomEvent<PanzoomEventDetail>
-  {
-    // if (contentRef.value) {
-    //   console.log(event.detail)
-    // }
-  }) as EventListener
+// const onPanzoomChange = ((event: CustomEvent<PanzoomEventDetail>) => {
+//   if (contentRef.value) {
+//     console.log(event.detail)
+//   }
+// }) as EventListener
 
 onMounted(() => {
   if (containerRef.value && contentRef.value) {
     panzoom.value = Panzoom(contentRef.value, {
-      animate: false,
-      duration: 0,
+      // animate: false,
+      // duration: 0,
       maxScale: 12,
       minScale: 0.1,
       cursor: 'grab',
       contain: 'outside'
     })
     containerRef.value.addEventListener('wheel', panzoom.value.zoomWithWheel)
-    contentRef.value.addEventListener('panzoomchange', onPanzoomChange)
+    // contentRef.value.addEventListener('panzoomchange', onPanzoomChange)
   }
 })
 onUnmounted(() => {
@@ -50,9 +48,9 @@ onUnmounted(() => {
     if (containerRef.value) {
       containerRef.value.removeEventListener('wheel', panzoom.value.zoomWithWheel)
     }
-    if (contentRef.value) {
-      contentRef.value.removeEventListener('panzoomchange', onPanzoomChange)
-    }
+    // if (contentRef.value) {
+    //   contentRef.value.removeEventListener('panzoomchange', onPanzoomChange)
+    // }
   }
 })
 </script>
