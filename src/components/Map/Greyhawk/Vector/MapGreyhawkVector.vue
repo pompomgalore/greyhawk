@@ -21,10 +21,10 @@
     <ForestFill />
     <SnowFill />
 
-    <!-- <ForestContours />
-    <PlainsContours />
-    <MountainContours /> -->
-    <HillsContours />
+    <!-- <ForestContours /> -->
+    <!-- <PlainsContours /> -->
+    <!-- <MountainContours /> -->
+    <!-- <HillsContours /> -->
     <!-- <FeaturesContours /> -->
 
     <RoadsLine />
@@ -55,7 +55,7 @@ import SnowFill from './Groups/10_Snow_Fill.vue'
 // import ForestContours from './Groups/11_Forest_Contours.vue'
 // import PlainsContours from './Groups/12_Plains_Contours.vue'
 // import MountainContours from './Groups/13_Mountain_Contours.vue'
-import HillsContours from './Groups/14_Hills_Contours.vue'
+// import HillsContours from './Groups/14_Hills_Contours.vue'
 // import FeaturesContours from './Groups/15_Features_Contours.vue'
 import RoadsLine from './Groups/16_Roads_Line.vue'
 import LakeStroke from './Groups/17_Lake_Stroke.vue'

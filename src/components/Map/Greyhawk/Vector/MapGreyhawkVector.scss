@@ -138,6 +138,14 @@
     }
   }
 
+  #map-features-contours-1 {
+    fill: color-mix(in hsl, var(--map-yellow), black);
+  }
+
+  #map-features-contours-2 {
+    fill: color-mix(in hsl, var(--map-brown), black);
+  }
+
   @font-face {
     font-family: 'BlackChancery';
     font-variant: normal;
