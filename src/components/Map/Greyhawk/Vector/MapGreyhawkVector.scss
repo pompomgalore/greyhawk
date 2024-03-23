@@ -54,7 +54,7 @@
   }
 
   .map-river-shadow {
-    fill: var(--map-blue-strong);
+    fill: var(--map-blue);
   }
 
   .map-ground-shadow {
@@ -144,6 +144,37 @@
 
   #map-features-contours-2 {
     fill: color-mix(in hsl, var(--map-brown), black);
+  }
+
+  .map-roads-line {
+    fill: none;
+    stroke: color-mix(in hsl, var(--map-brown-strong), var(--map-brown));
+    stroke-width: 24;
+    stroke-dasharray: 48 72;
+  }
+
+  .map-lake-stroke {
+    fill: none;
+    stroke: color-mix(in hsl, var(--map-blue), black 50%);
+    stroke-width: 16;
+  }
+
+  .map-coast-stroke {
+    fill: none;
+    stroke: color-mix(in hsl, var(--map-blue), black 50%);
+    stroke-width: 20;
+  }
+
+  .map-river-outline {
+    fill: none;
+    stroke: color-mix(in hsl, var(--map-blue), black 33%);
+    stroke-width: 40;
+  }
+
+  .map-river-line {
+    fill: none;
+    stroke: var(--map-blue);
+    stroke-width: 12;
   }
 
   @font-face {
