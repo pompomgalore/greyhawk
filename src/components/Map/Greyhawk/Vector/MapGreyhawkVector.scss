@@ -182,20 +182,20 @@
     circle.stroke {
       fill: none;
       stroke-width: 8px;
-      stroke: color-mix(in hsl, var(--map-yellow), black);
+      stroke: color-mix(in hsl, var(--map-yellow), black 67%);
     }
     circle.dash {
       fill: none;
       stroke-width: 16px;
       stroke-dasharray: 8px 24px;
-      stroke: color-mix(in hsl, var(--map-yellow), black);
+      stroke: color-mix(in hsl, var(--map-yellow), black 67%);
     }
     circle.fill {
-      fill: color-mix(in hsl, var(--map-yellow), black);
+      fill: color-mix(in hsl, var(--map-yellow), black 67%);
       stroke: none;
     }
     text {
-      fill: color-mix(in hsl, var(--map-yellow), black);
+      fill: color-mix(in hsl, var(--map-yellow), black 67%);
       stroke: none;
       font-size: 96px;
       font-family: 'GreyhawkGothic';
@@ -205,28 +205,15 @@
   #map-settlements-icons-6,
   #map-settlements-icons-7,
   #map-settlements-icons-8 {
-    fill: color-mix(in hsl, var(--map-yellow), black);
+    fill: color-mix(in hsl, var(--map-yellow), black 67%);
   }
 
-  @font-face {
-    font-family: 'BlackChancery';
-    font-variant: normal;
-    font-style: normal;
-    font-weight: 400;
-    src: url(#FontID2) format(svg);
-  }
-  @font-face {
-    font-family: 'GreyhawkGothic';
-    font-variant: normal;
-    font-style: normal;
-    font-weight: 500;
-    src: url(#FontID1) format(svg);
-  }
-  @font-face {
-    font-family: 'Wingdings';
-    font-variant: normal;
-    font-weight: 400;
-    src: url(#FontID0) format(svg);
+  .map-terrain-names {
+    fill-rule: nonzero;
+    fill: rgba(black, 0.75);
+    stroke: var(--map-yellow-subtle);
+    stroke-width: 24px;
+    paint-order: stroke;
   }
 
   .str15,

@@ -35,9 +35,10 @@
 
     <SettlementsIcons />
 
-    <!-- <TerrainNames />
-    <KingdomNames />
+    <TerrainNames />
+    <!-- <KingdomNames />
     <SettlementNames /> -->
+    <DarleneSignature />
   </svg>
 </template>
 
@@ -64,9 +65,10 @@ import CoastStroke from './Groups/18_Coast_Stroke.vue'
 import RiverOutline from './Groups/19_River_Outline.vue'
 import RiverLine from './Groups/20_River_Line.vue'
 import SettlementsIcons from './Groups/21_Settlements_Icons.vue'
-// import TerrainNames from './Groups/22_Terrain_Names.vue'
+import TerrainNames from './Groups/22_Terrain_Names.vue'
 // import KingdomNames from './Groups/23_Kingdom_Names.vue'
 // import SettlementNames from './Groups/24_Settlement_Names.vue'
+import DarleneSignature from './Groups/25_Darlene_Signature.vue'
 
 import './MapGreyhawkVector.scss'
 </script>
