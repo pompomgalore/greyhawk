@@ -120,6 +120,7 @@
 
   .map-hills-contours {
     fill: none;
+    stroke-width: 12px;
   }
 
   #map-hills-contours-1 {
@@ -175,6 +176,36 @@
     fill: none;
     stroke: var(--map-blue);
     stroke-width: 12;
+  }
+
+  .map-settlements-icons {
+    circle.stroke {
+      fill: none;
+      stroke-width: 8px;
+      stroke: color-mix(in hsl, var(--map-yellow), black);
+    }
+    circle.dash {
+      fill: none;
+      stroke-width: 16px;
+      stroke-dasharray: 8px 24px;
+      stroke: color-mix(in hsl, var(--map-yellow), black);
+    }
+    circle.fill {
+      fill: color-mix(in hsl, var(--map-yellow), black);
+      stroke: none;
+    }
+    text {
+      fill: color-mix(in hsl, var(--map-yellow), black);
+      stroke: none;
+      font-size: 96px;
+      font-family: 'GreyhawkGothic';
+    }
+  }
+
+  #map-settlements-icons-6,
+  #map-settlements-icons-7,
+  #map-settlements-icons-8 {
+    fill: color-mix(in hsl, var(--map-yellow), black);
   }
 
   @font-face {
