@@ -149,7 +149,7 @@
 
   .map-roads-line {
     fill: none;
-    stroke: color-mix(in hsl, var(--map-brown-strong), var(--map-brown));
+    stroke: var(--map-brown-strong);
     stroke-width: 24;
     stroke-dasharray: 48 72;
   }
@@ -209,8 +209,21 @@
   }
 
   .map-terrain-names {
-    fill-rule: nonzero;
-    fill: rgba(black, 0.75);
+    fill: #222;
+    stroke: var(--map-yellow-subtle);
+    stroke-width: 24px;
+    paint-order: stroke;
+  }
+
+  .map-kingdom-names {
+    fill: #222;
+    stroke: var(--map-yellow-subtle);
+    stroke-width: 24px;
+    paint-order: stroke;
+  }
+
+  .map-darlene-signature {
+    fill: black;
     stroke: var(--map-yellow-subtle);
     stroke-width: 24px;
     paint-order: stroke;
