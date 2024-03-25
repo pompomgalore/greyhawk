@@ -29,7 +29,8 @@
   <settlements-icons v-if="scale > 1.5" />
 
   <terrain-names />
-  <kingdom-names v-if="scale > 0.5" />
+  <river-names v-if="scale > 2" />
+  <kingdom-names v-if="scale > 0.75" />
   <settlement-names v-if="scale > 1.5" /> />
   <darlene-signature />
 </template>
@@ -58,6 +59,7 @@ import RiverOutline from './Groups/19_River_Outline.vue'
 import RiverLine from './Groups/20_River_Line.vue'
 import SettlementsIcons from './Groups/21_Settlements_Icons.vue'
 import TerrainNames from './Groups/22_Terrain_Names.vue'
+import RiverNames from './Groups/22b_River_Names.vue'
 import KingdomNames from './Groups/23_Kingdom_Names.vue'
 import SettlementNames from './Groups/24_Settlement_Names.vue'
 import DarleneSignature from './Groups/25_Darlene_Signature.vue'

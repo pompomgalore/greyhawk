@@ -184,6 +184,13 @@
   paint-order: stroke;
 }
 
+.map-river-names {
+  fill: #222;
+  stroke: var(--map-yellow-subtle);
+  stroke-width: 24px;
+  paint-order: stroke;
+}
+
 .map-kingdom-names {
   fill: #222;
   stroke: var(--map-yellow-subtle);
