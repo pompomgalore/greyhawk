@@ -2,7 +2,7 @@
   clip-rule: evenodd;
   fill-rule: evenodd;
 
-  image-rendering: optimizeQuality;
+  image-rendering: auto;
   shape-rendering: geometricPrecision;
   text-rendering: geometricPrecision;
 
@@ -224,6 +224,13 @@
 
   .map-darlene-signature {
     fill: black;
+    stroke: var(--map-yellow-subtle);
+    stroke-width: 24px;
+    paint-order: stroke;
+  }
+
+  .map-settlements-names {
+    fill: #222;
     stroke: var(--map-yellow-subtle);
     stroke-width: 24px;
     paint-order: stroke;
