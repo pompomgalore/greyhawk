@@ -1,6 +1,6 @@
 <template>
   <header class="layout-header">
-    <h1 class="layout-header-title">Vite App</h1>
+    <h1 class="layout-header-title">Greyhawk</h1>
     <nav class="layout-header-nav">
       <span class="user-name" v-if="authStore.user">{{ authStore.user.name }}</span>
       <standard-button
