@@ -2,7 +2,6 @@
   <div class="map-container" ref="containerRef">
     <div class="map-content" ref="contentRef">
       <map-greyhawk-vector class="map-image" />
-      <map-grid class="map-grid" :size="18.85" :width="4224" :height="3168" :x="4" :y="-9" />
     </div>
   </div>
 </template>
@@ -14,7 +13,6 @@ import Panzoom, {
 } from '@panzoom/panzoom'
 import { ref, onMounted, onUnmounted } from 'vue'
 import MapGreyhawkVector from './Vector/MapGreyhawkVector.vue'
-import MapGrid from '../Grid/MapGrid.vue'
 import './MapGreyhawk.css'
 
 const containerRef = ref<HTMLDivElement>()

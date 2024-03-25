@@ -21,6 +21,8 @@
     <ForestFill />
     <SnowFill />
 
+    <map-grid class="map-grid" :size="192.25" :x="708" :y="1518" :width="43060" :height="32300" />
+
     <!-- <ForestContours />
     <PlainsContours />
     <MountainContours />
@@ -69,6 +71,8 @@ import TerrainNames from './Groups/22_Terrain_Names.vue'
 import KingdomNames from './Groups/23_Kingdom_Names.vue'
 import SettlementNames from './Groups/24_Settlement_Names.vue'
 import DarleneSignature from './Groups/25_Darlene_Signature.vue'
+
+import MapGrid from '@/components/Map/Grid/MapGrid.vue'
 
 import './MapGreyhawkVector.scss'
 </script>
