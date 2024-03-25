@@ -1,5 +1,5 @@
 <template>
-  <layout-header class="app-header" />
+  <!-- <layout-header class="app-header" /> -->
 
   <main class="app-main">
     <router-view />
@@ -8,6 +8,6 @@
 
 <script lang="ts" setup>
 import { RouterView } from 'vue-router'
-import LayoutHeader from './components/Layout/Header/LayoutHeader.vue'
+// import LayoutHeader from './components/Layout/Header/LayoutHeader.vue'
 import './App.css'
 </script>
