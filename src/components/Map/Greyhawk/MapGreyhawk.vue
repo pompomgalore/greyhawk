@@ -11,30 +11,28 @@
       width="4224"
       height="3168"
     >
-      <map-greyhawk-vector />
+      <map-greyhawk-vector :scale="scale" />
     </svg>
   </div>
 </template>
 
 <script lang="ts" setup>
-import Panzoom, {
-  // type PanzoomEventDetail,
-  type PanzoomObject
-} from '@panzoom/panzoom'
+import Panzoom, { type PanzoomEventDetail, type PanzoomObject } from '@panzoom/panzoom'
 import { ref, onMounted, onUnmounted } from 'vue'
 import MapGreyhawkVector from './Vector/MapGreyhawkVector.vue'
 import './MapGreyhawk.css'
 
 const containerRef = ref<HTMLDivElement>()
-const contentRef = ref<SVGSVGElement>()
+const contentRef = ref<SVGElement>()
 
 const panzoom = ref<PanzoomObject>()
+const scale = ref<number>(1)
 
-// const onPanzoomChange = ((event: CustomEvent<PanzoomEventDetail>) => {
-//   if (contentRef.value) {
-//     console.log(event.detail)
-//   }
-// }) as EventListener
+const onPanzoomChange = ((event: CustomEvent<PanzoomEventDetail>) => {
+  if (contentRef.value) {
+    scale.value = event.detail.scale
+  }
+}) as EventListener
 
 onMounted(() => {
   if (containerRef.value && contentRef.value) {
@@ -47,7 +45,7 @@ onMounted(() => {
       contain: 'outside'
     })
     containerRef.value.addEventListener('wheel', panzoom.value.zoomWithWheel)
-    // contentRef.value.addEventListener('panzoomchange', onPanzoomChange)
+    contentRef.value.addEventListener('panzoomchange', onPanzoomChange)
   }
 })
 onUnmounted(() => {
@@ -56,9 +54,9 @@ onUnmounted(() => {
     if (containerRef.value) {
       containerRef.value.removeEventListener('wheel', panzoom.value.zoomWithWheel)
     }
-    // if (contentRef.value) {
-    //   contentRef.value.removeEventListener('panzoomchange', onPanzoomChange)
-    // }
+    if (contentRef.value) {
+      contentRef.value.removeEventListener('panzoomchange', onPanzoomChange)
+    }
   }
 })
 </script>

@@ -1,37 +1,37 @@
 <template>
-  <WaterFill />
-  <WaterContours />
-  <RiverShadow />
-  <GroundShadow />
+  <water-fill />
+  <water-contours />
+  <river-shadow />
+  <ground-shadow />
 
-  <GroundFill />
-  <SwampFill />
-  <HillsFill />
-  <MountainFill />
-  <PlainsFill />
-  <ForestFill />
-  <SnowFill />
+  <ground-fill />
+  <swamp-fill />
+  <hills-fill />
+  <mountain-fill />
+  <plains-fill />
+  <forest-fill />
+  <snow-fill />
 
   <map-grid class="map-grid" :size="192.25" :x="708" :y="1185" :width="43060" :height="32300" />
 
-  <ForestContours />
-  <PlainsContours />
-  <MountainContours />
-  <HillsContours />
-  <FeaturesContours />
+  <forest-contours v-if="scale > 1" />
+  <plains-contours v-if="scale > 1" />
+  <mountain-contours v-if="scale > 1" />
+  <hills-contours v-if="scale > 1" />
+  <features-contours v-if="scale > 1" />
 
-  <RoadsLine />
-  <LakeStroke />
-  <CoastStroke />
-  <RiverOutline />
-  <RiverLine />
+  <roads-line v-if="scale > 1.5" />
+  <lake-stroke />
+  <coast-stroke />
+  <river-outline />
+  <river-line />
 
-  <SettlementsIcons />
+  <settlements-icons v-if="scale > 1.5" />
 
-  <TerrainNames />
-  <KingdomNames />
-  <SettlementNames />
-  <DarleneSignature />
+  <terrain-names />
+  <kingdom-names v-if="scale > 0.5" />
+  <settlement-names v-if="scale > 1.5" /> />
+  <darlene-signature />
 </template>
 
 <script lang="ts" setup>
@@ -65,4 +65,8 @@ import DarleneSignature from './Groups/25_Darlene_Signature.vue'
 import MapGrid from '@/components/Map/Grid/MapGrid.vue'
 
 import './MapGreyhawkVector.scss'
+
+defineProps<{
+  scale: number
+}>()
 </script>
