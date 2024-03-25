@@ -1,7 +1,7 @@
 <template>
-  <g id="greyhawk-14_Hills_Contours" class="map-hills-contours">
+  <g class="map-hills-contours">
     <defs>
-      <g id="map-hills-contours-1">
+      <g class="map-hills-contours-1" id="map-hills-contours-1">
         <path
           d="M21899.61 17033.54c6.51-16.49 29.08-53.82 29.08-53.82l24.74-21.7 33.42-16.06 60.76 13.02 35.15 25.61 17.58 53.61c1.16 3.53-22.66 10.74-62.93 21.7-18.47 5.03-45.87 3.64-69.67 2.96-23.4-.66-39.84-9.93-46.44-11.86-13.31-3.9-16.93-6.08-21.7-13.46z"
           class="map-hills-contours-fill"
@@ -18,7 +18,7 @@
         <path d="m22065.44 17028.78-.87 9.54" />
       </g>
 
-      <g id="map-hills-contours-2">
+      <g class="map-hills-contours-2" id="map-hills-contours-2">
         <path
           d="M21921.89 17026.09c5.06-12.83 22.63-41.87 22.63-41.87l19.25-16.89 26-12.49 47.28 10.13 27.35 19.92 13.68 41.71c.9 2.75-17.63 8.36-48.96 16.89-14.37 3.91-35.69 2.83-54.21 2.31-18.2-.52-31-7.73-36.13-9.23-10.36-3.03-13.17-4.73-16.89-10.47z"
           class="map-hills-contours-fill"

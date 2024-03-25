@@ -1,47 +1,37 @@
 <template>
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    xml:space="preserve"
-    id="map-greyhawk-vector"
-    version="1.1"
-    viewBox="680 1280 43060 32300"
-    width="4224"
-    height="3168"
-  >
-    <WaterFill />
-    <WaterContours />
-    <RiverShadow />
-    <GroundShadow />
+  <WaterFill />
+  <WaterContours />
+  <RiverShadow />
+  <GroundShadow />
 
-    <GroundFill />
-    <SwampFill />
-    <HillsFill />
-    <MountainFill />
-    <PlainsFill />
-    <ForestFill />
-    <SnowFill />
+  <GroundFill />
+  <SwampFill />
+  <HillsFill />
+  <MountainFill />
+  <PlainsFill />
+  <ForestFill />
+  <SnowFill />
 
-    <map-grid class="map-grid" :size="192.25" :x="708" :y="1185" :width="43060" :height="32300" />
+  <map-grid class="map-grid" :size="192.25" :x="708" :y="1185" :width="43060" :height="32300" />
 
-    <!-- <ForestContours />
-    <PlainsContours />
-    <MountainContours />
-    <HillsContours />
-    <FeaturesContours /> -->
+  <ForestContours />
+  <PlainsContours />
+  <MountainContours />
+  <HillsContours />
+  <FeaturesContours />
 
-    <RoadsLine />
-    <LakeStroke />
-    <CoastStroke />
-    <RiverOutline />
-    <RiverLine />
+  <RoadsLine />
+  <LakeStroke />
+  <CoastStroke />
+  <RiverOutline />
+  <RiverLine />
 
-    <SettlementsIcons />
+  <SettlementsIcons />
 
-    <TerrainNames />
-    <KingdomNames />
-    <SettlementNames />
-    <DarleneSignature />
-  </svg>
+  <TerrainNames />
+  <KingdomNames />
+  <SettlementNames />
+  <DarleneSignature />
 </template>
 
 <script lang="ts" setup>
@@ -56,11 +46,11 @@ import MountainFill from './Groups/07_Mountain_Fill.vue'
 import PlainsFill from './Groups/08_Plains_Fill.vue'
 import ForestFill from './Groups/09_Forest_Fill.vue'
 import SnowFill from './Groups/10_Snow_Fill.vue'
-// import ForestContours from './Groups/11_Forest_Contours.vue'
-// import PlainsContours from './Groups/12_Plains_Contours.vue'
-// import MountainContours from './Groups/13_Mountain_Contours.vue'
-// import HillsContours from './Groups/14_Hills_Contours.vue'
-// import FeaturesContours from './Groups/15_Features_Contours.vue'
+import ForestContours from './Groups/11_Forest_Contours.vue'
+import PlainsContours from './Groups/12_Plains_Contours.vue'
+import MountainContours from './Groups/13_Mountain_Contours.vue'
+import HillsContours from './Groups/14_Hills_Contours.vue'
+import FeaturesContours from './Groups/15_Features_Contours.vue'
 import RoadsLine from './Groups/16_Roads_Line.vue'
 import LakeStroke from './Groups/17_Lake_Stroke.vue'
 import CoastStroke from './Groups/18_Coast_Stroke.vue'

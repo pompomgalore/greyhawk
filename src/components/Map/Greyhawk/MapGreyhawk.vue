@@ -1,8 +1,18 @@
 <template>
   <div class="map-container" ref="containerRef">
-    <div class="map-content" ref="contentRef">
-      <map-greyhawk-vector class="map-image" />
-    </div>
+    <svg
+      class="map-content"
+      ref="contentRef"
+      xmlns="http://www.w3.org/2000/svg"
+      xml:space="preserve"
+      id="map-greyhawk"
+      version="1.1"
+      viewBox="680 1280 43060 32300"
+      width="4224"
+      height="3168"
+    >
+      <map-greyhawk-vector />
+    </svg>
   </div>
 </template>
 
@@ -16,7 +26,7 @@ import MapGreyhawkVector from './Vector/MapGreyhawkVector.vue'
 import './MapGreyhawk.css'
 
 const containerRef = ref<HTMLDivElement>()
-const contentRef = ref<HTMLDivElement>()
+const contentRef = ref<SVGSVGElement>()
 
 const panzoom = ref<PanzoomObject>()
 
@@ -32,7 +42,7 @@ onMounted(() => {
       animate: false,
       duration: 0,
       maxScale: 12,
-      minScale: 0.1,
+      minScale: 0.33,
       cursor: 'grab',
       contain: 'outside'
     })

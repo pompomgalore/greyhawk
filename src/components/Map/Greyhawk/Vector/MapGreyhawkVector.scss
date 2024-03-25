@@ -1,389 +1,206 @@
-#map-greyhawk-vector {
-  clip-rule: evenodd;
-  fill-rule: evenodd;
+.map-water-fill {
+  fill: var(--map-blue-subtle);
+}
 
-  image-rendering: auto;
-  shape-rendering: geometricPrecision;
-  text-rendering: geometricPrecision;
+// .map-water-contours { stroke: var(--map-blue-strong); }
+.map-water-contours-1 {
+  fill: color-mix(in hsl, var(--map-blue-subtle), var(--map-blue) 17%);
+}
+.map-water-contours-2 {
+  fill: color-mix(in hsl, var(--map-blue-subtle), var(--map-blue) 33%);
+}
+.map-water-contours-3 {
+  fill: color-mix(in hsl, var(--map-blue-subtle), var(--map-blue) 50%);
+}
+.map-water-contours-4 {
+  fill: color-mix(in hsl, var(--map-blue-subtle), var(--map-blue) 67%);
+}
+.map-water-contours-5 {
+  fill: color-mix(in hsl, var(--map-blue-subtle), var(--map-blue) 83%);
+}
+.map-water-contours-6 {
+  fill: var(--map-blue);
+}
 
-  // image-rendering: optimizeSpeed;
-  // shape-rendering: optimizeSpeed;
-  // text-rendering: optimizeSpeed;
+.map-river-shadow {
+  fill: var(--map-blue);
+}
 
-  stroke-width: 8;
-  stroke-linejoin: round;
-  stroke-linecap: round;
+.map-ground-shadow {
+  fill: var(--map-blue-strong);
+}
 
-  --map-brown-subtle: #847172;
-  --map-green-subtle: #80a36f;
-  --map-blue-subtle: #839898;
-  --map-yellow-subtle: #d4bfa8;
+.map-ground-fill {
+  fill: var(--map-yellow-subtle);
+}
 
-  --map-brown-strong: #bd7155;
-  --map-green-strong: #8a804c;
-  --map-blue-strong: #305452;
-  --map-yellow-strong: #e9c79a;
+.map-swamp-fill {
+  fill: color-mix(in hsl, var(--map-green-strong), var(--map-yellow-subtle) 67%);
+}
 
-  --map-brown: color-mix(in hsl, var(--map-brown-subtle), var(--map-brown-strong));
-  --map-green: color-mix(in hsl, var(--map-green-subtle), var(--map-green-strong));
-  --map-blue: color-mix(in hsl, var(--map-blue-subtle), var(--map-blue-strong));
-  --map-yellow: color-mix(in hsl, var(--map-yellow-subtle), var(--map-yellow-strong));
+.map-hills-fill {
+  fill: color-mix(in hsl, var(--map-brown-subtle), var(--map-yellow-subtle) 67%);
+}
 
-  .map-water-fill {
-    fill: var(--map-blue-subtle);
+.map-mountain-fill-1 {
+  fill: color-mix(in hsl, var(--map-brown), var(--map-yellow-subtle));
+}
+
+.map-mountain-fill-2 {
+  fill: color-mix(in hsl, var(--map-brown-strong), var(--map-brown));
+}
+
+.map-mountain-fill-3 {
+  fill: rgba(white, 0.5);
+}
+
+.map-plains-fill-1 {
+  fill: color-mix(in hsl, var(--map-yellow-subtle), var(--map-yellow-strong) 33%);
+}
+
+.map-plains-fill-2 {
+  fill: color-mix(in hsl, var(--map-yellow-subtle), var(--map-yellow-strong) 67%);
+}
+
+.map-plains-fill-3 {
+  fill: var(--map-yellow-strong);
+}
+
+.map-forest-fill {
+  fill: color-mix(in hsl, var(--map-green-subtle), var(--map-yellow-subtle) 33%);
+}
+
+.map-snow-fill {
+  fill: color-mix(in hsl, rgba(white, 0.5), var(--map-yellow-subtle));
+}
+
+.map-forest-contours {
+  fill: color-mix(in hsl, var(--map-green), black);
+}
+
+.map-plains-contours {
+  stroke: color-mix(in hsl, var(--map-yellow), black);
+  fill: none;
+}
+
+.map-mountain-contours {
+  fill: color-mix(in hsl, var(--map-brown), black);
+}
+
+.map-hills-contours {
+  fill: none;
+  stroke-width: 12px;
+}
+
+.map-hills-contours-1 {
+  stroke: color-mix(in hsl, var(--map-brown), black 33%);
+  .map-hills-contours-fill {
+    stroke: none;
+    fill: color-mix(in hsl, var(--map-brown), var(--map-yellow-subtle) 67%);
   }
+}
 
-  // .map-water-contours { stroke: var(--map-blue-strong); }
-  .map-water-contours-1 {
-    fill: color-mix(in hsl, var(--map-blue-subtle), var(--map-blue) 17%);
+.map-hills-contours-2 {
+  stroke: color-mix(in hsl, var(--map-green), black 33%);
+  .map-hills-contours-fill {
+    stroke: none;
+    fill: color-mix(in hsl, var(--map-green-subtle), var(--map-yellow-subtle) 50%);
   }
-  .map-water-contours-2 {
-    fill: color-mix(in hsl, var(--map-blue-subtle), var(--map-blue) 33%);
-  }
-  .map-water-contours-3 {
-    fill: color-mix(in hsl, var(--map-blue-subtle), var(--map-blue) 50%);
-  }
-  .map-water-contours-4 {
-    fill: color-mix(in hsl, var(--map-blue-subtle), var(--map-blue) 67%);
-  }
-  .map-water-contours-5 {
-    fill: color-mix(in hsl, var(--map-blue-subtle), var(--map-blue) 83%);
-  }
-  .map-water-contours-6 {
-    fill: var(--map-blue);
-  }
+}
 
-  .map-river-shadow {
-    fill: var(--map-blue);
-  }
+.map-features-contours-1 {
+  fill: color-mix(in hsl, var(--map-yellow), black);
+}
 
-  .map-ground-shadow {
-    fill: var(--map-blue-strong);
-  }
+.map-features-contours-2 {
+  fill: color-mix(in hsl, var(--map-brown), black);
+}
 
-  .map-ground-fill {
-    fill: var(--map-yellow-subtle);
-  }
+.map-roads-line {
+  fill: none;
+  stroke: var(--map-brown-strong);
+  stroke-width: 24;
+  stroke-dasharray: 48 72;
+}
 
-  .map-swamp-fill {
-    fill: color-mix(in hsl, var(--map-green-strong), var(--map-yellow-subtle) 67%);
-  }
+.map-lake-stroke {
+  fill: none;
+  stroke: color-mix(in hsl, var(--map-blue), black 50%);
+  stroke-width: 16;
+}
 
-  .map-hills-fill {
-    fill: color-mix(in hsl, var(--map-brown-subtle), var(--map-yellow-subtle) 67%);
-  }
+.map-coast-stroke {
+  fill: none;
+  stroke: color-mix(in hsl, var(--map-blue), black 50%);
+  stroke-width: 20;
+}
 
-  .map-mountain-fill-1 {
-    fill: color-mix(in hsl, var(--map-brown), var(--map-yellow-subtle));
-  }
+.map-river-outline {
+  fill: none;
+  stroke: color-mix(in hsl, var(--map-blue), black 33%);
+  stroke-width: 40;
+}
 
-  .map-mountain-fill-2 {
-    fill: color-mix(in hsl, var(--map-brown-strong), var(--map-brown));
-  }
+.map-river-line {
+  fill: none;
+  stroke: var(--map-blue);
+  stroke-width: 12;
+}
 
-  .map-mountain-fill-3 {
-    fill: rgba(white, 0.5);
-  }
-
-  .map-plains-fill-1 {
-    fill: color-mix(in hsl, var(--map-yellow-subtle), var(--map-yellow-strong) 33%);
-  }
-
-  .map-plains-fill-2 {
-    fill: color-mix(in hsl, var(--map-yellow-subtle), var(--map-yellow-strong) 67%);
-  }
-
-  .map-plains-fill-3 {
-    fill: var(--map-yellow-strong);
-  }
-
-  .map-forest-fill {
-    fill: color-mix(in hsl, var(--map-green-subtle), var(--map-yellow-subtle) 33%);
-  }
-
-  .map-snow-fill {
-    fill: color-mix(in hsl, rgba(white, 0.5), var(--map-yellow-subtle));
-  }
-
-  .map-forest-contours {
-    fill: color-mix(in hsl, var(--map-green), black);
-  }
-
-  .map-plains-contours {
-    stroke: color-mix(in hsl, var(--map-yellow), black);
+.map-settlements-icons {
+  circle.stroke {
     fill: none;
+    stroke-width: 8px;
+    stroke: color-mix(in hsl, var(--map-yellow), black 67%);
   }
-
-  .map-mountain-contours {
-    fill: color-mix(in hsl, var(--map-brown), black);
-  }
-
-  .map-hills-contours {
+  circle.dash {
     fill: none;
-    stroke-width: 12px;
+    stroke-width: 16px;
+    stroke-dasharray: 8px 24px;
+    stroke: color-mix(in hsl, var(--map-yellow), black 67%);
   }
-
-  #map-hills-contours-1 {
-    stroke: color-mix(in hsl, var(--map-brown), black 33%);
-    .map-hills-contours-fill {
-      stroke: none;
-      fill: color-mix(in hsl, var(--map-brown), var(--map-yellow-subtle) 67%);
-    }
-  }
-
-  #map-hills-contours-2 {
-    stroke: color-mix(in hsl, var(--map-green), black 33%);
-    .map-hills-contours-fill {
-      stroke: none;
-      fill: color-mix(in hsl, var(--map-green-subtle), var(--map-yellow-subtle) 50%);
-    }
-  }
-
-  #map-features-contours-1 {
-    fill: color-mix(in hsl, var(--map-yellow), black);
-  }
-
-  #map-features-contours-2 {
-    fill: color-mix(in hsl, var(--map-brown), black);
-  }
-
-  .map-roads-line {
-    fill: none;
-    stroke: var(--map-brown-strong);
-    stroke-width: 24;
-    stroke-dasharray: 48 72;
-  }
-
-  .map-lake-stroke {
-    fill: none;
-    stroke: color-mix(in hsl, var(--map-blue), black 50%);
-    stroke-width: 16;
-  }
-
-  .map-coast-stroke {
-    fill: none;
-    stroke: color-mix(in hsl, var(--map-blue), black 50%);
-    stroke-width: 20;
-  }
-
-  .map-river-outline {
-    fill: none;
-    stroke: color-mix(in hsl, var(--map-blue), black 33%);
-    stroke-width: 40;
-  }
-
-  .map-river-line {
-    fill: none;
-    stroke: var(--map-blue);
-    stroke-width: 12;
-  }
-
-  .map-settlements-icons {
-    circle.stroke {
-      fill: none;
-      stroke-width: 8px;
-      stroke: color-mix(in hsl, var(--map-yellow), black 67%);
-    }
-    circle.dash {
-      fill: none;
-      stroke-width: 16px;
-      stroke-dasharray: 8px 24px;
-      stroke: color-mix(in hsl, var(--map-yellow), black 67%);
-    }
-    circle.fill {
-      fill: color-mix(in hsl, var(--map-yellow), black 67%);
-      stroke: none;
-    }
-    text {
-      fill: color-mix(in hsl, var(--map-yellow), black 67%);
-      stroke: none;
-      font-size: 96px;
-      font-family: 'GreyhawkGothic';
-    }
-  }
-
-  #map-settlements-icons-6,
-  #map-settlements-icons-7,
-  #map-settlements-icons-8 {
+  circle.fill {
     fill: color-mix(in hsl, var(--map-yellow), black 67%);
+    stroke: none;
   }
+  text {
+    fill: color-mix(in hsl, var(--map-yellow), black 67%);
+    stroke: none;
+    font-size: 96px;
+    font-family: 'GreyhawkGothic';
+  }
+}
 
-  .map-terrain-names {
-    fill: #222;
-    stroke: var(--map-yellow-subtle);
-    stroke-width: 24px;
-    paint-order: stroke;
-  }
+.map-settlements-icons-6,
+.map-settlements-icons-7,
+.map-settlements-icons-8 {
+  fill: color-mix(in hsl, var(--map-yellow), black 67%);
+}
 
-  .map-kingdom-names {
-    fill: #222;
-    stroke: var(--map-yellow-subtle);
-    stroke-width: 24px;
-    paint-order: stroke;
-  }
+.map-terrain-names {
+  fill: #222;
+  stroke: var(--map-yellow-subtle);
+  stroke-width: 24px;
+  paint-order: stroke;
+}
 
-  .map-darlene-signature {
-    fill: black;
-    stroke: var(--map-yellow-subtle);
-    stroke-width: 24px;
-    paint-order: stroke;
-  }
+.map-kingdom-names {
+  fill: #222;
+  stroke: var(--map-yellow-subtle);
+  stroke-width: 24px;
+  paint-order: stroke;
+}
 
-  .map-settlements-names {
-    fill: #222;
-    stroke: var(--map-yellow-subtle);
-    stroke-width: 24px;
-    paint-order: stroke;
-  }
+.map-settlements-names {
+  fill: #222;
+  stroke: var(--map-yellow-subtle);
+  stroke-width: 24px;
+  paint-order: stroke;
+}
 
-  .str15,
-  .str6 {
-    stroke: #000;
-    stroke-width: 27.78;
-    stroke-miterlimit: 2.61313;
-  }
-  .str6 {
-    stroke: #666;
-    stroke-width: 13.89;
-  }
-  .str0,
-  .str12,
-  .str21,
-  .str3,
-  .str9 {
-    stroke: #000;
-    stroke-width: 6.94;
-    stroke-miterlimit: 2.61313;
-  }
-  .str12,
-  .str21,
-  .str3 {
-    stroke-width: 3;
-  }
-  .str12 {
-    stroke: #666;
-  }
-  .str10,
-  .str17,
-  .str19,
-  .str2 {
-    stroke: #000;
-    stroke-width: 10.42;
-    stroke-linecap: round;
-    stroke-miterlimit: 2.61313;
-  }
-  .str17,
-  .str19,
-  .str2 {
-    stroke-width: 41.67;
-  }
-  .str19,
-  .str2 {
-    stroke-width: 13.89;
-  }
-  .str19 {
-    stroke: #039;
-  }
-  .str16,
-  .str18 {
-    stroke: #000;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-  }
-  .str18 {
-    stroke-width: 41.67;
-    stroke-miterlimit: 2.61313;
-  }
-  .str16 {
-    stroke-width: 27.78;
-  }
-  .str1,
-  .str14,
-  .str16,
-  .str20 {
-    stroke-miterlimit: 2.61313;
-  }
-  .str20 {
-    stroke: #039;
-    stroke-width: 13.89;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-  }
-  .str1,
-  .str14 {
-    stroke: #000;
-    stroke-width: 10.42;
-    stroke-dasharray: 20.834646 10.417323;
-  }
-  .str14 {
-    stroke-width: 27.78;
-    stroke-dasharray: 27.779528 27.779528;
-  }
-  .fil0 {
-    fill: none;
-  }
-  .fil32 {
-    fill: #373435;
-  }
-  .fil23 {
-    fill: #f3e292;
-  }
-  .fil2 {
-    fill: #dda974;
-  }
-  .fil22 {
-    fill: #b7d77a;
-  }
-  .fil1,
-  .fil29 {
-    fill: #000;
-  }
-  .fil19 {
-    fill: #006;
-  }
-  .fil20 {
-    fill: #039;
-  }
-  .fil5 {
-    fill: #25b544;
-  }
-  .fil14 {
-    fill: #319dad;
-  }
-  .fil18 {
-    fill: #363c7c;
-  }
-  .fil17 {
-    fill: #4b97ca;
-  }
-  .fil12 {
-    fill: #51b5ca;
-  }
-  .fil10 {
-    fill: #72d1df;
-  }
-  .fil9 {
-    fill: #bfeaf6;
-  }
-  .fil3 {
-    fill: #d74a29;
-  }
-  .fil6 {
-    fill: red;
-  }
-  .fil4 {
-    fill: #fff;
-  }
-  .fil27,
-  .fil28 {
-    fill: #000;
-  }
-  .fil28 {
-    fill-rule: nonzero;
-  }
-  .fnt0 {
-    font-weight: 400;
-    font-size: 111.82px;
-    font-family: 'Wingdings';
-  }
+.map-darlene-signature {
+  fill: black;
+  stroke: var(--map-yellow-subtle);
+  stroke-width: 24px;
+  paint-order: stroke;
 }

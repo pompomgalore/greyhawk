@@ -1,13 +1,12 @@
 <template>
-  <!-- <layout-header class="app-header" /> -->
-
   <main class="app-main">
     <router-view />
   </main>
+  <!-- <layout-footer class="app-footer" /> -->
 </template>
 
 <script lang="ts" setup>
 import { RouterView } from 'vue-router'
-// import LayoutHeader from './components/Layout/Header/LayoutHeader.vue'
+// import LayoutFooter from './components/Layout/Footer/LayoutFooter.vue'
 import './App.css'
 </script>

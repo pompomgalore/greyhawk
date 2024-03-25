@@ -1,12 +1,12 @@
 <template>
-  <g id="map-grid">
+  <g class="map-grid">
     <defs>
       <polygon
         v-if="hexagonCorners"
         id="map-grid-hexagon"
         :points="hexagonCorners.map((corner) => corner.join(',')).join(' ')"
         stroke="black"
-        stroke-opacity="0.1"
+        stroke-opacity="0.17"
         fill="none"
       />
     </defs>
