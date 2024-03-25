@@ -14,24 +14,36 @@
 
   <map-grid class="map-grid" :size="192.25" :x="708" :y="1185" :width="43060" :height="32300" />
 
-  <forest-contours v-if="scale > 1" />
-  <plains-contours v-if="scale > 1" />
-  <mountain-contours v-if="scale > 1" />
-  <hills-contours v-if="scale > 1" />
-  <features-contours v-if="scale > 1" />
+  <Transition>
+    <g class="map-contours" v-if="scale > 1 && scale < 9">
+      <forest-contours />
+      <plains-contours />
+      <mountain-contours />
+      <hills-contours />
+      <features-contours />
+    </g>
+  </Transition>
 
-  <roads-line v-if="scale > 1.5" />
+  <roads-line v-if="scale > 1.5 && scale < 6" />
+
+  <river-outline />
   <lake-stroke />
   <coast-stroke />
-  <river-outline />
   <river-line />
 
-  <settlements-icons v-if="scale > 1.5" />
+  <Transition>
+    <terrain-names v-if="scale < 4" />
+  </Transition>
+  <Transition><river-names v-if="scale > 1 && scale < 4" /></Transition>
+  <Transition><kingdom-names v-if="scale > 0.5 && scale < 3" /></Transition>
 
-  <terrain-names />
-  <river-names v-if="scale > 2" />
-  <kingdom-names v-if="scale > 0.75" />
-  <settlement-names v-if="scale > 1.5" /> />
+  <Transition>
+    <g v-if="scale > 1.5 && scale < 7">
+      <settlements-icons />
+      <settlement-names />
+    </g>
+  </Transition>
+
   <darlene-signature />
 </template>
 

@@ -1,126 +1,55 @@
-.map-water-fill {
-  fill: var(--map-blue-subtle);
+:root {
+  --map-water: #839898;
+  --map-blue: #5a7675;
+  --map-shadow: #305452;
+
+  --map-ground: #d4bfa8;
+  --map-beige: #dfc3a1;
+  --map-desert: #e9c79a;
+
+  --map-forest: #80a36f;
+  --map-green: #85925e;
+  --map-swamp: #8a804c;
+
+  --map-hill: #847172;
+  --map-brown: #a17164;
+  --map-red: #bd7155;
 }
 
-// .map-water-contours { stroke: var(--map-blue-strong); }
+.map-water-fill {
+  fill: var(--map-water);
+}
+// .map-water-contours { stroke: var(--map-shadow); }
 .map-water-contours-1 {
-  fill: color-mix(in hsl, var(--map-blue-subtle), var(--map-blue) 17%);
+  fill: color-mix(in hsl, var(--map-water), var(--map-blue) 17%);
 }
 .map-water-contours-2 {
-  fill: color-mix(in hsl, var(--map-blue-subtle), var(--map-blue) 33%);
+  fill: color-mix(in hsl, var(--map-water), var(--map-blue) 33%);
 }
 .map-water-contours-3 {
-  fill: color-mix(in hsl, var(--map-blue-subtle), var(--map-blue) 50%);
+  fill: color-mix(in hsl, var(--map-water), var(--map-blue) 50%);
 }
 .map-water-contours-4 {
-  fill: color-mix(in hsl, var(--map-blue-subtle), var(--map-blue) 67%);
+  fill: color-mix(in hsl, var(--map-water), var(--map-blue) 67%);
 }
 .map-water-contours-5 {
-  fill: color-mix(in hsl, var(--map-blue-subtle), var(--map-blue) 83%);
+  fill: color-mix(in hsl, var(--map-water), var(--map-blue) 83%);
 }
 .map-water-contours-6 {
   fill: var(--map-blue);
 }
 
-.map-river-shadow {
-  fill: var(--map-blue);
-}
-
 .map-ground-shadow {
-  fill: var(--map-blue-strong);
+  fill: var(--map-shadow);
 }
-
 .map-ground-fill {
-  fill: var(--map-yellow-subtle);
+  fill: var(--map-ground);
 }
 
-.map-swamp-fill {
-  fill: color-mix(in hsl, var(--map-green-strong), var(--map-yellow-subtle) 67%);
-}
-
-.map-hills-fill {
-  fill: color-mix(in hsl, var(--map-brown-subtle), var(--map-yellow-subtle) 67%);
-}
-
-.map-mountain-fill-1 {
-  fill: color-mix(in hsl, var(--map-brown), var(--map-yellow-subtle));
-}
-
-.map-mountain-fill-2 {
-  fill: color-mix(in hsl, var(--map-brown-strong), var(--map-brown));
-}
-
-.map-mountain-fill-3 {
-  fill: rgba(white, 0.5);
-}
-
-.map-plains-fill-1 {
-  fill: color-mix(in hsl, var(--map-yellow-subtle), var(--map-yellow-strong) 33%);
-}
-
-.map-plains-fill-2 {
-  fill: color-mix(in hsl, var(--map-yellow-subtle), var(--map-yellow-strong) 67%);
-}
-
-.map-plains-fill-3 {
-  fill: var(--map-yellow-strong);
-}
-
-.map-forest-fill {
-  fill: color-mix(in hsl, var(--map-green-subtle), var(--map-yellow-subtle) 33%);
-}
-
-.map-snow-fill {
-  fill: color-mix(in hsl, rgba(white, 0.5), var(--map-yellow-subtle));
-}
-
-.map-forest-contours {
-  fill: color-mix(in hsl, var(--map-green), black);
-}
-
-.map-plains-contours {
-  stroke: color-mix(in hsl, var(--map-yellow), black);
+.map-coast-stroke {
   fill: none;
-}
-
-.map-mountain-contours {
-  fill: color-mix(in hsl, var(--map-brown), black);
-}
-
-.map-hills-contours {
-  fill: none;
-  stroke-width: 12px;
-}
-
-.map-hills-contours-1 {
-  stroke: color-mix(in hsl, var(--map-brown), black 33%);
-  .map-hills-contours-fill {
-    stroke: none;
-    fill: color-mix(in hsl, var(--map-brown), var(--map-yellow-subtle) 67%);
-  }
-}
-
-.map-hills-contours-2 {
-  stroke: color-mix(in hsl, var(--map-green), black 33%);
-  .map-hills-contours-fill {
-    stroke: none;
-    fill: color-mix(in hsl, var(--map-green-subtle), var(--map-yellow-subtle) 50%);
-  }
-}
-
-.map-features-contours-1 {
-  fill: color-mix(in hsl, var(--map-yellow), black);
-}
-
-.map-features-contours-2 {
-  fill: color-mix(in hsl, var(--map-brown), black);
-}
-
-.map-roads-line {
-  fill: none;
-  stroke: var(--map-brown-strong);
-  stroke-width: 24;
-  stroke-dasharray: 48 72;
+  stroke: color-mix(in hsl, var(--map-shadow), black 50%);
+  stroke-width: 16;
 }
 
 .map-lake-stroke {
@@ -129,85 +58,144 @@
   stroke-width: 16;
 }
 
-.map-coast-stroke {
-  fill: none;
-  stroke: color-mix(in hsl, var(--map-blue), black 50%);
-  stroke-width: 20;
+.map-river-shadow {
+  fill: var(--map-blue);
 }
-
 .map-river-outline {
   fill: none;
-  stroke: color-mix(in hsl, var(--map-blue), black 33%);
+  stroke: var(--map-shadow);
   stroke-width: 40;
 }
-
 .map-river-line {
   fill: none;
   stroke: var(--map-blue);
-  stroke-width: 12;
+  stroke-width: 16;
+}
+
+.map-swamp-fill {
+  fill: color-mix(in hsl, var(--map-swamp), var(--map-ground) 67%);
+}
+
+.map-hills-fill {
+  fill: color-mix(in hsl, var(--map-hill), var(--map-ground) 67%);
+}
+.map-hills-contours {
+  fill: none;
+  stroke-width: 12px;
+}
+.map-hills-contours-1 {
+  stroke: color-mix(in hsl, var(--map-brown), black 33%);
+  .map-hills-contours-fill {
+    stroke: none;
+    fill: color-mix(in hsl, var(--map-brown), var(--map-ground) 67%);
+  }
+}
+.map-hills-contours-2 {
+  stroke: color-mix(in hsl, var(--map-green), black 33%);
+  .map-hills-contours-fill {
+    stroke: none;
+    fill: color-mix(in hsl, var(--map-forest), var(--map-ground) 50%);
+  }
+}
+
+.map-mountain-fill-1 {
+  fill: color-mix(in hsl, var(--map-brown), var(--map-ground));
+}
+.map-mountain-fill-2 {
+  fill: color-mix(in hsl, var(--map-red), var(--map-brown));
+}
+.map-mountain-fill-3 {
+  fill: rgba(white, 0.5);
+}
+.map-mountain-contours {
+  fill: color-mix(in hsl, var(--map-brown), black);
+}
+
+.map-plains-fill-1 {
+  fill: color-mix(in hsl, var(--map-ground), var(--map-desert) 33%);
+}
+.map-plains-fill-2 {
+  fill: color-mix(in hsl, var(--map-ground), var(--map-desert) 67%);
+}
+.map-plains-fill-3 {
+  fill: var(--map-desert);
+}
+.map-plains-contours {
+  stroke: color-mix(in hsl, var(--map-beige), black);
+  fill: none;
+}
+
+.map-forest-fill {
+  fill: color-mix(in hsl, var(--map-forest), var(--map-ground) 33%);
+}
+.map-forest-contours {
+  fill: color-mix(in hsl, var(--map-green), black);
+}
+
+.map-snow-fill {
+  fill: color-mix(in hsl, var(--map-ground), rgba(white, 0.5));
+}
+
+.map-features-contours-1 {
+  fill: color-mix(in hsl, var(--map-beige), black 67%);
+}
+.map-features-contours-2 {
+  fill: color-mix(in hsl, var(--map-brown), black 67%);
+}
+
+.map-roads-line {
+  fill: none;
+  stroke: var(--map-red);
+  stroke-width: 24;
+  stroke-dasharray: 48 72;
 }
 
 .map-settlements-icons {
   circle.stroke {
     fill: none;
     stroke-width: 8px;
-    stroke: color-mix(in hsl, var(--map-yellow), black 67%);
+    stroke: color-mix(in hsl, var(--map-beige), black 67%);
   }
   circle.dash {
     fill: none;
     stroke-width: 16px;
     stroke-dasharray: 8px 24px;
-    stroke: color-mix(in hsl, var(--map-yellow), black 67%);
+    stroke: color-mix(in hsl, var(--map-beige), black 67%);
   }
   circle.fill {
-    fill: color-mix(in hsl, var(--map-yellow), black 67%);
+    fill: color-mix(in hsl, var(--map-beige), black 67%);
     stroke: none;
   }
   text {
-    fill: color-mix(in hsl, var(--map-yellow), black 67%);
+    fill: color-mix(in hsl, var(--map-beige), black 67%);
     stroke: none;
     font-size: 96px;
-    font-family: 'GreyhawkGothic';
   }
 }
-
 .map-settlements-icons-6,
 .map-settlements-icons-7,
 .map-settlements-icons-8 {
-  fill: color-mix(in hsl, var(--map-yellow), black 67%);
+  fill: color-mix(in hsl, var(--map-beige), black 67%);
 }
 
-.map-terrain-names {
-  fill: #222;
-  stroke: var(--map-yellow-subtle);
-  stroke-width: 24px;
-  paint-order: stroke;
-}
-
-.map-river-names {
-  fill: #222;
-  stroke: var(--map-yellow-subtle);
-  stroke-width: 24px;
-  paint-order: stroke;
-}
-
+.map-terrain-names,
+.map-river-names,
 .map-kingdom-names {
   fill: #222;
-  stroke: var(--map-yellow-subtle);
+  stroke: var(--map-ground);
   stroke-width: 24px;
   paint-order: stroke;
 }
-
 .map-settlements-names {
-  fill: #222;
-  stroke: var(--map-yellow-subtle);
-  stroke-width: 24px;
+  fill: color-mix(in hsl, var(--map-beige), black 67%);
+  stroke: rgba(white, 0.5);
+  stroke-width: 16px;
   paint-order: stroke;
 }
 
 .map-darlene-signature {
   fill: black;
-  stroke: var(--map-yellow-subtle);
+  stroke: var(--map-ground);
   stroke-width: 24px;
   paint-order: stroke;
 }

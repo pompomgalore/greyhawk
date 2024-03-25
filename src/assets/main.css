@@ -67,3 +67,13 @@ body {
   width: 100vw;
   height: 100vh;
 }
+
+.v-enter-active,
+.v-leave-active {
+  transition: opacity 0.8s ease-in-out;
+}
+
+.v-enter-from,
+.v-leave-to {
+  opacity: 0;
+}

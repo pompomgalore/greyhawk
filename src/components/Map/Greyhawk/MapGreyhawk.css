@@ -1,20 +1,3 @@
-:root {
-  --map-brown-subtle: #847172;
-  --map-green-subtle: #80a36f;
-  --map-blue-subtle: #839898;
-  --map-yellow-subtle: #d4bfa8;
-
-  --map-brown-strong: #bd7155;
-  --map-green-strong: #8a804c;
-  --map-blue-strong: #305452;
-  --map-yellow-strong: #e9c79a;
-
-  --map-brown: color-mix(in hsl, var(--map-brown-subtle), var(--map-brown-strong));
-  --map-green: color-mix(in hsl, var(--map-green-subtle), var(--map-green-strong));
-  --map-blue: color-mix(in hsl, var(--map-blue-subtle), var(--map-blue-strong));
-  --map-yellow: color-mix(in hsl, var(--map-yellow-subtle), var(--map-yellow-strong));
-}
-
 .map-container {
   position: relative;
   max-width: 100%;
