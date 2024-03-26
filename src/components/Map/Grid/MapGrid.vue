@@ -30,8 +30,8 @@ interface GridProps {
   x: number
   y: number
 }
-const { size, width, height, x, y } = defineProps<GridProps>()
+const props = defineProps<GridProps>()
 
-const hexagonCorners = getHexagonCorners(size)
-const gridPositions = getGridPositions(width, height, size)
+const hexagonCorners = getHexagonCorners(props.size)
+const gridPositions = getGridPositions(props.width, props.height, props.size)
 </script>

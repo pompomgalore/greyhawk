@@ -12,10 +12,25 @@
   <forest-fill />
   <snow-fill />
 
-  <map-grid class="map-grid" :size="192.25" :x="708" :y="1185" :width="43060" :height="32300" />
+  <Transition>
+    <map-grid
+      class="map-grid"
+      v-if="scale >= 0.5"
+      :opacity="scale <= 6 ? 1 : 1 - (scale - 6) / (12 - 6)"
+      :size="192.25"
+      :x="708"
+      :y="1185"
+      :width="43060"
+      :height="32300"
+    />
+  </Transition>
 
   <Transition>
-    <g class="map-contours" v-if="scale > 1 && scale < 9">
+    <g
+      class="map-contours"
+      v-if="scale >= 1 && scale <= 9"
+      :opacity="scale <= 4 ? 1 : 1 - (scale - 4) / (9 - 4)"
+    >
       <forest-contours />
       <plains-contours />
       <mountain-contours />
@@ -24,21 +39,18 @@
     </g>
   </Transition>
 
-  <roads-line v-if="scale > 1.5 && scale < 6" />
-
   <river-outline />
   <lake-stroke />
   <coast-stroke />
   <river-line />
 
-  <Transition>
-    <terrain-names v-if="scale < 4" />
-  </Transition>
-  <Transition><river-names v-if="scale > 1 && scale < 4" /></Transition>
-  <Transition><kingdom-names v-if="scale > 0.5 && scale < 3" /></Transition>
+  <Transition><terrain-names v-if="scale <= 4" /></Transition>
+  <Transition><river-names v-if="scale >= 1 && scale <= 4" /></Transition>
+  <Transition><kingdom-names v-if="scale >= 0.5 && scale <= 3" /></Transition>
 
   <Transition>
-    <g v-if="scale > 1.5 && scale < 7">
+    <g v-if="scale >= 1.5 && scale <= 7">
+      <roads-line />
       <settlements-icons />
       <settlement-names />
     </g>

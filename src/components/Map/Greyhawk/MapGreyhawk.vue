@@ -37,8 +37,8 @@ const onPanzoomChange = ((event: CustomEvent<PanzoomEventDetail>) => {
 onMounted(() => {
   if (containerRef.value && contentRef.value) {
     panzoom.value = Panzoom(contentRef.value, {
-      animate: false,
-      duration: 0,
+      // animate: false,
+      // duration: 0.4,
       maxScale: 12,
       minScale: 0.33,
       cursor: 'grab',
