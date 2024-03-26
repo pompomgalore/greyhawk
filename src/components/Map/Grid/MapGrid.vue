@@ -14,8 +14,8 @@
       v-for="position in gridPositions"
       :key="position.key"
       href="#map-grid-hexagon"
-      :x="position.center[0] + x"
-      :y="position.center[1] + y"
+      :x="position.center[0] + props.x"
+      :y="position.center[1] + props.y"
     />
   </g>
 </template>
@@ -23,14 +23,13 @@
 <script lang="ts" setup>
 import { getGridPositions, getHexagonCorners } from '@/libs/grid'
 
-interface GridProps {
+const props = defineProps<{
   size: number
   width: number
   height: number
   x: number
   y: number
-}
-const props = defineProps<GridProps>()
+}>()
 
 const hexagonCorners = getHexagonCorners(props.size)
 const gridPositions = getGridPositions(props.width, props.height, props.size)
