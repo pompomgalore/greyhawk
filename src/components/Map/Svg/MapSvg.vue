@@ -13,10 +13,8 @@ onMounted(() => {
       svgRef.value.parentElement.style.maxHeight = '100vh'
     }
     panzoom.value = Panzoom(svgRef.value, {
-      animate: false,
-      duration: 0,
       maxScale: 12,
-      minScale: 0.33,
+      minScale: 0.25,
       cursor: 'grab',
       contain: 'outside'
     })

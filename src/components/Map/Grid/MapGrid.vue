@@ -34,3 +34,9 @@ const props = defineProps<{
 const hexagonCorners = getHexagonCorners(props.size)
 const gridPositions = getGridPositions(props.width, props.height, props.size)
 </script>
+
+<style scoped>
+.map-grid {
+  stroke-width: 8;
+}
+</style>
