@@ -12,49 +12,43 @@
   <forest-fill />
   <snow-fill />
 
-  <Transition>
-    <map-grid
-      class="map-grid"
-      v-if="scale >= 0.5"
-      :opacity="scale <= 4 ? 1 : 1 - (scale - 4) / (12 - 4)"
-      :size="192.25"
-      :x="708"
-      :y="1185"
-      :width="43060"
-      :height="32300"
-    />
-  </Transition>
+  <map-grid
+    class="map-grid"
+    v-if="scale >= 0.5"
+    :opacity="scale <= 4 ? 1 : 1 - (scale - 4) / (12 - 4)"
+    :size="192.25"
+    :x="708"
+    :y="1185"
+    :width="43060"
+    :height="32300"
+  />
 
-  <Transition>
-    <g
-      class="map-contours"
-      v-if="scale >= 1 && scale <= 8"
-      :opacity="scale <= 4 ? 1 : 1 - (scale - 4) / (8 - 4)"
-    >
-      <forest-contours />
-      <plains-contours />
-      <mountain-contours />
-      <hills-contours />
-      <features-contours />
-    </g>
-  </Transition>
+  <g
+    class="map-contours"
+    v-if="scale >= 1 && scale <= 8"
+    :opacity="scale <= 4 ? 1 : 1 - (scale - 4) / (8 - 4)"
+  >
+    <forest-contours />
+    <plains-contours />
+    <mountain-contours />
+    <hills-contours />
+    <features-contours />
+  </g>
 
   <lake-stroke />
   <coast-stroke />
   <river-outline />
   <river-line />
 
-  <Transition><terrain-names v-if="scale <= 4" /></Transition>
-  <Transition><river-names v-if="scale >= 1 && scale <= 4" /></Transition>
-  <Transition><kingdom-names v-if="scale >= 0.5 && scale <= 4" /></Transition>
+  <g v-if="scale >= 1.5 && scale <= 8">
+    <roads-line />
+    <settlements-icons />
+    <settlement-names />
+  </g>
 
-  <Transition>
-    <g v-if="scale >= 1.5 && scale <= 8">
-      <roads-line />
-      <settlements-icons />
-      <settlement-names />
-    </g>
-  </Transition>
+  <terrain-names v-if="scale <= 4" />
+  <river-names v-if="scale >= 1 && scale <= 4" />
+  <kingdom-names v-if="scale >= 0.5 && scale <= 4" />
 
   <darlene-signature />
 </template>

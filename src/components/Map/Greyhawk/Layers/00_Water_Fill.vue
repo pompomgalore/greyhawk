@@ -1,5 +1,3 @@
 <template>
-  <g class="map-water-fill" :style="{ fill: 'var(--map-water)' }">
-    <rect x="680" y="1280" width="43060" height="32300" />
-  </g>
+  <path class="map-water-fill" style="fill: #839898" d="M680 1280h43060v32300H680z" />
 </template>

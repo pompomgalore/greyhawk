@@ -1,217 +1,215 @@
-<script lang="ts" setup>
-import { reactive } from 'vue'
-
-const fillStyle = reactive({
-  fill: 'color-mix(in hsl, var(--map-beige), black 67%)',
-  stroke: 'none'
-})
-const dashStyle = reactive({
-  strokeWidth: 16,
-  strokeDasharray: '8px 24px',
-  stroke: 'color-mix(in hsl, var(--map-beige), black 67%)'
-})
-</script>
-
 <template>
   <g
     class="map-settlements-icons"
-    :style="{
-      fill: 'none',
-      strokeWidth: 8,
-      stroke: 'color-mix(in hsl, var(--map-beige), black 67%)',
-      fontSize: 96
-    }"
+    style="
+      fill: none;
+      stroke-width: 8;
+      stroke: color-mix(in hsl, #dfc3a1, black 67%);
+      font-size: 96px;
+    "
   >
     <defs>
-      <g id="map-settlements-icons-1">
-        <circle cx="22000" cy="17000" r="54.69" />
-        <circle cx="22000" cy="17000" r="37.76" />
-        <text :style="fillStyle" x="21957" y="17031">★</text>
+      <g id="e">
+        <circle cx="22000" cy="17000" r="54.7" />
+        <circle cx="22000" cy="17000" r="37.8" />
+        <text x="21957" y="17031" style="fill: color-mix(in hsl, #dfc3a1, black 67%); stroke: none">
+          ★
+        </text>
       </g>
-      <g id="map-settlements-icons-2">
-        <circle cx="22000" cy="17000" r="54.69" />
-        <circle cx="22000" cy="17000" r="37.76" />
+      <g id="f">
+        <circle cx="22000" cy="17000" r="54.7" />
+        <circle cx="22000" cy="17000" r="37.8" />
       </g>
-      <g id="map-settlements-icons-3">
-        <circle cx="22000" cy="17000" r="54.69" />
-        <circle :style="fillStyle" cx="22000" cy="17000" r="37.76" />
+      <g id="g">
+        <circle cx="22000" cy="17000" r="54.7" />
+        <circle
+          cx="22000"
+          cy="17000"
+          r="37.8"
+          style="fill: color-mix(in hsl, #dfc3a1, black 67%); stroke: none"
+        />
       </g>
-      <g id="map-settlements-icons-4">
-        <circle cx="22000" cy="17000" r="54.69" />
-        <circle cx="22000" cy="17000" r="37.76" />
-        <circle :style="dashStyle" cx="22000" cy="17000" r="45.93" />
+      <g id="h">
+        <circle cx="22000" cy="17000" r="54.7" />
+        <circle cx="22000" cy="17000" r="37.8" />
+        <circle
+          cx="22000"
+          cy="17000"
+          r="45.9"
+          style="
+            stroke-width: 16;
+            stroke-dasharray: 8px, 24px;
+            stroke: color-mix(in hsl, #dfc3a1, black 67%);
+          "
+        />
       </g>
-      <g id="map-settlements-icons-5">
-        <circle cx="22000" cy="17000" r="54.69" />
-        <circle cx="22000" cy="17000" r="37.76" />
-        <circle :style="dashStyle" cx="22000" cy="17000" r="45.93" />
-        <text :style="fillStyle" x="21957" y="17031">★</text>
+      <g id="i">
+        <circle cx="22000" cy="17000" r="54.7" />
+        <circle cx="22000" cy="17000" r="37.8" />
+        <circle
+          cx="22000"
+          cy="17000"
+          r="45.9"
+          style="
+            stroke-width: 16;
+            stroke-dasharray: 8px, 24px;
+            stroke: color-mix(in hsl, #dfc3a1, black 67%);
+          "
+        />
+        <text x="21957" y="17031" style="fill: color-mix(in hsl, #dfc3a1, black 67%); stroke: none">
+          ★
+        </text>
       </g>
     </defs>
-    <g id="map-settlements-icons-6" :style="fillStyle">
+    <path
+      stroke="none"
+      d="M17441 3218c-15 3-18 11-6 16 11 5 14 16 16 54 3 36 1 39-16 33-8-3-10-3-23 10-7 7-17 15-21 16-10 6-6 25 6 25 5 0 6-9 1-12-4-2 18-27 25-27 8 0 4 10-8 20l-12 10 9-2c8-1 12 1 31 21 14 14 23 22 28 22 4 0 10 3 14 7 5 7 8 8 18 6l13-3c3-3-8-7-15-5-6 1-17-6-17-12 0-2-4-3-8-3h-9v-80c0-56 1-81 3-82 6-2 11 64 11 125 0 22 5 37 12 37 6 0 8-6 4-11-2-1-3-5-3-7 0-4 4-5 23-3 38 3 47 5 47 10 0 4-3 5-11 3-14-2-15 1-2 10 7 6 11 6 24 4 25-3 40-9 50-18 12-11 11-19-4-22-10-3-11-5-14-18-3-18-8-19-8-2 0 11-1 13-7 13s-6-2-4-11l7-21 4-11 18 2c20 3 28 9 31 24 3 10 0 12-6 7-3-2-6-3-7-2-2 1 1 5 5 9 6 4 9 5 12 2s6-2 12 2c10 6 10 10 3 20-3 5-8 7-17 7-7 0-13 2-13 3 0 2 3 4 7 4s7 2 8 4a9 9 0 0 0 8 5c7 0 29-25 27-31l-2-9c0-3-3-6-8-8-4-1-8-4-8-6s-4-7-8-12a567 567 0 0 1-15-16c-5-7-9-9-25-10-11-1-27 1-36 3-14 3-17 5-23 16-4 7-8 15-8 19 0 6-1 6-11 5l-31-3c-10-2-19-4-21-6-2-3-4-24-4-51-1-45-1-47 6-55 6-6 7-8 4-9-7-2-38-9-41-8l-15 2zm111 139c45 7 58 11 45 16-4 2-83-6-99-9-5-1-7-4-7-8 0-8 3-10 9-8l52 9zm-111-1c7 7 4 12-4 7-6-3-9-14-4-14 1 0 5 3 8 7zm145 31c0 2-1 4-4 4a5 5 0 0 1-5-5c0-6 7-5 9 1zm110-15c1 1 3 3 5 3s3-2 3-3c0-2-2-3-5-3-2 0-4 1-3 3zm20 2c-5 4-2 7 7 7 11 0 13-4 5-7-7-3-9-3-12 0zm-188 43c-8 4-3 9 6 5 8-4 11-9 4-9l-10 4zm32-2c-6 5-1 7 30 7 25 1 32 0 31-3-2-5-57-8-61-4z"
+      style="fill: color-mix(in hsl, #dfc3a1, black 67%); stroke: none"
+    />
+    <g style="fill: color-mix(in hsl, #dfc3a1, black 67%); stroke: none">
       <path
-        d="M17441.22 3218.39c-15.3 2.23-18.49 10.2-6.38 15.62 11.16 5.1 14.35 15.94 16.58 53.87 2.23 36.34.64 39.21-16.58 32.83-8.29-3.19-10.2-2.55-22.63 9.88-7.33 7.01-16.9 14.98-20.72 16.89-10.84 5.42-6.38 24.23 5.42 24.23 5.42 0 6.06-8.29.96-11.48-4.15-2.23 18.49-26.78 24.86-26.78 7.97 0 4.15 9.24-7.65 19.13l-12.11 10.2 9.24-1.59c7.97-1.28 11.8 1.28 30.6 20.4 14.03 14.66 23.59 22 28.37 22 4.14 0 10.2 3.5 13.39 7.65 5.1 6.69 7.97 7.65 18.17 6.06 6.38-.95 12.43-2.55 13.39-3.19 3.19-2.87-8.29-7.02-14.66-5.42-6.7 1.59-17.22-5.42-17.22-11.8 0-1.59-3.82-2.87-8.61-2.87h-8.93v-80.33c0-56.1.96-80.33 3.51-81.29 5.42-1.91 11.16 63.44 11.16 124.96 0 21.35 4.78 36.66 11.15 36.66 6.06 0 8.93-6.38 4.78-10.52-1.91-1.91-3.51-5.42-3.51-7.97 0-3.83 4.15-4.46 23.27-2.55 37.93 3.51 46.86 5.42 46.86 10.52 0 3.83-2.55 4.46-11.16 2.87-13.39-2.55-14.34.96-2.23 9.88 7.33 5.42 11.15 6.06 24.54 4.14 25.18-3.82 39.53-9.24 50.05-18.81 12.11-10.84 10.52-18.17-4.46-22-9.24-2.23-10.83-4.14-13.39-17.53-3.51-18.17-8.29-19.44-8.29-2.23 0 10.84-.96 12.75-6.7 12.75s-6.37-1.28-4.46-10.52c1.28-5.42 4.46-14.98 6.69-21.04l4.46-10.84 18.49 2.23c19.13 2.23 27.09 8.29 30.92 23.91 2.55 9.56 0 12.11-6.38 6.69-2.87-2.23-6.06-3.19-7.33-1.91-1.28 1.28 1.28 5.1 5.42 8.61 5.74 4.78 8.61 5.42 11.8 2.55 3.51-2.87 6.38-2.23 12.43 1.59 9.24 6.06 9.88 10.52 2.87 20.4-3.5 5.1-7.97 7.01-17.53 7.01-6.69 0-12.43 1.28-12.43 3.19 0 1.59 2.87 3.19 6.38 3.19s7.33 2.23 8.29 4.78a9.14 9.14 0 0 0 7.65 4.78c7.33 0 29.33-25.5 27.1-31.24-.96-2.23-1.59-6.38-1.59-8.93s-3.51-6.06-7.97-7.65c-4.46-1.59-7.97-4.46-7.97-6.06 0-1.91-3.83-7.33-8.29-12.11a566.9 566.9 0 0 1-14.66-16.57c-4.78-6.38-9.56-8.29-25.5-9.24-10.52-.96-26.78.32-35.7 2.23-14.02 3.19-17.21 5.42-23.27 16.26-4.14 6.69-7.33 15.3-7.33 19.13 0 5.74-1.59 6.37-11.8 4.78-6.69-.64-20.4-2.23-30.28-3.19-9.88-1.28-19.44-3.83-21.36-6.06-1.91-2.23-3.82-23.91-4.14-50.69-.64-44.94-.64-46.86 6.69-54.51 5.74-6.38 6.69-8.61 3.19-9.56-7.01-2.23-37.93-8.29-40.48-7.97-1.28.32-7.97 1.59-14.98 2.55zm111.25 138.67c44.63 6.7 57.38 11.16 44.94 15.94-4.78 1.59-83.83-5.74-99.46-9.24-4.46-.96-7.33-4.15-7.33-7.65 0-7.65 3.51-10.52 9.24-7.97 2.87 1.28 26.46 5.1 52.6 8.93zm-111.25-1.28c6.69 7.33 3.82 12.43-4.15 7.65-6.06-3.83-9.24-14.03-4.46-14.03 1.59 0 5.42 2.87 8.61 6.38zm144.4 31.24c.64 2.23-.95 3.83-3.82 3.83a5.03 5.03 0 0 1-5.1-5.1c0-5.42 7.02-4.46 8.93 1.28z"
+        d="M1564 29373c-6 10-3 6-23 3v-10c27 0 17 0 23 7zm-83-24h-10v-10h10zm30-16c10 20 14 40-16 40v-24c0-10-10-16 16-16zm14-4c43-30 26 17 3 24-4-10-4 3-4-24zm-64-23c10 7 17 10 4 20-7-3-7 0-7-10 0-7 0-7 3-10zm47-27c0 17 3 30-3 40-10-3-7 7-7-16 0-10-3-14-3-24h13zm-33-53c20 0 10-3 23-10 7 13 13 33-3 43-20-13 6 0-10-13-10-10-10 3-10-20zm-127 40c-10-10-7-7-7-27-3-13-3-30 20-36 14 0 14 0 14 13-10 0-10 0-17-3 0 30-7 30-10 53zm-47-57c7-3 10-3 20-3-3 10-6 13-16 17-4-7-4-4-4-14zm187 4c-17 0-10-7-13-20 0-17 0-14 19-14-3 17-6 4-6 34zm36 56c-26-13-10-13-10-50 0-46 17-26 20-53l-49 3-47 10c3 17 3 7 17 14v36c3 10 0 24 0 37s0 27-4 37c-3 16-3 16-20 16v27h-10c-3-13-3-13-16-20-14-3-20-3-34-3v10c17 0 17 0 30 3 0 17-3 3-6 20-14 0-7 0-17-7l-23-40c10-13 13-10 16-30 4-26-10-40 4-50 0-3 3-6 6-6 17-14 14-34-23-30-37 6-60-10-70 26 17 27 30 0 30 60 0 17-3 20 3 34 4 10 0-4 4 6l10 34c-10 6-24 10-24 26 0 10 10 27 17 30 10-16-3-16-3-36 0-7 23-17 43-17 0 13 7 20 7 37-30 20-30 3-34 23 20 0 30-10 44-17 6 7 10 10 13 17 17-7 13 0 23-17-3-10-23-23 0-36 17 23 0 16 14 26l13 7c0 3 0 3 7 10l16-7-10-20c-26 4-20 7-13-26 20 0 43 20 33 40 14 0 14-4 30-4 20 0 4 4 20-3h10c40 7 17-3 37-3 16 0-4 13 20-7 10-7 10-3 26-3v-7c-10-3-16-3-23-7-10-10 0-6-13-16-14-7-14 0-20-10-4-7-4-14-7-20-10 0-30 3-33 0-20-7-3-44-3-44z"
       />
+      <path d="M1358 29376c-7 0-3 7 0 7s7-4 0-7z" />
+    </g>
+    <g style="fill: color-mix(in hsl, #dfc3a1, black 67%); stroke: none">
+      <path d="M6910 28221c0 7 0 0 3 0 10 0 0 7 3 0 0-7-6-3-6 0z" />
       <path
-        d="M17696.24 3371.72c.96 1.59 3.19 3.19 5.1 3.19 1.59 0 2.87-1.59 2.87-3.19 0-1.91-2.23-3.19-5.1-3.19-2.55 0-3.83 1.28-2.87 3.19z"
-      />
-      <path
-        d="M17716 3373.95c-4.78 4.46-1.91 7.33 7.33 7.33 10.2 0 12.75-4.46 4.46-7.65-6.37-2.55-9.24-2.55-11.8.32z"
-      />
-      <path
-        d="M17527.93 3416.67c-8.29 4.78-3.19 9.56 5.74 5.42 8.29-3.83 10.83-8.93 4.14-8.93-2.23 0-6.69 1.59-9.88 3.5z"
-      />
-      <path
-        d="M17559.81 3415.07c-5.42 5.42-.32 6.69 29.96 7.33 24.87.32 31.88-.32 30.92-3.51-1.59-4.46-56.74-7.97-60.89-3.82z"
+        d="M6910 28221c0-3 6-7 6 0-3 7 7 0-3 0-3 0-3 7-3 0zm-74-87c0-10 7-10 14-6 23 6 10 46-4 46s-10-10-10-40zm97-99c0-10 3-10 13-10 0 50 7 60-10 70-3-10-3 3-3-10zm-30-20c0 16 3 13 17 20 0 56 13 43-24 66 0 23-3 33-3 53-17 4-23 14-27-23 0-27 4-13-13-13-13 0 0-4-17-10-20 20 0 43-33 53-7-13-7-106 3-126 14-27 4-14-30-17-13 0-36-10-36 20 30 3 23 53 23 93 0 17-7 20-47 20 0 10 0 10 4 17 10-4 6 0 10-10 16 0 13 3 26 3 0 17 4 13 0 27-3 20-6 6-10 23 7 10 7 13 17 17 0-17 3-20 7-37 3-13 3-23 3-40 7-30 0-40 3-63 0-17-3-10 7-17 7 4 7 0 7 10v123c0 14-7 14 0 17 6 3 13-3 23-3 23 0 17 16 57 6 0-16-4-16-4-30h-6c0 20 0 17-4 20-13 14-23-10-10-23 7-7 7 0 17-13 7-7 10-14 20-10 10 6-3 0-7 16 7 4 14 4 20 7-3 7-3 27-6 37 20 6 13 3 40 3 0-13 3-17 3-33v-37c0-13 0-23 3-33 0-20 0-20 20-20 14 56-3 70-3 120 13 0 13-4 13-17 14 0 14 0 24-3 6 3 10 6 13 10l7 3h3c13 3-10-3 7 0 13 3 30 0 40-7-7-10 0 0-14-6l-3-4-7-3c4-23 7-20 24-20 20 0-4 10 23 10-3-7-10-13-20-17l-27-3c-3-3-53 7-60 0-6-17-3-50-3-70-20-10-17 7-17-46 0-27 14-24 17-40-13-7-3 0-13 0-14-4-40-7-57 0zm187 183c0 3 6 6 6 0-3-7 7 0-3 0-3 0-3-7-3 0z"
       />
     </g>
-    <g id="map-settlements-icons-7" :style="fillStyle">
-      <path
-        d="M1564.48 29372.61c-6.67 10-3.33 6.67-23.33 3.33v-10c26.66 0 16.66 0 23.33 6.67zm-83.3-23.32h-10v-10h10zm29.99-16.66c10 19.99 13.33 39.98-16.66 39.98v-23.32c0-10-10-16.66 16.66-16.66zm13.33-3.33c43.31-29.99 26.65 16.66 3.33 23.33-3.33-10-3.33 3.33-3.33-23.33zm-63.31-23.32c10 6.67 16.66 10 3.33 19.99-6.67-3.33-6.67 0-6.67-10 0-6.67 0-6.67 3.33-10zm46.65-26.66c0 16.66 3.33 29.99-3.33 39.98-10-3.33-6.67 6.67-6.67-16.66 0-10-3.33-13.33-3.33-23.33h13.33zm-33.32-53.31c19.99 0 10-3.33 23.32-10 6.67 13.33 13.33 33.32-3.33 43.32-19.99-13.33 6.66 0-10-13.33-10-10-10 3.33-10-20zM1347.9 29266c-10-10-6.67-6.67-6.67-26.66-3.33-13.33-3.33-29.99 19.99-36.65 13.33 0 13.33 0 13.33 13.33-10 0-10 0-16.66-3.33 0 29.99-6.67 29.99-10 53.31zm-46.65-56.65c6.67-3.33 10-3.33 19.99-3.33-3.33 10-6.67 13.33-16.66 16.66-3.33-6.67-3.33-3.33-3.33-13.33zm186.59 3.33c-16.66 0-10-6.67-13.33-19.99 0-16.66 0-13.33 19.99-13.33-3.33 16.66-6.67 3.33-6.67 33.32zm36.65 56.65c-26.66-13.33-10-13.33-10-49.98 0-46.65 16.66-26.66 19.99-53.31l-49.98 3.33c-16.66 3.33-29.99 6.67-46.65 10 3.33 16.66 3.33 6.66 16.66 13.33v36.65c3.33 10 0 23.32 0 36.65 0 13.33 0 26.66-3.33 36.65-3.33 16.66-3.33 16.66-19.99 16.66v26.66h-10c-3.33-13.33-3.33-13.33-16.66-19.99-13.33-3.33-19.99-3.33-33.32-3.33v10c16.66 0 16.66 0 29.99 3.33 0 16.66-3.33 3.33-6.66 19.99-13.33 0-6.67 0-16.66-6.66l-23.33-39.99c10-13.33 13.33-10 16.66-29.99 3.33-26.66-10-39.98 3.33-49.98 0-3.33 3.33-6.67 6.66-6.67 16.66-13.33 13.33-33.32-23.32-29.99-36.65 6.67-59.98-10-69.97 26.66 16.66 26.66 29.99 0 29.99 59.98 0 16.66-3.33 19.99 3.33 33.32 3.33 10 0-3.33 3.33 6.66l10 33.32c-10 6.67-23.32 10-23.32 26.66 0 10 10 26.66 16.66 29.99 10-16.66-3.33-16.66-3.33-36.65 0-6.67 23.33-16.66 43.32-16.66 0 13.33 6.67 19.99 6.67 36.65-29.99 19.99-29.99 3.33-33.32 23.33 19.99 0 29.99-10 43.32-16.66 6.66 6.67 10 10 13.33 16.66 16.66-6.67 13.33 0 23.32-16.66-3.33-10-23.32-23.33 0-36.65 16.66 23.32 0 16.66 13.33 26.66l13.33 6.67c0 3.33 0 3.33 6.67 10 6.66-3.33 6.66-3.33 16.66-6.67-6.66-10-6.66-10-10-19.99-26.65 3.33-19.99 6.66-13.33-26.66 19.99 0 43.31 19.99 33.32 39.98 13.33 0 13.33-3.33 29.99-3.33 19.99 0 3.33 3.33 19.99-3.33h10c39.98 6.67 16.66-3.33 36.65-3.33 16.66 0-3.33 13.33 19.99-6.67 10-6.66 10-3.33 26.66-3.33v-6.67c-10-3.33-16.66-3.33-23.33-6.66-10-10 0-6.67-13.33-16.66-13.33-6.67-13.33 0-19.99-10-3.33-6.67-3.33-13.33-6.67-19.99-10 0-29.99 3.33-33.32 0-19.99-6.67-3.33-43.32-3.33-43.32z"
-      />
-      <path d="M1357.89 29375.94c-6.67 0-3.33 6.67 0 6.67s6.66-3.33 0-6.67z" />
-    </g>
-    <g id="map-settlements-icons-8" :style="fillStyle">
-      <path d="M6909.77 28221.12c0 6.67 0 0 3.33 0 10 0 0 6.67 3.33 0 0-6.67-6.66-3.33-6.66 0z" />
-      <path
-        d="M6909.77 28221.12c0-3.33 6.66-6.67 6.66 0-3.33 6.67 6.67 0-3.33 0-3.33 0-3.33 6.67-3.33 0zm-73.31-86.63c0-10 6.67-10 13.33-6.67 23.32 6.67 10 46.65-3.33 46.65s-10-10-10-39.98zm96.63-99.96c0-10 3.33-10 13.33-10 0 49.98 6.67 59.98-10 69.98-3.33-10-3.33 3.33-3.33-10zm-29.99-19.99c0 16.66 3.33 13.33 16.66 19.99 0 56.65 13.33 43.32-23.33 66.64 0 23.33-3.33 33.32-3.33 53.31-16.66 3.33-23.32 13.33-26.66-23.32 0-26.66 3.33-13.33-13.33-13.33-13.33 0 0-3.33-16.66-10-19.99 19.99 0 43.32-33.32 53.31-6.67-13.33-6.67-106.63 3.33-126.62 13.33-26.66 3.33-13.33-29.99-16.66-13.33 0-36.65-10-36.65 19.99 29.99 3.33 23.32 53.31 23.32 93.3 0 16.66-6.67 19.99-46.65 19.99 0 10 0 10 3.33 16.66 10-3.33 6.66 0 10-10 16.66 0 13.33 3.33 26.65 3.33 0 16.66 3.33 13.33 0 26.66-3.33 19.99-6.66 6.66-10 23.32 6.67 10 6.67 13.33 16.66 16.66 0-16.66 3.33-19.99 6.67-36.65 3.33-13.33 3.33-23.33 3.33-39.98 6.67-29.99 0-39.99 3.33-63.31 0-16.66-3.33-10 6.67-16.66 6.67 3.33 6.67 0 6.67 10v123.29c0 13.33-6.67 13.33 0 16.66 6.66 3.33 13.33-3.33 23.32-3.33 23.32 0 16.66 16.66 56.65 6.66 0-16.66-3.33-16.66-3.33-29.99h-6.66c0 19.99 0 16.66-3.33 19.99-13.33 13.33-23.32-10-10-23.32 6.67-6.67 6.67 0 16.66-13.33 6.67-6.66 10-13.33 19.99-10 10 6.67-3.33 0-6.67 16.66 6.67 3.33 13.33 3.33 19.99 6.67-3.33 6.67-3.33 26.66-6.66 36.65 19.99 6.67 13.33 3.33 39.98 3.33 0-13.33 3.33-16.66 3.33-33.32v-36.65c0-13.33 0-23.33 3.33-33.32 0-19.99 0-19.99 19.99-19.99 13.33 56.65-3.33 69.97-3.33 119.96 13.33 0 13.33-3.33 13.33-16.66 13.33 0 13.33 0 23.33-3.33 6.66 3.33 10 6.66 13.33 10l6.67 3.33h3.33c13.33 3.33-10-3.33 6.67 0 13.33 3.33 29.99 0 39.98-6.67-6.67-10 0 0-13.33-6.66l-3.33-3.33-6.67-3.33c3.33-23.33 6.67-19.99 23.33-19.99 19.99 0-3.33 10 23.32 10-3.33-6.67-10-13.33-19.99-16.66l-26.66-3.33c-3.33-3.33-53.31 6.66-59.98 0-6.66-16.66-3.33-49.98-3.33-69.98-19.99-10-16.66 6.67-16.66-46.65 0-26.65 13.33-23.32 16.66-39.98-13.33-6.67-3.33 0-13.33 0-13.33-3.33-39.98-6.67-56.65 0z"
-      />
-      <path
-        d="M7089.7 28197.8c0 3.33 6.66 6.66 6.66 0-3.33-6.67 6.67 0-3.33 0-3.33 0-3.33-6.67-3.33 0z"
-      />
-    </g>
-    <use href="#map-settlements-icons-1" transform="translate(-6187.62 -4059.67)" />
-    <use href="#map-settlements-icons-2" transform="translate(-4304.37 -5238.49)" />
-    <use href="#map-settlements-icons-3" transform="translate(-2785.7 -2335.71)" />
-    <use href="#map-settlements-icons-2" transform="translate(-6238.34 -4674.93)" />
-    <use href="#map-settlements-icons-1" transform="translate(-10309.51 -6821.6)" />
-    <use href="#map-settlements-icons-2" transform="translate(-19108.31 15067.55)" />
-    <use href="#map-settlements-icons-1" transform="translate(-16043.19 -11029.7)" />
-    <use href="#map-settlements-icons-1" transform="translate(-18559.27 -7244.54)" />
-    <use href="#map-settlements-icons-3" transform="translate(-12939.45 -8234.29)" />
-    <use href="#map-settlements-icons-1" transform="translate(-7343.07 -11139.64)" />
-    <use href="#map-settlements-icons-1" transform="translate(-6196.36 -13368.79)" />
-    <use href="#map-settlements-icons-1" transform="translate(-19757.13 -5877.47)" />
-    <use href="#map-settlements-icons-2" transform="translate(-20652.96 -4040.66)" />
-    <use href="#map-settlements-icons-2" transform="translate(-16215.46 -4228.16)" />
-    <use href="#map-settlements-icons-1" transform="translate(-16246.71 -4870.53)" />
-    <use href="#map-settlements-icons-1" transform="translate(-14229.34 -3776.77)" />
-    <use href="#map-settlements-icons-2" transform="translate(-12538.37 -4370.53)" />
-    <use href="#map-settlements-icons-1" transform="translate(-9392.54 -3648.3)" />
-    <use href="#map-settlements-icons-1" transform="translate(-9430.73 -1922.61)" />
-    <use href="#map-settlements-icons-2" transform="translate(-11368.23 -1485.11)" />
-    <use href="#map-settlements-icons-3" transform="translate(-5902.95 -1957.33)" />
-    <use href="#map-settlements-icons-4" transform="translate(-8538.37 -1103.16)" />
-    <use href="#map-settlements-icons-2" transform="translate(-2215.45 -3439.97)" />
-    <use href="#map-settlements-icons-1" transform="translate(-736.28 -2929.55)" />
-    <use href="#map-settlements-icons-5" transform="translate(-2406.42 -797.61)" />
-    <use href="#map-settlements-icons-5" transform="translate(-3621.7 -603.16)" />
-    <use href="#map-settlements-icons-5" transform="translate(-5889.06 188.51)" />
-    <use href="#map-settlements-icons-2" transform="translate(-722.4 209.34)" />
-    <use href="#map-settlements-icons-2" transform="translate(-3923.78 910.73)" />
-    <use href="#map-settlements-icons-2" transform="translate(-3135.59 1410.73)" />
-    <use href="#map-settlements-icons-2" transform="translate(-3670.31 2757.95)" />
-    <use href="#map-settlements-icons-2" transform="translate(-3937.67 3494.06)" />
-    <use href="#map-settlements-icons-2" transform="translate(-3052.26 3619.06)" />
-    <use href="#map-settlements-icons-2" transform="translate(-5357.81 3504.48)" />
-    <use href="#map-settlements-icons-1" transform="translate(-5961.98 1858.64)" />
-    <use href="#map-settlements-icons-1" transform="translate(-10489.76 823.92)" />
-    <use href="#map-settlements-icons-2" transform="translate(-12864.76 2348.23)" />
-    <use href="#map-settlements-icons-2" transform="translate(-9975.87 2424.62)" />
-    <use href="#map-settlements-icons-1" transform="translate(-6809.2 3501.01)" />
-    <use href="#map-settlements-icons-2" transform="translate(-11677.26 5101.7)" />
-    <use href="#map-settlements-icons-1" transform="translate(-8500.17 4560.03)" />
-    <use href="#map-settlements-icons-1" transform="translate(-6531.42 5313.51)" />
-    <use href="#map-settlements-icons-1" transform="translate(-4736.28 6695.46)" />
-    <use href="#map-settlements-icons-2" transform="translate(-1562.67 5855.18)" />
-    <use href="#map-settlements-icons-2" transform="translate(-1545.31 4528.8)" />
-    <use href="#map-settlements-icons-2" transform="translate(-9955.04 7073.93)" />
-    <use href="#map-settlements-icons-1" transform="translate(-12458.51 7945.46)" />
-    <use href="#map-settlements-icons-1" transform="translate(-13069.62 5202.4)" />
-    <use href="#map-settlements-icons-1" transform="translate(-13968.93 3796.15)" />
-    <use href="#map-settlements-icons-3" transform="translate(-9083.51 10945.46)" />
-    <use href="#map-settlements-icons-2" transform="translate(-8545.31 9584.35)" />
-    <use href="#map-settlements-icons-1" transform="translate(-7093.92 9421.15)" />
-    <use href="#map-settlements-icons-2" transform="translate(-4465.45 6181.57)" />
-    <use href="#map-settlements-icons-4" transform="translate(17108.36 1421.13)" />
-    <use href="#map-settlements-icons-2" transform="translate(7361.83 13299.6)" />
-    <use href="#map-settlements-icons-3" transform="translate(10514.6 13514.88)" />
-    <use href="#map-settlements-icons-2" transform="translate(13080.59 12389.88)" />
-    <use href="#map-settlements-icons-1" transform="translate(20025.03 9691.96)" />
-    <use href="#map-settlements-icons-5" transform="translate(4665.64 7227.97)" />
-    <use href="#map-settlements-icons-1" transform="translate(7378.18 9099.1)" />
-    <use href="#map-settlements-icons-1" transform="translate(2182.57 6439.51)" />
-    <use href="#map-settlements-icons-1" transform="translate(10208.41 7739.88)" />
-    <use href="#map-settlements-icons-2" transform="translate(12560.68 10099.86)" />
-    <use href="#map-settlements-icons-1" transform="translate(6636.8 6351.25)" />
-    <use href="#map-settlements-icons-3" transform="translate(15683.55 6576.49)" />
-    <use href="#map-settlements-icons-3" transform="translate(58.43 6274.76)" />
-    <use href="#map-settlements-icons-1" transform="translate(946.92 -874.36)" />
-    <use href="#map-settlements-icons-2" transform="translate(1623.59 161.23)" />
-    <use href="#map-settlements-icons-2" transform="translate(3341.82 -1574.95)" />
-    <use href="#map-settlements-icons-1" transform="translate(1294.08 -3080.88)" />
-    <use href="#map-settlements-icons-1" transform="translate(5660.04 108.28)" />
-    <use href="#map-settlements-icons-2" transform="translate(6186.9 2031.49)" />
-    <use href="#map-settlements-icons-2" transform="translate(6474.74 1437.78)" />
-    <use href="#map-settlements-icons-2" transform="translate(9614.12 20.02)" />
-    <use href="#map-settlements-icons-2" transform="translate(6730.94 -1309.78)" />
-    <use href="#map-settlements-icons-2" transform="translate(10455.54 -1786.39)" />
-    <use href="#map-settlements-icons-1" transform="translate(8201.95 2897.31)" />
-    <use href="#map-settlements-icons-2" transform="translate(12481.77 5084.54)" />
-    <use href="#map-settlements-icons-1" transform="translate(13962.43 2561.92)" />
-    <use href="#map-settlements-icons-1" transform="translate(16510.22 4733.14)" />
-    <use href="#map-settlements-icons-2" transform="translate(17845.9 3968.21)" />
-    <use href="#map-settlements-icons-3" transform="translate(19875.89 1867.6)" />
-    <use href="#map-settlements-icons-1" transform="translate(19022.71 890.86)" />
-    <use href="#map-settlements-icons-2" transform="translate(17934.16 184.77)" />
-    <use href="#map-settlements-icons-2" transform="translate(17051.55 -944.97)" />
-    <use href="#map-settlements-icons-2" transform="translate(14809.73 155.35)" />
-    <use href="#map-settlements-icons-1" transform="translate(13144.55 -1880.53)" />
-    <use href="#map-settlements-icons-2" transform="translate(11944.2 -580.15)" />
-    <use href="#map-settlements-icons-2" transform="translate(3691.38 -4786.58)" />
-    <use href="#map-settlements-icons-2" transform="translate(1853.07 -5322.7)" />
-    <use href="#map-settlements-icons-1" transform="translate(2170.81 -7546.87)" />
-    <use href="#map-settlements-icons-2" transform="translate(3092.57 -6783.88)" />
-    <use href="#map-settlements-icons-2" transform="translate(4972.09 -4226.43)" />
-    <use href="#map-settlements-icons-2" transform="translate(8790.35 -4422.44)" />
-    <use href="#map-settlements-icons-2" transform="translate(6142.72 -9507.6)" />
-    <use href="#map-settlements-icons-1" transform="translate(4677.41 -8741.33)" />
-    <use href="#map-settlements-icons-1" transform="translate(6460.27 -6746.64)" />
-    <use href="#map-settlements-icons-1" transform="translate(10955.68 -7099.68)" />
-    <use href="#map-settlements-icons-2" transform="translate(11244 -5864.03)" />
-    <use href="#map-settlements-icons-2" transform="translate(13073.94 -4857.86)" />
-    <use href="#map-settlements-icons-1" transform="translate(11014.52 -4663.68)" />
-    <use href="#map-settlements-icons-2" transform="translate(13297.53 -3975.25)" />
-    <use href="#map-settlements-icons-1" transform="translate(5346.55 -11010.06)" />
-    <use href="#map-settlements-icons-3" transform="translate(7119.3 -10812.51)" />
-    <use href="#map-settlements-icons-2" transform="translate(5721.58 -12292.01)" />
-    <use href="#map-settlements-icons-2" transform="translate(8512.93 -12180.79)" />
-    <use href="#map-settlements-icons-3" transform="translate(10875.62 -9524)" />
-    <use href="#map-settlements-icons-1" transform="translate(12933.97 -11726.76)" />
-    <use href="#map-settlements-icons-3" transform="translate(17159.68 -12258.73)" />
-    <use href="#map-settlements-icons-1" transform="translate(19159.87 -9759.75)" />
-    <use href="#map-settlements-icons-1" transform="translate(20221.51 -10761.58)" />
-    <use href="#map-settlements-icons-3" transform="translate(17239.74 -14564.51)" />
-    <use href="#map-settlements-icons-1" transform="translate(-3737.27 -7781.17)" />
-    <use href="#map-settlements-icons-1" transform="translate(15052.28 10678.89)" />
-    <use href="#map-settlements-icons-4" transform="translate(11944.38 6447.96)" />
-    <use href="#map-settlements-icons-1" transform="translate(-18351.14 -821.25)" />
-    <use href="#map-settlements-icons-2" transform="translate(-19481.33 1868.89)" />
-    <use href="#map-settlements-icons-4" transform="translate(-2242.2 813.67)" />
-    <use href="#map-settlements-icons-4" transform="translate(7624.13 4630.94)" />
-    <use href="#map-settlements-icons-2" transform="translate(-9544.11 -8090.01)" />
-    <use href="#map-settlements-icons-2" transform="translate(3247.56 73.2)" />
-    <use href="#map-settlements-icons-2" transform="translate(-10191.69 5864.85)" />
-    <use href="#map-settlements-icons-4" transform="translate(-7613.57 10708.59)" />
-    <use href="#map-settlements-icons-4" transform="translate(8564.36 6074.85)" />
-    <use href="#map-settlements-icons-4" transform="translate(13724.09 7063.57)" />
-    <use href="#map-settlements-icons-2" transform="translate(3434.14 1592.2)" />
-    <use href="#map-settlements-icons-4" transform="translate(16824.77 -2340.97)" />
-    <use href="#map-settlements-icons-2" transform="translate(14840.39 -3615.28)" />
-    <use href="#map-settlements-icons-1" transform="translate(-2729.12 -5433.84)" />
-    <use href="#map-settlements-icons-4" transform="translate(-8453.54 2542.72)" />
-    <use href="#map-settlements-icons-2" transform="translate(-6215.62 7231.53)" />
-    <use href="#map-settlements-icons-2" transform="translate(-11728.64 -5942.09)" />
-    <use href="#map-settlements-icons-4" transform="translate(11865.11 3731.84)" />
+    <use href="#e" transform="translate(-6188 -4060)" />
+    <use href="#f" transform="translate(-4304 -5238)" />
+    <use href="#g" transform="translate(-2786 -2336)" />
+    <use href="#f" transform="translate(-6238 -4675)" />
+    <use href="#e" transform="translate(-10310 -6822)" />
+    <use href="#f" transform="translate(-19108 15068)" />
+    <use href="#e" transform="translate(-16043 -11030)" />
+    <use href="#e" transform="translate(-18559 -7245)" />
+    <use href="#g" transform="translate(-12939 -8234)" />
+    <use href="#e" transform="translate(-7343 -11140)" />
+    <use href="#e" transform="translate(-6196 -13369)" />
+    <use href="#e" transform="translate(-19757 -5877)" />
+    <use href="#f" transform="translate(-20653 -4041)" />
+    <use href="#f" transform="translate(-16215 -4228)" />
+    <use href="#e" transform="translate(-16247 -4871)" />
+    <use href="#e" transform="translate(-14229 -3777)" />
+    <use href="#f" transform="translate(-12538 -4371)" />
+    <use href="#e" transform="translate(-9393 -3648)" />
+    <use href="#e" transform="translate(-9431 -1923)" />
+    <use href="#f" transform="translate(-11368 -1485)" />
+    <use href="#g" transform="translate(-5903 -1957)" />
+    <use href="#h" transform="translate(-8538 -1103)" />
+    <use href="#f" transform="translate(-2215 -3440)" />
+    <use href="#e" transform="translate(-736 -2930)" />
+    <use href="#i" transform="translate(-2406 -798)" />
+    <use href="#i" transform="translate(-3622 -603)" />
+    <use href="#i" transform="translate(-5889 189)" />
+    <use href="#f" transform="translate(-722 209)" />
+    <use href="#f" transform="translate(-3924 911)" />
+    <use href="#f" transform="translate(-3136 1411)" />
+    <use href="#f" transform="translate(-3670 2758)" />
+    <use href="#f" transform="translate(-3938 3494)" />
+    <use href="#f" transform="translate(-3052 3619)" />
+    <use href="#f" transform="translate(-5358 3504)" />
+    <use href="#e" transform="translate(-5962 1859)" />
+    <use href="#e" transform="translate(-10490 824)" />
+    <use href="#f" transform="translate(-12865 2348)" />
+    <use href="#f" transform="translate(-9976 2425)" />
+    <use href="#e" transform="translate(-6809 3501)" />
+    <use href="#f" transform="translate(-11677 5102)" />
+    <use href="#e" transform="translate(-8500 4560)" />
+    <use href="#e" transform="translate(-6531 5314)" />
+    <use href="#e" transform="translate(-4736 6695)" />
+    <use href="#f" transform="translate(-1563 5855)" />
+    <use href="#f" transform="translate(-1545 4529)" />
+    <use href="#f" transform="translate(-9955 7074)" />
+    <use href="#e" transform="translate(-12459 7945)" />
+    <use href="#e" transform="translate(-13070 5202)" />
+    <use href="#e" transform="translate(-13969 3796)" />
+    <use href="#g" transform="translate(-9084 10945)" />
+    <use href="#f" transform="translate(-8545 9584)" />
+    <use href="#e" transform="translate(-7094 9421)" />
+    <use href="#f" transform="translate(-4465 6182)" />
+    <use href="#h" transform="translate(17108 1421)" />
+    <use href="#f" transform="translate(7362 13300)" />
+    <use href="#g" transform="translate(10515 13515)" />
+    <use href="#f" transform="translate(13081 12390)" />
+    <use href="#e" transform="translate(20025 9692)" />
+    <use href="#i" transform="translate(4666 7228)" />
+    <use href="#e" transform="translate(7378 9099)" />
+    <use href="#e" transform="translate(2183 6440)" />
+    <use href="#e" transform="translate(10208 7740)" />
+    <use href="#f" transform="translate(12561 10100)" />
+    <use href="#e" transform="translate(6637 6351)" />
+    <use href="#g" transform="translate(15684 6576)" />
+    <use href="#g" transform="translate(58 6275)" />
+    <use href="#e" transform="translate(947 -874)" />
+    <use href="#f" transform="translate(1624 161)" />
+    <use href="#f" transform="translate(3342 -1575)" />
+    <use href="#e" transform="translate(1294 -3081)" />
+    <use href="#e" transform="translate(5660 108)" />
+    <use href="#f" transform="translate(6187 2031)" />
+    <use href="#f" transform="translate(6475 1438)" />
+    <use href="#f" transform="translate(9614 20)" />
+    <use href="#f" transform="translate(6731 -1310)" />
+    <use href="#f" transform="translate(10456 -1786)" />
+    <use href="#e" transform="translate(8202 2897)" />
+    <use href="#f" transform="translate(12482 5085)" />
+    <use href="#e" transform="translate(13962 2562)" />
+    <use href="#e" transform="translate(16510 4733)" />
+    <use href="#f" transform="translate(17846 3968)" />
+    <use href="#g" transform="translate(19876 1868)" />
+    <use href="#e" transform="translate(19023 891)" />
+    <use href="#f" transform="translate(17934 185)" />
+    <use href="#f" transform="translate(17052 -945)" />
+    <use href="#f" transform="translate(14810 155)" />
+    <use href="#e" transform="translate(13145 -1881)" />
+    <use href="#f" transform="translate(11944 -580)" />
+    <use href="#f" transform="translate(3691 -4787)" />
+    <use href="#f" transform="translate(1853 -5323)" />
+    <use href="#e" transform="translate(2171 -7547)" />
+    <use href="#f" transform="translate(3093 -6784)" />
+    <use href="#f" transform="translate(4972 -4226)" />
+    <use href="#f" transform="translate(8790 -4422)" />
+    <use href="#f" transform="translate(6143 -9508)" />
+    <use href="#e" transform="translate(4677 -8741)" />
+    <use href="#e" transform="translate(6460 -6747)" />
+    <use href="#e" transform="translate(10956 -7100)" />
+    <use href="#f" transform="translate(11244 -5864)" />
+    <use href="#f" transform="translate(13074 -4858)" />
+    <use href="#e" transform="translate(11015 -4664)" />
+    <use href="#f" transform="translate(13298 -3975)" />
+    <use href="#e" transform="translate(5347 -11010)" />
+    <use href="#g" transform="translate(7119 -10813)" />
+    <use href="#f" transform="translate(5722 -12292)" />
+    <use href="#f" transform="translate(8513 -12181)" />
+    <use href="#g" transform="translate(10876 -9524)" />
+    <use href="#e" transform="translate(12934 -11727)" />
+    <use href="#g" transform="translate(17160 -12259)" />
+    <use href="#e" transform="translate(19160 -9760)" />
+    <use href="#e" transform="translate(20222 -10762)" />
+    <use href="#g" transform="translate(17240 -14565)" />
+    <use href="#e" transform="translate(-3737 -7781)" />
+    <use href="#e" transform="translate(15052 10679)" />
+    <use href="#h" transform="translate(11944 6448)" />
+    <use href="#e" transform="translate(-18351 -821)" />
+    <use href="#f" transform="translate(-19481 1869)" />
+    <use href="#h" transform="translate(-2242 814)" />
+    <use href="#h" transform="translate(7624 4631)" />
+    <use href="#f" transform="translate(-9544 -8090)" />
+    <use href="#f" transform="translate(3248 73)" />
+    <use href="#f" transform="translate(-10192 5865)" />
+    <use href="#h" transform="translate(-7614 10709)" />
+    <use href="#h" transform="translate(8564 6075)" />
+    <use href="#h" transform="translate(13724 7064)" />
+    <use href="#f" transform="translate(3434 1592)" />
+    <use href="#h" transform="translate(16825 -2341)" />
+    <use href="#f" transform="translate(14840 -3615)" />
+    <use href="#e" transform="translate(-2729 -5434)" />
+    <use href="#h" transform="translate(-8454 2543)" />
+    <use href="#f" transform="translate(-6216 7232)" />
+    <use href="#f" transform="translate(-11729 -5942)" />
+    <use href="#h" transform="translate(11865 3732)" />
   </g>
 </template>
