@@ -1,7 +1,12 @@
 <template>
   <g
     class="map-settlements-names"
-    :style="{ fill: '#222', stroke: 'var(--map-ground)', strokeWidth: 24 }"
+    :style="{
+      fill: 'color-mix(in hsl, var(--map-beige), black 67%)',
+      stroke: 'white',
+      strokeOpacity: 0.5,
+      strokeWidth: 16
+    }"
   >
     <g id="dullstrand">
       <path

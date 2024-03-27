@@ -3,16 +3,17 @@ import { type PanzoomEventDetail } from '@panzoom/panzoom'
 import { ref } from 'vue'
 import MapSvg from '../Svg/MapSvg.vue'
 import MapGreyhawkLayers from './MapGreyhawkLayers.vue'
+import _ from 'lodash'
 
 const svgRef = ref<InstanceType<typeof MapSvg>>()
 
 const scale = ref<number>(1)
 
-const onPanzoomChange = (event: CustomEvent<PanzoomEventDetail>) => {
+const onPanzoomChange = _.debounce((event: CustomEvent<PanzoomEventDetail>) => {
   if (svgRef.value) {
     scale.value = event.detail.scale
   }
-}
+}, 200)
 </script>
 
 <template>
@@ -40,7 +41,7 @@ const onPanzoomChange = (event: CustomEvent<PanzoomEventDetail>) => {
       '--map-brown': '#a17164',
       '--map-red': '#bd7155'
     }"
-    @panzoomchange="onPanzoomChange"
+    @panzoomchange.passive="onPanzoomChange"
   >
     <map-greyhawk-layers :scale="scale" />
   </map-svg>

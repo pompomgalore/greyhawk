@@ -2,9 +2,9 @@
   <g
     class="map-kingdom-names"
     :style="{
-      fill: 'color-mix(in hsl, var(--map-beige), black 67%)',
-      stroke: 'rgba(white, 0.5)',
-      strokeWidth: 16
+      fill: '#222',
+      stroke: 'var(--map-ground)',
+      strokeWidth: 24
     }"
   >
     <g id="county-sunndi">
