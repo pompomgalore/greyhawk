@@ -18,6 +18,6 @@
 
 <script lang="ts" setup>
 import './LayoutFooter.css'
-import DarleneSignature from '../../Map/Greyhawk/Layers/DarleneSignature.vue'
+import DarleneSignature from '../../Map/Greyhawk/Layers/25_Darlene_Signature.vue'
 // 42487.261 33183.204 1103.557 319.154
 </script>
