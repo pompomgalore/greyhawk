@@ -15,7 +15,6 @@
   <map-grid
     class="map-grid"
     v-if="scale >= 0.5"
-    :opacity="scale <= 4 ? 1 : 1 - (scale - 4) / (12 - 4)"
     :size="192.25"
     :x="708"
     :y="1185"
@@ -23,11 +22,7 @@
     :height="32300"
   />
 
-  <g
-    class="map-contours"
-    v-if="scale >= 1 && scale <= 8"
-    :opacity="scale <= 4 ? 1 : 1 - (scale - 4) / (8 - 4)"
-  >
+  <g class="map-contours" v-if="scale >= 1 && scale <= 8">
     <forest-contours />
     <plains-contours />
     <mountain-contours />

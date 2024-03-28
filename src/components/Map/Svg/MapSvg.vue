@@ -1,10 +1,19 @@
 <script lang="ts" setup>
-import Panzoom, { type PanzoomObject } from '@panzoom/panzoom'
+import Panzoom, { type PanzoomEventDetail, type PanzoomObject } from '@panzoom/panzoom'
+import _ from 'lodash'
 import { ref, onMounted, onUnmounted } from 'vue'
 
 const svgRef = ref<SVGElement>()
 
 const panzoom = ref<PanzoomObject>()
+
+const scale = ref<number>(1)
+
+const onPanzoomChange = _.debounce((event: CustomEvent<PanzoomEventDetail>) => {
+  if (svgRef.value) {
+    scale.value = event.detail.scale
+  }
+}, 200)
 
 onMounted(() => {
   if (svgRef.value) {
@@ -18,21 +27,23 @@ onMounted(() => {
       cursor: 'grab',
       contain: 'outside'
     })
-    svgRef.value.addEventListener('wheel', panzoom.value.zoomWithWheel)
   }
 })
 onUnmounted(() => {
   if (panzoom.value) {
-    if (svgRef.value) {
-      svgRef.value.removeEventListener('wheel', panzoom.value.zoomWithWheel)
-    }
     panzoom.value.destroy()
   }
 })
 </script>
 
 <template>
-  <svg class="map-svg" ref="svgRef" xmlns="http://www.w3.org/2000/svg">
-    <slot />
+  <svg
+    class="map-svg"
+    ref="svgRef"
+    xmlns="http://www.w3.org/2000/svg"
+    @panzoomchange="onPanzoomChange"
+    @wheel="panzoom?.zoomWithWheel"
+  >
+    <slot :scale="scale" />
   </svg>
 </template>

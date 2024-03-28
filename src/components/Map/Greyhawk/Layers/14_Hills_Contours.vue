@@ -1,9 +1,9 @@
 <template>
   <g class="map-hills-contours" style="fill: none; stroke-width: 12">
     <defs>
-      <g id="b" style="stroke: color-mix(in hsl, #a17164, black 33%)">
+      <g id="b" style="stroke: #6b4b43">
         <path
-          style="stroke: none; fill: color-mix(in hsl, #a17164, #d4bfa8 67%)"
+          style="stroke: none; fill: #c3a591"
           d="M21900 17034c6-17 29-54 29-54l24-22 34-16 61 13 35 26 17 53c2 4-22 11-63 22-18 5-45 4-69 3s-40-10-47-12c-13-4-17-6-21-13z"
         />
         <path d="M21901 17037c9-40 51-95 92-96 40-2 75 15 90 41" />
@@ -11,9 +11,9 @@
           d="M21958 16953c-6 11-33 61-33 91m35-45c-6 11-12 22-12 53m29-35c-6 11-9 24-6 41m25-36c-6 12-7 22-7 35m31-34c-5 8-5 16-2 27m26-23c-2 6-4 11-2 21m23-19v9"
         />
       </g>
-      <g id="c" style="stroke: color-mix(in hsl, #85925e, black 33%)">
+      <g id="c" style="stroke: #59613f">
         <path
-          style="stroke: none; fill: color-mix(in hsl, #80a36f, #d4bfa8 50%)"
+          style="stroke: none; fill: #aab18c"
           d="M21922 17026c5-13 23-42 23-42l19-17 26-12 47 10 27 20 14 42c1 2-18 8-49 16-14 4-36 3-54 3-18-1-31-8-36-9-11-3-13-5-17-11z"
         />
         <path d="M21923 17029c7-32 40-74 71-75s59 12 70 32" />
