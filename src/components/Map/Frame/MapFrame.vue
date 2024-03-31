@@ -10,20 +10,31 @@ const scale = ref<number>(1)
 
 const onPanzoomChange = (event: CustomEvent<PanzoomEventDetail>) => {
   if (divRef.value) {
+    console.log(event.detail)
     scale.value = event.detail.scale
   }
 }
 
+const props = defineProps<{
+  width: number
+  height: number
+  startScale?: number
+  minScale?: number
+  maxScale?: number
+}>()
+
 onMounted(() => {
-  if (divRef.value) {
-    if (divRef.value.parentElement) {
-      divRef.value.parentElement.style.overflow = 'hidden'
-      divRef.value.parentElement.style.maxHeight = '100vh'
-    }
+  if (divRef.value && divRef.value.parentElement) {
+    const clientWidth = divRef.value.parentElement.clientWidth
+    const clientHeight = divRef.value.parentElement.clientHeight
     panzoom.value = Panzoom(divRef.value, {
-      maxScale: 7.6,
       cursor: 'grab',
-      contain: 'outside'
+      contain: 'outside',
+      startScale: props.startScale,
+      minScale: props.minScale,
+      maxScale: props.maxScale,
+      startX: (clientWidth - props.width) / 4,
+      startY: (clientHeight - props.height) / 4
     })
   }
 })
