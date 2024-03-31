@@ -9,11 +9,11 @@ const computeGridPositions = (columns: number, rows: number, size: number): Grid
   const grid: GridPosition[] = []
   for (let c = 0; c < columns; c++) {
     const offset = c % 2 === 0 ? 0 : (Math.sqrt(3) * size) / 2
-    const x = (3 / 2) * size * c + size / 2
+    const x = Math.round((3 / 2) * size * c + size / 2)
     for (let r = 0; r < rows; r++) {
-      const y = Math.sqrt(3) * size * r + offset + size / 2
+      const y = Math.round(Math.sqrt(3) * size * r + offset + size / 2)
       grid.push({
-        center: [x, y],
+        center: [x, Math.round(y)],
         key: `${c},${r}`
       })
     }
@@ -29,11 +29,11 @@ export const getGridPositions = (width: number, height: number, size: number): G
 
 export const getHexagonCorners = (size: number, [x, y]: GridPoint = [0, 0]): GridHexagonCorners => {
   return [
-    [x + size, y],
-    [x + size / 2, y + (size * Math.sqrt(3)) / 2],
-    [x - size / 2, y + (size * Math.sqrt(3)) / 2],
-    [x - size, y],
-    [x - size / 2, y - (size * Math.sqrt(3)) / 2],
-    [x + size / 2, y - (size * Math.sqrt(3)) / 2]
+    [Math.round(x + size), Math.round(y)],
+    [Math.round(x + size / 2), Math.round(y + (size * Math.sqrt(3)) / 2)],
+    [Math.round(x - size / 2), Math.round(y + (size * Math.sqrt(3)) / 2)],
+    [Math.round(x - size), Math.round(y)],
+    [Math.round(x - size / 2), Math.round(y - (size * Math.sqrt(3)) / 2)],
+    [Math.round(x + size / 2), Math.round(y - (size * Math.sqrt(3)) / 2)]
   ]
 }
