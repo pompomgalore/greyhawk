@@ -10,7 +10,6 @@ const scale = ref<number>(1)
 
 const onPanzoomChange = (event: CustomEvent<PanzoomEventDetail>) => {
   if (divRef.value) {
-    console.log(event.detail)
     scale.value = event.detail.scale
   }
 }
