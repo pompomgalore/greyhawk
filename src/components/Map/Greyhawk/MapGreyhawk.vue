@@ -1,5 +1,7 @@
 <script lang="ts" setup>
+import { ref } from 'vue'
 import MapFrame from '../Frame/MapFrame.vue'
+import MapGreyhawkPoliticalDivisions from './MapGreyhawkPoliticalDivisions.vue'
 
 const WIDTH = 4224
 const HEIGHT = 3168
@@ -14,15 +16,19 @@ const ZOOM = {
   '4': 5.1,
   '5': 7.6
 }
+
+const frameRef = ref<InstanceType<typeof MapFrame>>()
+defineExpose({ frameRef })
 </script>
 
 <template>
   <map-frame
     class="map-greyhawk-frame"
+    ref="frameRef"
     v-slot="{ scale }"
     :width="WIDTH"
     :height="HEIGHT"
-    :startScale="ZOOM['1']"
+    :startScale="ZOOM['0']"
     :minScale="ZOOM['-3']"
     :maxScale="ZOOM['5']"
   >
@@ -64,13 +70,10 @@ const ZOOM = {
       src="@/assets/greyhawk/v3/greyhawk-v3-3-terrain-names.svg"
     />
 
-    <Transition>
-      <img
-        class="map-greyhawk-content"
-        v-if="scale >= ZOOM['-2'] && scale <= ZOOM['4']"
-        src="@/assets/greyhawk/v3/greyhawk-v3-7-kingdom-names.svg"
-      />
-    </Transition>
+    <map-greyhawk-political-divisions
+      class="map-greyhawk-content"
+      src="@/assets/greyhawk/v3/greyhawk-v3-7-kingdom-names.svg"
+    />
 
     <Transition>
       <img

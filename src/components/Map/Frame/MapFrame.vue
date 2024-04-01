@@ -22,7 +22,8 @@ const {
   width,
   height,
   startScale = 1,
-  ...panzoomOptions
+  minScale,
+  maxScale
 } = defineProps<
   {
     width: number
@@ -30,17 +31,32 @@ const {
   } & Pick<PanzoomOptions, 'startScale' | 'minScale' | 'maxScale'>
 >()
 
+function focusTo(x: number, y: number) {
+  if (panzoom.value && divRef.value && divRef.value.parentElement) {
+    const { clientWidth, clientHeight } = divRef.value.parentElement
+    panzoom.value.pan((clientWidth / 2 - x) / scale.value, (clientHeight / 2 - y) / scale.value, {
+      animate: true,
+      relative: true
+    })
+  }
+}
+
+defineExpose({ focusTo })
+
 onMounted(() => {
   if (divRef.value && divRef.value.parentElement) {
-    const clientWidth = divRef.value.parentElement.clientWidth
-    const clientHeight = divRef.value.parentElement.clientHeight
-    const startX = (clientWidth - width) / (startScale * startScale)
-    const startY = (clientHeight - height) / (startScale * startScale)
+    const { clientWidth, clientHeight } = divRef.value.parentElement
+    const startX = (clientWidth - width) / 2 / startScale
+    const startY = (clientHeight - height) / 2 / startScale
     panzoom.value = Panzoom(divRef.value, {
-      ...panzoomOptions,
       contain: 'outside',
+      startScale,
+      minScale,
+      maxScale,
       startX,
-      startY
+      startY,
+      animate: true,
+      duration: 800
     })
   }
 })
