@@ -1,3 +1,9 @@
+<script lang="ts" setup>
+import './LayoutFooter.css'
+import DarleneSignature from '../../Map/Greyhawk/Layers/25_Darlene_Signature.vue'
+// 42487.261 33183.204 1103.557 319.154
+</script>
+
 <template>
   <footer class="layout-footer">
     <input class="layout-footer-search" type="search" placeholder="Greyhawk" />
@@ -15,9 +21,3 @@
     </div>
   </footer>
 </template>
-
-<script lang="ts" setup>
-import './LayoutFooter.css'
-import DarleneSignature from '../../Map/Greyhawk/Layers/25_Darlene_Signature.vue'
-// 42487.261 33183.204 1103.557 319.154
-</script>

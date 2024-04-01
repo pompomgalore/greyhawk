@@ -34,12 +34,16 @@ function expectLogoutButton(canvasElement: HTMLElement) {
 
 function clickLoginButton(canvasElement: HTMLElement) {
   const loginButton = queryLoginButton(canvasElement)
-  return userEvent.click(loginButton)
+  if (loginButton) {
+    return userEvent.click(loginButton)
+  }
 }
 
 function clickLogoutButton(canvasElement: HTMLElement) {
   const logoutButton = queryLogoutButton(canvasElement)
-  return userEvent.click(logoutButton)
+  if (logoutButton) {
+    return userEvent.click(logoutButton)
+  }
 }
 
 export const Footer: Story = {
