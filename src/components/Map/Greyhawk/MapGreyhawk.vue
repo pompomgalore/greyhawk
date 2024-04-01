@@ -83,19 +83,3 @@ const ZOOM = {
     <img class="map-greyhawk-content" src="@/assets/greyhawk/v3/greyhawk-v3-9-signature.svg" />
   </map-frame>
 </template>
-
-<style scoped>
-.map-greyhawk-frame {
-  display: block;
-  top: 0;
-  left: 0;
-  width: 4224px;
-  height: 3168px;
-}
-.map-greyhawk-content {
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-</style>

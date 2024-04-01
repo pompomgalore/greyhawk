@@ -1,5 +1,9 @@
 <script lang="ts" setup>
-import Panzoom, { type PanzoomEventDetail, type PanzoomObject } from '@panzoom/panzoom'
+import Panzoom, {
+  type PanzoomEventDetail,
+  type PanzoomObject,
+  type PanzoomOptions
+} from '@panzoom/panzoom'
 import { ref, onMounted, onUnmounted } from 'vue'
 
 const divRef = ref<HTMLDivElement>()
@@ -10,30 +14,33 @@ const scale = ref<number>(1)
 
 const onPanzoomChange = (event: CustomEvent<PanzoomEventDetail>) => {
   if (divRef.value) {
-    scale.value = event.detail.scale
+    scale.value = Math.round(event.detail.scale * 100) / 100
   }
 }
 
-const props = defineProps<{
-  width: number
-  height: number
-  startScale?: number
-  minScale?: number
-  maxScale?: number
-}>()
+const {
+  width,
+  height,
+  startScale = 1,
+  ...panzoomOptions
+} = defineProps<
+  {
+    width: number
+    height: number
+  } & Pick<PanzoomOptions, 'startScale' | 'minScale' | 'maxScale'>
+>()
 
 onMounted(() => {
   if (divRef.value && divRef.value.parentElement) {
     const clientWidth = divRef.value.parentElement.clientWidth
     const clientHeight = divRef.value.parentElement.clientHeight
+    const startX = (clientWidth - width) / (startScale * startScale)
+    const startY = (clientHeight - height) / (startScale * startScale)
     panzoom.value = Panzoom(divRef.value, {
-      cursor: 'grab',
+      ...panzoomOptions,
       contain: 'outside',
-      startScale: props.startScale,
-      minScale: props.minScale,
-      maxScale: props.maxScale,
-      startX: (clientWidth - props.width) / 4,
-      startY: (clientHeight - props.height) / 4
+      startX,
+      startY
     })
   }
 })
@@ -45,7 +52,20 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <div ref="divRef" @panzoomchange="onPanzoomChange" @wheel="panzoom?.zoomWithWheel">
+  <div
+    class="map-frame"
+    ref="divRef"
+    :style="{ width: `${width}px`, height: `${height}px` }"
+    @panzoomchange="onPanzoomChange"
+    @wheel="panzoom?.zoomWithWheel"
+  >
     <slot :scale="scale" />
   </div>
 </template>
+
+<style scoped>
+:slotted(*) {
+  display: block;
+  position: absolute;
+}
+</style>

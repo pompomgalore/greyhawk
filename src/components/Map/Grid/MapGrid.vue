@@ -16,7 +16,6 @@ const gridPositions = getGridPositions(props.width, props.height, props.size)
 
 <template>
   <svg
-    class="map-grid"
     xmlns="http://www.w3.org/2000/svg"
     :viewBox="`0 0 ${props.width} ${props.height}`"
     :width="props.width"

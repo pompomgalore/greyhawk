@@ -24,7 +24,6 @@ function getNextCorner(index: number) {
 function drawGrid() {
   if (context.value) {
     context.value.clearRect(0, 0, props.width, props.height)
-    context.value.lineWidth = props.lineWidth
     for (const [positionX, positionY] of gridPositions) {
       for (const [index, [cornerX, cornerY]] of hexagonCorners.entries()) {
         const [nextCornerX, nextCornerY] = getNextCorner(index)
@@ -39,6 +38,10 @@ function drawGrid() {
 onMounted(() => {
   if (canvasRef.value) {
     context.value = canvasRef.value.getContext('2d')
+    if (context.value) {
+      context.value.lineWidth = props.lineWidth
+      context.value.strokeStyle = 'rgba(0,0,0,0.085)'
+    }
     drawGrid()
   }
 })
