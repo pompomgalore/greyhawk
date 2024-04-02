@@ -68,6 +68,6 @@ onMounted(() => {
 .map-view-legend {
   flex-basis: 38.2%;
   overflow: auto;
-  padding: 2em 1.5em 3em;
+  padding: 1em 1.618em;
 }
 </style>

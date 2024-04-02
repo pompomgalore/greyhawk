@@ -3,6 +3,7 @@ import { ref } from 'vue'
 import MapFrame from '../Frame/MapFrame.vue'
 import MapGreyhawkFeatures from './MapGreyhawkFeatures.vue'
 import MapGreyhawkKingdoms from './MapGreyhawkKingdoms.vue'
+import MapGreyhawkSettlements from './MapGreyhawkSettlements.vue'
 
 const WIDTH = 4224
 const HEIGHT = 3168
@@ -83,13 +84,7 @@ defineExpose({
 
     <map-greyhawk-kingdoms class="map-greyhawk-content" />
 
-    <Transition>
-      <img
-        class="map-greyhawk-content"
-        v-if="scale >= ZOOM['0']"
-        src="@/assets/greyhawk/v3/greyhawk-v3-8-settlements.svg"
-      />
-    </Transition>
+    <map-greyhawk-settlements class="map-greyhawk-content" />
 
     <img class="map-greyhawk-content" src="@/assets/greyhawk/v3/greyhawk-v3-9-signature.svg" />
   </map-frame>
