@@ -1,22 +1,18 @@
 <script lang="ts" setup>
 import Panzoom, {
+  type PanOptions,
   type PanzoomEventDetail,
   type PanzoomObject,
   type PanzoomOptions
 } from '@panzoom/panzoom'
 import { ref, onMounted, onUnmounted } from 'vue'
 
-const divRef = ref<HTMLDivElement>()
+type Point = [x: number, y: number]
 
+const contentRef = ref<HTMLDivElement>()
+const frameRef = ref<HTMLDivElement>()
 const panzoom = ref<PanzoomObject>()
-
-const scale = ref<number>(1)
-
-const onPanzoomChange = (event: CustomEvent<PanzoomEventDetail>) => {
-  if (divRef.value) {
-    scale.value = Math.round(event.detail.scale * 100) / 100
-  }
-}
+const current = ref<Pick<PanzoomEventDetail, 'scale' | 'x' | 'y'>>({ scale: 1, x: 0, y: 0 })
 
 const {
   width,
@@ -31,24 +27,63 @@ const {
   } & Pick<PanzoomOptions, 'startScale' | 'minScale' | 'maxScale'>
 >()
 
-function focusTo(x: number, y: number) {
-  if (panzoom.value && divRef.value && divRef.value.parentElement) {
-    const { clientWidth, clientHeight } = divRef.value.parentElement
-    panzoom.value.pan((clientWidth / 2 - x) / scale.value, (clientHeight / 2 - y) / scale.value, {
-      animate: true,
-      relative: true
-    })
+function onPanzoomChange(event: CustomEvent<PanzoomEventDetail>) {
+  current.value = event.detail
+}
+
+function onWheel(event: WheelEvent) {
+  if (panzoom.value) {
+    panzoom.value.zoomWithWheel(event)
   }
 }
 
-defineExpose({ focusTo })
+function pan([x, y]: Point, panOptions?: PanOptions) {
+  if (panzoom.value && current.value) {
+    panzoom.value.pan(x / current.value.scale, y / current.value.scale, panOptions)
+  }
+}
+
+function queryMapSelector(selector: string) {
+  if (contentRef.value) {
+    return contentRef.value.querySelector(selector)
+  }
+}
+
+function getFrameRect() {
+  if (frameRef.value) {
+    return frameRef.value.getBoundingClientRect()
+  }
+  return { top: 0, left: 0, width: 0, height: 0 }
+}
+
+function getCenterPoint(element: Element): Point {
+  const { top, left, width, height } = element.getBoundingClientRect()
+  return [left + width / 2, top + height / 2]
+}
+
+function focusOnPoint([x, y]: Point) {
+  const { top, left, width, height } = getFrameRect()
+  pan([width / 2 - x + left, height / 2 - y + top], {
+    relative: true
+  })
+}
+
+function focusOnElement(selector: string) {
+  const mapElement = queryMapSelector(selector)
+  if (mapElement) {
+    const point = getCenterPoint(mapElement)
+    focusOnPoint(point)
+  }
+}
+
+defineExpose({ focusOnElement, queryMapSelector })
 
 onMounted(() => {
-  if (divRef.value && divRef.value.parentElement) {
-    const { clientWidth, clientHeight } = divRef.value.parentElement
-    const startX = (clientWidth - width) / 2 / startScale
-    const startY = (clientHeight - height) / 2 / startScale
-    panzoom.value = Panzoom(divRef.value, {
+  if (contentRef.value && frameRef.value) {
+    const { width: frameWidth, height: frameHeight } = getFrameRect()
+    const startX = (frameWidth - width) / 2 / startScale
+    const startY = (frameHeight - height) / 2 / startScale
+    panzoom.value = Panzoom(contentRef.value, {
       contain: 'outside',
       startScale,
       minScale,
@@ -60,6 +95,7 @@ onMounted(() => {
     })
   }
 })
+
 onUnmounted(() => {
   if (panzoom.value) {
     panzoom.value.destroy()
@@ -68,14 +104,16 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <div
-    class="map-frame"
-    ref="divRef"
-    :style="{ width: `${width}px`, height: `${height}px` }"
-    @panzoomchange="onPanzoomChange"
-    @wheel="panzoom?.zoomWithWheel"
-  >
-    <slot :scale="scale" />
+  <div ref="frameRef" class="map-frame">
+    <div
+      ref="contentRef"
+      class="map-frame-content"
+      :style="{ width: `${width}px`, height: `${height}px` }"
+      @wheel.prevent="onWheel"
+      @panzoomchange.prevent="onPanzoomChange"
+    >
+      <slot :scale="current.scale" />
+    </div>
   </div>
 </template>
 
@@ -83,5 +121,10 @@ onUnmounted(() => {
 :slotted(*) {
   display: block;
   position: absolute;
+}
+.map-frame {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
 }
 </style>

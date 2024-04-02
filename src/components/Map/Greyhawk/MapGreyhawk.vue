@@ -18,17 +18,31 @@ const ZOOM = {
 }
 
 const frameRef = ref<InstanceType<typeof MapFrame>>()
-defineExpose({ frameRef })
+function focusOnElement(hash: string) {
+  if (frameRef.value && frameRef.value.focusOnElement) {
+    frameRef.value.focusOnElement(hash)
+  }
+}
+function queryMapSelector(hash: string) {
+  if (frameRef.value && frameRef.value.queryMapSelector) {
+    return frameRef.value.queryMapSelector(hash)
+  }
+}
+
+defineExpose({
+  focusOnElement,
+  queryMapSelector
+})
 </script>
 
 <template>
   <map-frame
-    class="map-greyhawk-frame"
     ref="frameRef"
+    class="map-greyhawk"
     v-slot="{ scale }"
     :width="WIDTH"
     :height="HEIGHT"
-    :startScale="ZOOM['0']"
+    :startScale="ZOOM['1']"
     :minScale="ZOOM['-3']"
     :maxScale="ZOOM['5']"
   >
