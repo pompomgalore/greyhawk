@@ -1,11 +1,11 @@
 <template>
   <h2>Political Divisions</h2>
 
-  <!-- <h3><a href="#ahlissa">Ahlissa</a></h3>
-  <p>See <a href="#south-province">South Province</a>.</p>
+  <h3><a href="#ahlissa">Ahlissa</a></h3>
+  <!-- <p>See <a href="#south-province">South Province</a>.</p> -->
 
   <h3><a href="#prelacy-almor">Prelacy of Almor</a></h3>
-  <p>
+  <!-- <p>
     Originally a clerical fief of <a href="#great-kingdom">Aerdy</a>, Almor grew in power and
     independence as the <a href="#great-kingdom">Great Kingdom</a> became weak and decadent. The
     various petty nobles and the Lord Mayor of the town of <a href="#innspa">Innspa</a> swear
@@ -17,28 +17,28 @@
     nobility and gentry. The Prelacy is strongly supported by <a href="#nyrond">Nyrond</a> as a
     buffer between that realm and the <em>Overking</em>'s, and pays a stipend to help support the
     standing army of Almor.
-  </p>
+  </p> -->
 
   <h3><a href="#bandit-kingdoms">Bandit Kingdoms</a></h3>
   <h3><a href="#bissel">March of Bissel</a></h3>
   <h3><a href="#blackmoor">Blackmoor</a></h3>
   <h3><a href="#bone-march">Bone March</a></h3>
-  <h3>Kingdom of Celene</h3>
-  <h3>Free and Independent City of Dyvers</h3>
-  <h3>Caliphate of Ekbir</h3>
-  <h3>Kingdom of Fruztii</h3>
-  <h3>Kingdom of Furyondy</h3>
-  <h3>Grand Duchy of Geoff</h3>
-  <h3>Gran March</h3> -->
+  <h3><a href="#celene">Kingdom of Celene</a></h3>
+  <h3><a href="#dyvers">Free and Independent City of Dyvers</a></h3>
+  <h3><a href="#caliphate-ekbir">Caliphate of Ekbir</a></h3>
+  <h3><a href="#frost-barbarians">Kingdom of Fruztii</a></h3>
+  <h3><a href="#kingdom-furyondy">Kingdom of Furyondy</a></h3>
+  <h3><a href="#grand-duchy-geoff">Grand Duchy of Geoff</a></h3>
+  <h3><a href="#gran-march">Gran March</a></h3>
 
   <h3><a href="#great-kingdom">Great Kingdom of Aerdy</a></h3>
 
-  <!-- <h3>Free City of Greyhawk</h3>
-  <h3>Independent Town Of Highfolk</h3>
-  <h3>Horned Society</h3>
-  <h3>Kingdom of Cruski</h3>
-  <h3>County of Idee</h3>
-  <h3>Free City of Irongate</h3> -->
+  <h3><a href="#greyhawk">Free City of Greyhawk</a></h3>
+  <h3><a href="#highfolk">Independent Town Of Highfolk</a></h3>
+  <h3><a href="#horned-society">Horned Society</a></h3>
+  <h3><a href="#ice-barbarians">Kingdom of Cruski</a></h3>
+  <h3><a href="#idee">County of Idee</a></h3>
+  <h3><a href="#irongate">Free City of Irongate</a></h3>
 
   <h3><a href="#iuz">Land of Iuz</a></h3>
 
@@ -49,9 +49,9 @@
     nominally included many and varied demi-human groups as well. After several centuries of benign
     leadership, a line of monarchs upon the Keoish Throne became ambitious and embarked upon a
     policy of conquest. At the peak of this imperialism, Keoland held sway from the
-    <a href="#pomarj">Pomarj</a> to the <em>Crystalmist Mountains</em>, while her armies pushed into
-    <a href="#ket">Ket</a> and threatened <a href="#verbobonc">Verbobonc</a> and
-    <a href="#veluna-city">Veluna City</a> (c. 350-360 CY).
+    <a href="#pomarj">Pomarj</a> to the <a href="#crystalmist-mountains">Crystalmist Mountains</a>,
+    while her armies pushed into <a href="#ket">Ket</a> and threatened
+    <a href="#verbobonc">Verbobonc</a> and <a href="#veluna-city">Veluna City</a> (c. 350-360 CY).
   </p>
   <p>
     The Ketite expedition came to grief in successive battles (<em>Molvar</em>,
@@ -88,18 +88,18 @@
 
   <h3><a href="#ket">Ket</a></h3>
 
-  <!-- <h3>Principality of the Isles</h3>
-  <h3>See of Medegia</h3>
-  <h3>North Province</h3>
-  <h3>Kingdom of Nyrond</h3>
-  <h3>Free State of Onnwal</h3>
-  <h3>Theocracy of Pale</h3>
-  <h3>Concatenated Cantons Of Perrenland</h3>
-  <h3>Tribes of Paynims</h3>
-  <h3>Pomarj</h3>
-  <h3>Barony of Ratik</h3>
-  <h3>City of Rel Astra</h3>
-  <h3>Rovers of the Barrens</h3> -->
+  <h3><a href="#lordship-isles">Principality of the Isles</a></h3>
+  <h3><a href="#see-medegia">See of Medegia</a></h3>
+  <h3><a href="#north-province">North Province</a></h3>
+  <h3><a href="#kingdom-nyrond">Kingdom of Nyrond</a></h3>
+  <h3><a href="#onnwal">Free State of Onnwal</a></h3>
+  <h3><a href="#theocracy-pale">Theocracy of Pale</a></h3>
+  <h3><a href="#perrenland">Concatenated Cantons Of Perrenland</a></h3>
+  <h3><a href="#plains-paynims">Tribes of Paynims</a></h3>
+  <h3><a href="#pomarj">Pomarj</a></h3>
+  <h3><a href="#ratik">Barony of Ratik</a></h3>
+  <h3><a href="#rel-astra">City of Rel Astra</a></h3>
+  <h3><a href="#rovers-barrens">Rovers of the Barrens</a></h3>
 
   <h3><a href="#scarlet-brotherhood">Scarlet Brotherhood</a></h3>
   <h3><a href="#sea-barons">Sea Barons</a></h3>
@@ -119,7 +119,7 @@
     rebuild to check the threat of the Sea Princes, as they were now commonly known. Their numbers
     and strength had become so great, however, that the Keoish fleet, even with the aid of a
     squadron of <em>Ulek</em> warships, could at best deliver a sharp check to them (<em
-      >Battle of Jetsom Island</em
+      >Battle of <a href="#jetsom-island">Jetsom Island</a></em
     >). This lesson caused their leaders to rethink their policies, and several of the wiser
     captains retired to mainland estates, appointing lieutenants to command their ships. Not in
     piratical or raiding activities in the <em>Flanaess</em>, but on expeditions to the
@@ -137,31 +137,31 @@
     <a href="#flotsom-island">Flotsom</a>) prevent it.
   </p>
 
-  <!-- <h3>Shield Lands</h3>
-  <h3>Kingdom of Schnai</h3>
-  <h3>South Province</h3>
-  <h3>Spindrift Isles</h3>
-  <h3>Earldom of Sterich</h3>
-  <h3>Hold of Stonefist</h3>
-  <h3>County of Sunndi</h3>
-  <h3>Duchy of Tenh</h3>
-  <h3>Chakyik</h3>
-  <h3>Tusmit</h3> -->
+  <h3><a href="#shield-lands">Shield Lands</a></h3>
+  <h3><a href="#kingdom-schnai">Kingdom of Schnai</a></h3>
+  <h3><a href="#south-province">South Province</a></h3>
+  <h3><a href="#spindrift-isles">Spindrift Isles</a></h3>
+  <h3><a href="#earldom-sterich">Earldom of Sterich</a></h3>
+  <h3><a href="#hold-stonefist">Hold of Stonefist</a></h3>
+  <h3><a href="#sunndi">County of Sunndi</a></h3>
+  <h3><a href="#duchy-tenh">Duchy of Tenh</a></h3>
+  <h3><a href="#chayik">Chakyik</a></h3>
+  <h3><a href="#tusmit">Tusmit</a></h3>
 
   <h3><a href="#county-ulek">County of Ulek</a></h3>
   <h3><a href="#duchy-ulek">Duchy of Ulek</a></h3>
   <h3><a href="#principality-ulek">Principality of Ulek</a></h3>
 
-  <!-- <h3>Ull</h3>
-  <h3>County of Urnst</h3>
-  <h3>Duchy of Urnst</h3>
-  <h3>Valley of the Mage</h3>
-  <h3>Archclericy of Veluna</h3>
-  <h3>Viscounty and Town of Verbobonc</h3>
-  <h3>Wild Coast</h3>
-  <h3>Wolf Nomads (Wegwlur)</h3> -->
+  <h3><a href="#ull">Ull</a></h3>
+  <h3><a href="#county-urnst">County of Urnst</a></h3>
+  <h3><a href="#duchy-urnst">Duchy of Urnst</a></h3>
+  <h3><a href="#valley-mage">Valley of the Mage</a></h3>
+  <h3><a href="#veluna">Archclericy of Veluna</a></h3>
+  <h3><a href="#verbobonc">Viscounty and Town of Verbobonc</a></h3>
+  <h3><a href="#wild-coast">Wild Coast</a></h3>
+  <h3><a href="#wolf-nomads">Wolf Nomads (Wegwlur)</a></h3>
 
   <h3><a href="#yeomanry">Yeomanry</a></h3>
 
-  <!-- <h3>Sultanate of Zeif</h3> -->
+  <h3><a href="#">Sultanate of Zeif</a></h3>
 </template>
