@@ -161,5 +161,5 @@
 
   <h2><a href="#yeomanry">Yeomanry</a></h2>
 
-  <h2><a href="#">Sultanate of Zeif</a></h2>
+  <h2><a href="#sultanate-zeif">Sultanate of Zeif</a></h2>
 </template>

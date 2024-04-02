@@ -11,7 +11,7 @@ import PoliticalDivisions from './LegendGreyhawkPoliticalDivisions.vue'
       Coast LLC.
       <a href="https://archive.org/details/tsr09025worldofgreyhawkfolio">World of Greyhawk</a> by
       <a href="https://en.wikipedia.org/wiki/Gary_Gygax">Gary Gygax</a>. Map by
-      <a href="http://darlenetheartist.com" target="_blank">Darlene</a>. Vector by
+      <a href="https://keap.page/fsx038/artstore.html" target="_blank">Darlene</a>. Vector by
       <a
         href="https://batintheattic.blogspot.com/2021/12/happy-needfest-digital-darlene-greyhawk.html"
         target="_blank"
