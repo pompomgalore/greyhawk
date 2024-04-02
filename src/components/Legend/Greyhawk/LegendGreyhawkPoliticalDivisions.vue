@@ -1,7 +1,7 @@
 <template>
   <h2>Political Divisions</h2>
 
-  <h3><a href="#ahlissa">Ahlissa</a></h3>
+  <!-- <h3><a href="#ahlissa">Ahlissa</a></h3>
   <p>See <a href="#south-province">South Province</a>.</p>
 
   <h3><a href="#prelacy-almor">Prelacy of Almor</a></h3>
@@ -29,15 +29,18 @@
   <h3>Kingdom of Fruztii</h3>
   <h3>Kingdom of Furyondy</h3>
   <h3>Grand Duchy of Geoff</h3>
-  <h3>Gran March</h3>
+  <h3>Gran March</h3> -->
+
   <h3><a href="#great-kingdom">Great Kingdom of Aerdy</a></h3>
-  <h3>Free City of Greyhawk</h3>
+
+  <!-- <h3>Free City of Greyhawk</h3>
   <h3>Independent Town Of Highfolk</h3>
   <h3>Horned Society</h3>
   <h3>Kingdom of Cruski</h3>
   <h3>County of Idee</h3>
-  <h3>Free City of Irongate</h3>
-  <h3>Land of Iuz</h3>
+  <h3>Free City of Irongate</h3> -->
+
+  <h3><a href="#iuz">Land of Iuz</a></h3>
 
   <h3><a href="#kingdom-keoland">Kingdom of Keoland</a></h3>
   <p>
@@ -84,7 +87,8 @@
   </p>
 
   <h3><a href="#ket">Ket</a></h3>
-  <h3>Principality of the Isles</h3>
+
+  <!-- <h3>Principality of the Isles</h3>
   <h3>See of Medegia</h3>
   <h3>North Province</h3>
   <h3>Kingdom of Nyrond</h3>
@@ -95,11 +99,45 @@
   <h3>Pomarj</h3>
   <h3>Barony of Ratik</h3>
   <h3>City of Rel Astra</h3>
-  <h3>Rovers of the Barrens</h3>
-  <h3>Scarlet Brotherhood</h3>
-  <h3>Sea Barons</h3>
-  <h3>Hold of the Sea Princes</h3>
-  <h3>Shield Lands</h3>
+  <h3>Rovers of the Barrens</h3> -->
+
+  <h3><a href="#scarlet-brotherhood">Scarlet Brotherhood</a></h3>
+  <h3><a href="#sea-barons">Sea Barons</a></h3>
+
+  <h3><a href="#hold-sea-princes">Hold of the Sea Princes</a></h3>
+  <p>
+    The buccaneers of the <a href="#azure-sea">Azure Sea</a> and
+    <a href="#jeklea-bay">Jeklea Bay</a> grew strong and wealthy when
+    <a href="#kingdom-keoland">Keoland</a> was at the height of its power, for the eyes of its
+    leaders were turned northwards towards empire, and the sea raiders were ignored. These
+    privateers took to calling themselves <em>Sea Princes</em>, after a particularly successful
+    captain who was, in fact, of noble birth. Sailing unchecked from their island and mainland
+    strongholds, these raiders were the scourge of the coasts from <a href="#gradsul">Gradsul</a> to
+    <a href="#scant">Scant</a>, on the <a href="#pomarj">Pomarj</a>, and even beyond into the
+    <a href="#sea-gearnat">Sea of Gearnat</a> and the <a href="#tilva-strait">Tilva Strait</a>. When
+    <a href="#kingdom-keoland">Keoland</a> turned back from imperial expansion, her navy began to
+    rebuild to check the threat of the Sea Princes, as they were now commonly known. Their numbers
+    and strength had become so great, however, that the Keoish fleet, even with the aid of a
+    squadron of <em>Ulek</em> warships, could at best deliver a sharp check to them (<em
+      >Battle of Jetsom Island</em
+    >). This lesson caused their leaders to rethink their policies, and several of the wiser
+    captains retired to mainland estates, appointing lieutenants to command their ships. Not in
+    piratical or raiding activities in the <em>Flanaess</em>, but on expeditions to the
+    <a href="#amedio-jungle">Amedio Jungle</a> coasts and then to trade northwards with the rare
+    woods, spices, ivory, and gold, which they wrested from the jungle savages. Eventually, the
+    mainland possessions of the <a href="#hold-sea-princes">Sea Princes</a> amounted to more
+    territory than their island homes, and they practiced little formal raiding. Today they are
+    still probably the strongest sea power, but they also have a small and efficient army and are
+    relatively peaceful traders. If these people have a fault, it is that they allow the use of
+    slaves in their nation, despite strong protests from the <a href="#yeomanry">Yeomanry</a>. It is
+    reported that the Prince of <a href="#monmurg">Monmurg</a> would abolish this practice, but his
+    fellow nobles (the Prince of <a href="#port-toli">Toli</a>, the Plar of
+    <a href="#hool">Hool</a>, and the Grandee of <a href="#westkeep">Westkeep</a>, along with the
+    Commodores of <a href="#jetsom-island">Jetsom</a>, <a href="#fairwind-isle">Fairwind</a>, and
+    <a href="#flotsom-island">Flotsom</a>) prevent it.
+  </p>
+
+  <!-- <h3>Shield Lands</h3>
   <h3>Kingdom of Schnai</h3>
   <h3>South Province</h3>
   <h3>Spindrift Isles</h3>
@@ -108,18 +146,22 @@
   <h3>County of Sunndi</h3>
   <h3>Duchy of Tenh</h3>
   <h3>Chakyik</h3>
-  <h3>Tusmit</h3>
-  <h3>County of Ulek</h3>
-  <h3>Duchy of Ulek</h3>
-  <h3>Principality of Ulek</h3>
-  <h3>Ull</h3>
+  <h3>Tusmit</h3> -->
+
+  <h3><a href="#county-ulek">County of Ulek</a></h3>
+  <h3><a href="#duchy-ulek">Duchy of Ulek</a></h3>
+  <h3><a href="#principality-ulek">Principality of Ulek</a></h3>
+
+  <!-- <h3>Ull</h3>
   <h3>County of Urnst</h3>
   <h3>Duchy of Urnst</h3>
   <h3>Valley of the Mage</h3>
   <h3>Archclericy of Veluna</h3>
   <h3>Viscounty and Town of Verbobonc</h3>
   <h3>Wild Coast</h3>
-  <h3>Wolf Nomads (Wegwlur)</h3>
-  <h3>Yeomanry</h3>
-  <h3>Sultanate of Zeif</h3>
+  <h3>Wolf Nomads (Wegwlur)</h3> -->
+
+  <h3><a href="#yeomanry">Yeomanry</a></h3>
+
+  <!-- <h3>Sultanate of Zeif</h3> -->
 </template>

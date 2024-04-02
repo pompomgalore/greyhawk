@@ -44,7 +44,7 @@ function pan([x, y]: Point, panOptions?: PanOptions) {
 }
 
 function queryMapSelector(selector: string) {
-  if (contentRef.value) {
+  if (contentRef.value && selector) {
     return contentRef.value.querySelector(selector)
   }
 }
@@ -107,7 +107,6 @@ onUnmounted(() => {
   <div ref="frameRef" class="map-frame">
     <div
       ref="contentRef"
-      class="map-frame-content"
       :style="{ width: `${width}px`, height: `${height}px` }"
       @wheel.prevent="onWheel"
       @panzoomchange.prevent="onPanzoomChange"
