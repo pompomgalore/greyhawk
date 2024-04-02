@@ -18,18 +18,19 @@ function queryMapSelector(hash: string) {
   }
 }
 
-function isAnchorElement(target: EventTarget | null): target is HTMLAnchorElement {
-  return target instanceof HTMLAnchorElement
+function isAnchor(target: EventTarget | null): target is HTMLAnchorElement {
+  return target instanceof HTMLAnchorElement && target.hash.startsWith('#')
 }
 
 function onClickLegend(event: MouseEvent) {
-  if (isAnchorElement(event.target)) {
+  if (isAnchor(event.target)) {
+    event.preventDefault()
     focusOnElement(event.target.hash)
   }
 }
 
 function highlightBrokenAnchor(target: EventTarget | null) {
-  if (isAnchorElement(target)) {
+  if (isAnchor(target)) {
     target.style.color = 'red'
   }
 }
@@ -50,7 +51,7 @@ onMounted(() => {
 <template>
   <div class="map-view">
     <map-greyhawk ref="mapRef" class="map-view-map" />
-    <legend-greyhawk ref="legendRef" class="map-view-legend" @click.prevent="onClickLegend" />
+    <legend-greyhawk ref="legendRef" class="map-view-legend" @click="onClickLegend" />
   </div>
 </template>
 
