@@ -2,7 +2,7 @@
 import { icons } from '@/libs/heraldry'
 
 const { name } = defineProps<{
-  name: keyof typeof icons
+  name: string
 }>()
 </script>
 

@@ -1,6 +1,6 @@
 import { computed } from 'vue'
 
-export const icons = computed(() => {
+export const icons = computed<{ [name: string]: string }>(() => {
   const iconsRecord = import.meta.glob<true, string, { default: string }>(
     '@/assets/heraldry/*.png',
     {
