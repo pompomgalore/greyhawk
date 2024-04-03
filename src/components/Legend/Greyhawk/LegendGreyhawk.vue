@@ -31,7 +31,7 @@ import PoliticalDivisions from './LegendGreyhawkPoliticalDivisions.vue'
           height="17"
         />
       </a>
-      <a href="https://patreon.com/PomPomGalli" target="_blank">Pom Pom Galli</a> 2024
+      <a href="https://github.com/pompomgalore" target="_blank">Pom Pom Galli</a> 2024
     </p>
     <h1>Greyhawk</h1>
     <political-divisions />
