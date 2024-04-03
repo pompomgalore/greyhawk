@@ -43,24 +43,21 @@
   <h2><a href="#kingdom-keoland">Kingdom of Keoland</a></h2>
   <p>
     Keoland was the first major kingdom to be established in the <em>Flanaess</em>, the Oeridians
-    and Suloise tribes mingling and joining to build a tolerant and prosperous realm, which
-    nominally included many and varied demi-human groups as well. After several centuries of benign
+    and Suloise tribes mingling and joining to build a tolerant and prosperous realm which nominally
+    included many and varied demi-human groups as well. After several centuries of benign
     leadership, a line of monarchs upon the Keoish Throne became ambitious and embarked upon a
     policy of conquest. At the peak of this imperialism, Keoland held sway from the
     <a href="#pomarj">Pomarj</a> to the <a href="#crystalmist-mountains">Crystalmist Mountains</a>,
     while her armies pushed into <a href="#ket">Ket</a> and threatened
     <a href="#verbobonc">Verbobonc</a> and <a href="#veluna-city">Veluna City</a> (c. 350-360 CY).
-  </p>
-  <p>
     The Ketite expedition came to grief in successive battles (<a href="#molvar">Molvar</a>,
-    <a href="#lopolla">Lopolla</a>), while an alliance between <a href="#veluna">Veluna</a> and
-    <a href="#kingdom-furyondy">Furyondy</a> ended the Keoish threat in that quarter (<em
-      >Short War</em
-    >). Coincidentally, the Olvenfolk within the boundaries of Keoland objected to the warlike
-    policies of the King and began expelling royal garrisons in the <em>Ulek</em> Provinces (<a
-      href="#county-ulek"
-      >Ulek County</a
-    >, <a href="#duchy-ulek">Ulek Duchy</a>, <a href="#principality-ulek">Ulek Principality</a>) and
+    <a href="#lopolla">Lopolla</a>), while an alliance between <a href="#veluna">Veluna</a>-<a
+      href="#kingdom-furyondy"
+      >Furyondy</a
+    >
+    ended the Keoish threat in that quarter (<em>Short War</em>) Coincidentally, the Olvenfolk
+    within the boundaries of Keoland objected to the warlike policies of the King and began
+    expelling royal garrisons in the <a href="#ulek">Ulek</a> Provinces and
     <a href="#celene">Celene</a>. In the ensuing struggle, the freemen of the western portion sided
     with the demi-humans. Raiders in the far south took advantage of these conditions to harry the
     Keoish coast from <a href="#gradsul">Gradsul</a> to <a href="#gryrax">Gryrax</a>.
@@ -74,14 +71,12 @@
     Keoland returned to its former state of tolerance and prosperity thereafter. The
     semi-independent <a href="#gran-march">Gran March</a> and Earldom of
     <a href="#sterich">Sterich</a> are loyal to the crown and furnish strong contingents to the
-    royal army.
-  </p>
-  <p>
-    The Keolanders are well-known for their light cavalry employing javelins, crossbows, and lances.
-    The bulk of the army consists of foot armed with pole arms and long spears, while the nobility
-    comprises the heavy cavalry portion of the force. There are typically small companies of elves,
-    gnomes, halflings, and/or dwarves included in muster. The fleet is battleworthy but small, and
-    conflict with the <a href="#hold-sea-princes">Sea Princes</a> continues to plague the realm.
+    royal army. The Keolanders are well-known for their light cavalry employing javelins, crossbows,
+    and lances. The bulk of the army consists of foot armed with pole arms and long spears, while
+    the nobility comprises the heavy cavalry portion of the force. There are typically small
+    companies of elves, gnomes, halflings, and/or dwarves included in muster. The fleet is
+    battleworthy but small, and conflict with the
+    <a href="#hold-sea-princes">Sea Princes</a> continues to plague the realm.
   </p>
 
   <h2><a href="#ket">Ket</a></h2>
@@ -109,30 +104,30 @@
     <a href="#kingdom-keoland">Keoland</a> was at the height of its power, for the eyes of its
     leaders were turned northwards towards empire, and the sea raiders were ignored. These
     privateers took to calling themselves <em>Sea Princes</em>, after a particularly successful
-    captain who was, in fact, of noble birth. Sailing unchecked from their island and mainland
+    captain who was in fact of noble birth. Sailing unchecked from their island and mainland
     strongholds, these raiders were the scourge of the coasts from <a href="#gradsul">Gradsul</a> to
     <a href="#scant">Scant</a>, on the <a href="#pomarj">Pomarj</a>, and even beyond into the
     <a href="#sea-gearnat">Sea of Gearnat</a> and the <a href="#tilva-strait">Tilva Strait</a>. When
     <a href="#kingdom-keoland">Keoland</a> turned back from imperial expansion, her navy began to
-    rebuild to check the threat of the Sea Princes, as they were now commonly known. Their numbers
-    and strength had become so great, however, that the Keoish fleet, even with the aid of a
-    squadron of <em>Ulek</em> warships, could at best deliver a sharp check to them (<em
+    rebuild in order to check the threat of the Sea Princes — as they were now commonly known. Their
+    numbers and strength had become so great, however, that the Keoish fleet, even with the aid of a
+    squadron of <a href="#ulek">Ulek</a> warships, could at best deliver a sharp check to them (<em
       >Battle of <a href="#jetsom-island">Jetsom Island</a></em
-    >). This lesson caused their leaders to rethink their policies, and several of the wiser
-    captains retired to mainland estates, appointing lieutenants to command their ships. Not in
-    piratical or raiding activities in the <em>Flanaess</em>, but on expeditions to the
-    <a href="#amedio-jungle">Amedio Jungle</a> coasts and then to trade northwards with the rare
-    woods, spices, ivory, and gold, which they wrested from the jungle savages. Eventually, the
-    mainland possessions of the <a href="#hold-sea-princes">Sea Princes</a> amounted to more
-    territory than their island homes, and they practiced little formal raiding. Today they are
-    still probably the strongest sea power, but they also have a small and efficient army and are
-    relatively peaceful traders. If these people have a fault, it is that they allow the use of
-    slaves in their nation, despite strong protests from the <a href="#yeomanry">Yeomanry</a>. It is
-    reported that the Prince of <a href="#monmurg">Monmurg</a> would abolish this practice, but his
-    fellow nobles (the Prince of <a href="#port-toli">Toli</a>, the Plar of
-    <a href="#hool-marshes">Hool</a>, and the Grandee of <a href="#westkeep">Westkeep</a>, along
-    with the Commodores of <a href="#jetsom-island">Jetsom</a>,
-    <a href="#fairwind-isle">Fairwind</a>, and <a href="#flotsom-island">Flotsom</a>) prevent it.
+    >). This lesson caused their leaders to rethink their policies, however, and several of the
+    wiser captains retired to mainland estates, appointing lieutenants to command their ships, not
+    in piratical or raiding activities in the <em>Flanaess</em>, but on expeditions to the
+    <a href="#amedio-jungle">Amedio Coasts</a> and thence to trade northwards with the rare woods,
+    spices, ivory, and gold which they wrested from the jungle savages. Eventually the mainland
+    possessions of the Sea Princes amounted to more territory than their island homes, and they
+    practiced little formal raiding. Today they are still probably the strongest sea power, but they
+    also have a small and efficient army and are relatively peaceful traders. If these people have a
+    fault, it is that they allow the use of slaves in their nation, despite strong protests from the
+    <a href="#yeomanry">Yeomanry</a>. It is reported that the Prince of
+    <a href="#monmurg">Monmurg</a> would abolish this practice, but his fellow nobles (the Prince of
+    <a href="#port-toli">Toli</a>, the Plar of <a href="#hool-marshes">Hool</a>, and the Grandee of
+    <a href="#westkeep">Westkeep</a>, along with the Commodores of
+    <a href="#jetsom-island">Jetsom</a>, <a href="#fairwind-isle">Fairwind</a>, and
+    <a href="#flotsom-island">Flotsom</a>) prevent it.
   </p>
 
   <h2><a href="#shield-lands">Shield Lands</a></h2>
