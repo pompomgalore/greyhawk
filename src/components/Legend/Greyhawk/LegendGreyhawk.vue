@@ -10,8 +10,9 @@ import PoliticalDivisions from './LegendGreyhawkPoliticalDivisions.vue'
       Wizards. Portions of the materials used are property of Wizards of the Coast. ©Wizards of the
       Coast LLC.
       <a href="https://archive.org/details/tsr09025worldofgreyhawkfolio">World of Greyhawk</a> by
-      <a href="https://en.wikipedia.org/wiki/Gary_Gygax">Gary Gygax</a>. Map by
-      <a href="https://keap.page/fsx038/artstore.html" target="_blank">Darlene</a>. Vector by
+      Gary Gygax. Map by
+      <a href="https://keap.page/fsx038/artstore.html" target="_blank">Darlene</a>. Heraldry by
+      <a href="https://www.annabmeyer.com/heraldry">Anna B. Meyer</a>. Vector by
       <a
         href="https://batintheattic.blogspot.com/2021/12/happy-needfest-digital-darlene-greyhawk.html"
         target="_blank"
