@@ -1,8 +1,18 @@
+<script setup lang="ts">
+import HeraldryIcon from '@/components/Heraldry/HeraldryIcon.vue'
+</script>
+
 <template>
-  <h2><a href="#ahlissa">Ahlissa</a></h2>
+  <h2>
+    <heraldry-icon name="ahlissa" />
+    <a href="#ahlissa">Ahlissa</a>
+  </h2>
   <!-- <p>See <a href="#south-province">South Province</a>.</p> -->
 
-  <h2><a href="#prelacy-almor">Prelacy of Almor</a></h2>
+  <h2>
+    <heraldry-icon name="prelacy-almor" />
+    <a href="#prelacy-almor">Prelacy of Almor</a>
+  </h2>
   <!-- <p>
     Originally a clerical fief of <a href="#great-kingdom">Aerdy</a>, Almor grew in power and
     independence as the <a href="#great-kingdom">Great Kingdom</a> became weak and decadent. The
@@ -17,30 +27,94 @@
     standing army of Almor.
   </p> -->
 
-  <h2><a href="#bandit-kingdoms">Bandit Kingdoms</a></h2>
-  <h2><a href="#bissel">March of Bissel</a></h2>
-  <h2><a href="#blackmoor">Blackmoor</a></h2>
-  <h2><a href="#bone-march">Bone March</a></h2>
-  <h2><a href="#celene">Kingdom of Celene</a></h2>
-  <h2><a href="#dyvers">Free and Independent City of Dyvers</a></h2>
-  <h2><a href="#caliphate-ekbir">Caliphate of Ekbir</a></h2>
-  <h2><a href="#frost-barbarians">Frost Barbarians (Fruztii)</a></h2>
-  <h2><a href="#kingdom-furyondy">Kingdom of Furyondy</a></h2>
-  <h2><a href="#grand-duchy-geoff">Grand Duchy of Geoff</a></h2>
-  <h2><a href="#gran-march">Gran March</a></h2>
+  <h2>
+    <heraldry-icon name="bandit-kingdoms-dimre" />
+    <heraldry-icon name="bandit-kingdoms-grosskopf" />
+    <heraldry-icon name="bandit-kingdoms-johrase" />
+    <heraldry-icon name="bandit-kingdoms-reyhu" />
+    <heraldry-icon name="bandit-kingdoms-rookroost" />
+    <a href="#bandit-kingdoms">Bandit Kingdoms</a>
+  </h2>
+  <h2>
+    <heraldry-icon name="bissel" />
+    <a href="#bissel">March of Bissel</a>
+  </h2>
+  <h2>
+    <heraldry-icon name="blackmoor" />
+    <a href="#blackmoor">Blackmoor</a>
+  </h2>
+  <h2>
+    <heraldry-icon name="bone-march" />
+    <a href="#bone-march">Bone March</a>
+  </h2>
+  <h2>
+    <heraldry-icon name="celene" />
+    <a href="#celene">Kingdom of Celene</a>
+  </h2>
+  <h2>
+    <heraldry-icon name="dyvers" />
+    <a href="#dyvers">Free and Independent City of Dyvers</a>
+  </h2>
+  <h2>
+    <heraldry-icon name="caliphate-ekbir" />
+    <a href="#caliphate-ekbir">Caliphate of Ekbir</a>
+  </h2>
+  <h2>
+    <heraldry-icon name="frost-barbarians" />
+    <a href="#frost-barbarians">Frost Barbarians (Fruztii)</a>
+  </h2>
+  <h2>
+    <heraldry-icon name="kingdom-furyondy" />
+    <a href="#kingdom-furyondy">Kingdom of Furyondy</a>
+  </h2>
+  <h2>
+    <heraldry-icon name="grand-duchy-geoff" />
+    <a href="#grand-duchy-geoff">Grand Duchy of Geoff</a>
+  </h2>
+  <h2>
+    <heraldry-icon name="gran-march" />
+    <a href="#gran-march">Gran March</a>
+  </h2>
 
-  <h2><a href="#great-kingdom">Great Kingdom of Aerdy</a></h2>
+  <h2>
+    <heraldry-icon name="great-kingdom" />
+    <a href="#great-kingdom">Great Kingdom of Aerdy</a>
+  </h2>
 
-  <h2><a href="#greyhawk">Free City of Greyhawk</a></h2>
-  <h2><a href="#highfolk">Independent Town Of Highfolk</a></h2>
-  <h2><a href="#horned-society">Horned Society</a></h2>
-  <h2><a href="#ice-barbarians">Ice Barbarians (Cruski)</a></h2>
-  <h2><a href="#idee">County of Idee</a></h2>
-  <h2><a href="#irongate">Free City of Irongate</a></h2>
+  <h2>
+    <heraldry-icon name="greyhawk" />
+    <a href="#greyhawk">Free City of Greyhawk</a>
+  </h2>
+  <h2>
+    <heraldry-icon name="highfolk" />
+    <a href="#highfolk">Independent Town Of Highfolk</a>
+  </h2>
+  <h2>
+    <heraldry-icon name="horned-society" />
+    <a href="#horned-society">Horned Society</a>
+  </h2>
+  <h2>
+    <heraldry-icon name="ice-barbarians" />
+    <a href="#ice-barbarians">Ice Barbarians (Cruski)</a>
+  </h2>
+  <h2>
+    <heraldry-icon name="idee" />
+    <a href="#idee">County of Idee</a>
+  </h2>
+  <h2>
+    <heraldry-icon name="irongate" />
+    <a href="#irongate">Free City of Irongate</a>
+  </h2>
 
-  <h2><a href="#iuz">Land of Iuz</a></h2>
+  <h2>
+    <heraldry-icon name="iuz" />
+    <a href="#iuz">Land of Iuz</a>
+  </h2>
 
-  <h2><a href="#kingdom-keoland">Kingdom of Keoland</a></h2>
+  <h2>
+    <heraldry-icon name="kingdom-keoland" />
+    <a href="#kingdom-keoland">Kingdom of Keoland</a>
+  </h2>
   <p>
     Keoland was the first major kingdom to be established in the <em>Flanaess</em>, the Oeridians
     and Suloise tribes mingling and joining to build a tolerant and prosperous realm which nominally
@@ -79,25 +153,73 @@
     <a href="#hold-sea-princes">Sea Princes</a> continues to plague the realm.
   </p>
 
-  <h2><a href="#ket">Ket</a></h2>
+  <h2>
+    <heraldry-icon name="ket" />
+    <a href="#ket">Ket</a>
+  </h2>
 
-  <h2><a href="#lordship-isles">Principality of the Isles</a></h2>
-  <h2><a href="#see-medegia">See of Medegia</a></h2>
-  <h2><a href="#north-province">North Province</a></h2>
-  <h2><a href="#kingdom-nyrond">Kingdom of Nyrond</a></h2>
-  <h2><a href="#onnwal">Free State of Onnwal</a></h2>
-  <h2><a href="#theocracy-pale">Theocracy of Pale</a></h2>
-  <h2><a href="#perrenland">Concatenated Cantons Of Perrenland</a></h2>
-  <h2><a href="#plains-paynims">Tribes of Paynims</a></h2>
-  <h2><a href="#pomarj">Pomarj</a></h2>
-  <h2><a href="#ratik">Barony of Ratik</a></h2>
-  <h2><a href="#rel-astra">City of Rel Astra</a></h2>
-  <h2><a href="#rovers-barrens">Rovers of the Barrens</a></h2>
+  <h2>
+    <heraldry-icon name="lordship-isles" />
+    <a href="#lordship-isles">Principality of the Isles</a>
+  </h2>
+  <h2>
+    <heraldry-icon name="see-medegia" />
+    <a href="#see-medegia">See of Medegia</a>
+  </h2>
+  <h2>
+    <heraldry-icon name="north-province" />
+    <a href="#north-province">North Province</a>
+  </h2>
+  <h2>
+    <heraldry-icon name="kingdom-nyrond" />
+    <a href="#kingdom-nyrond">Kingdom of Nyrond</a>
+  </h2>
+  <h2>
+    <heraldry-icon name="onnwal" />
+    <a href="#onnwal">Free State of Onnwal</a>
+  </h2>
+  <h2>
+    <heraldry-icon name="theocracy-pale" />
+    <a href="#theocracy-pale">Theocracy of Pale</a>
+  </h2>
+  <h2>
+    <heraldry-icon name="perrenland" />
+    <a href="#perrenland">Concatenated Cantons Of Perrenland</a>
+  </h2>
+  <h2>
+    <heraldry-icon name="plains-paynims" />
+    <a href="#plains-paynims">Tribes of Paynims</a>
+  </h2>
+  <h2>
+    <heraldry-icon name="pomarj" />
+    <a href="#pomarj">Pomarj</a>
+  </h2>
+  <h2>
+    <heraldry-icon name="ratik" />
+    <a href="#ratik">Barony of Ratik</a>
+  </h2>
+  <h2>
+    <heraldry-icon name="rel-astra" />
+    <a href="#rel-astra">City of Rel Astra</a>
+  </h2>
+  <h2>
+    <heraldry-icon name="rovers-barrens" />
+    <a href="#rovers-barrens">Rovers of the Barrens</a>
+  </h2>
 
-  <h2><a href="#scarlet-brotherhood">Scarlet Brotherhood</a></h2>
-  <h2><a href="#sea-barons">Sea Barons</a></h2>
+  <h2>
+    <heraldry-icon name="scarlet-brotherhood" />
+    <a href="#scarlet-brotherhood">Scarlet Brotherhood</a>
+  </h2>
+  <h2>
+    <heraldry-icon name="sea-barons" />
+    <a href="#sea-barons">Sea Barons</a>
+  </h2>
 
-  <h2><a href="#hold-sea-princes">Hold of the Sea Princes</a></h2>
+  <h2>
+    <heraldry-icon name="hold-sea-princes" />
+    <a href="#hold-sea-princes">Hold of the Sea Princes</a>
+  </h2>
   <p>
     The buccaneers of the <a href="#azure-sea">Azure Sea</a> and
     <a href="#jeklea-bay">Jeklea Bay</a> grew strong and wealthy when
@@ -130,31 +252,103 @@
     <a href="#flotsom-island">Flotsom</a>) prevent it.
   </p>
 
-  <h2><a href="#shield-lands">Shield Lands</a></h2>
-  <h2><a href="#snow-barbarians">Snow Barbarians (Schnai)</a></h2>
-  <h2><a href="#south-province">South Province</a></h2>
-  <h2><a href="#spindrift-isles">Spindrift Isles</a></h2>
-  <h2><a href="#sterich">Earldom of Sterich</a></h2>
-  <h2><a href="#hold-stonefist">Hold of Stonefist</a></h2>
-  <h2><a href="#county-sunndi">County of Sunndi</a></h2>
-  <h2><a href="#duchy-tenh">Duchy of Tenh</a></h2>
-  <h2><a href="#tiger-nomads">Tiger Nomads (Chakyik)</a></h2>
-  <h2><a href="#tusmit">Tusmit</a></h2>
+  <h2>
+    <heraldry-icon name="shield-lands" />
+    <a href="#shield-lands">Shield Lands</a>
+  </h2>
+  <h2>
+    <heraldry-icon name="snow-barbarians" />
+    <a href="#snow-barbarians">Snow Barbarians (Schnai)</a>
+  </h2>
+  <h2>
+    <heraldry-icon name="south-province" />
+    <a href="#south-province">South Province</a>
+  </h2>
+  <h2>
+    <heraldry-icon name="spindrift-isles" />
+    <a href="#spindrift-isles">Spindrift Isles</a>
+  </h2>
+  <h2>
+    <heraldry-icon name="sterich" />
+    <a href="#sterich">Earldom of Sterich</a>
+  </h2>
+  <h2>
+    <heraldry-icon name="hold-stonefist" />
+    <a href="#hold-stonefist">Hold of Stonefist</a>
+  </h2>
+  <h2>
+    <heraldry-icon name="county-sunndi" />
+    <a href="#county-sunndi">County of Sunndi</a>
+  </h2>
+  <h2>
+    <heraldry-icon name="duchy-tenh" />
+    <a href="#duchy-tenh">Duchy of Tenh</a>
+  </h2>
+  <h2>
+    <heraldry-icon name="tiger-nomads" />
+    <a href="#tiger-nomads">Tiger Nomads (Chakyik)</a>
+  </h2>
+  <h2>
+    <heraldry-icon name="tusmit" />
+    <a href="#tusmit">Tusmit</a>
+  </h2>
 
-  <h2><a href="#county-ulek">County of Ulek</a></h2>
-  <h2><a href="#duchy-ulek">Duchy of Ulek</a></h2>
-  <h2><a href="#principality-ulek">Principality of Ulek</a></h2>
+  <h2>
+    <heraldry-icon name="county-ulek" />
+    <a href="#county-ulek">County of Ulek</a>
+  </h2>
+  <h2>
+    <heraldry-icon name="duchy-ulek" />
+    <a href="#duchy-ulek">Duchy of Ulek</a>
+  </h2>
+  <h2>
+    <heraldry-icon name="principality-ulek" />
+    <a href="#principality-ulek">Principality of Ulek</a>
+  </h2>
 
-  <h2><a href="#ull">Ull</a></h2>
-  <h2><a href="#county-urnst">County of Urnst</a></h2>
-  <h2><a href="#duchy-urnst">Duchy of Urnst</a></h2>
-  <h2><a href="#valley-mage">Valley of the Mage</a></h2>
-  <h2><a href="#veluna">Archclericy of Veluna</a></h2>
-  <h2><a href="#verbobonc">Viscounty and Town of Verbobonc</a></h2>
-  <h2><a href="#wild-coast">Wild Coast</a></h2>
-  <h2><a href="#wolf-nomads">Wolf Nomads (Wegwlur)</a></h2>
+  <h2>
+    <heraldry-icon name="ull" />
+    <a href="#ull">Ull</a>
+  </h2>
+  <h2>
+    <heraldry-icon name="county-urnst" />
+    <a href="#county-urnst">County of Urnst</a>
+  </h2>
+  <h2>
+    <heraldry-icon name="duchy-urnst" />
+    <a href="#duchy-urnst">Duchy of Urnst</a>
+  </h2>
+  <h2>
+    <heraldry-icon name="valley-mage" />
+    <a href="#valley-mage">Valley of the Mage</a>
+  </h2>
+  <h2>
+    <heraldry-icon name="veluna" />
+    <a href="#veluna">Archclericy of Veluna</a>
+  </h2>
+  <h2>
+    <heraldry-icon name="verbobonc" />
+    <a href="#verbobonc">Viscounty and Town of Verbobonc</a>
+  </h2>
+  <h2>
+    <heraldry-icon name="wild-coast-elredd" />
+    <heraldry-icon name="wild-coast-fax" />
+    <heraldry-icon name="wild-coast-narwell" />
+    <heraldry-icon name="wild-coast-safeton" />
+    <a href="#wild-coast">Wild Coast</a>
+  </h2>
+  <h2>
+    <heraldry-icon name="wolf-nomads" />
+    <a href="#wolf-nomads">Wolf Nomads (Wegwlur)</a>
+  </h2>
 
-  <h2><a href="#yeomanry">Yeomanry</a></h2>
+  <h2>
+    <heraldry-icon name="yeomanry" />
+    <a href="#yeomanry">Yeomanry</a>
+  </h2>
 
-  <h2><a href="#sultanate-zeif">Sultanate of Zeif</a></h2>
+  <h2>
+    <heraldry-icon name="sultanate-zeif" />
+    <a href="#sultanate-zeif">Sultanate of Zeif</a>
+  </h2>
 </template>
