@@ -71,4 +71,15 @@ onMounted(() => {
   overflow: auto;
   padding: 1em 1.618em;
 }
+@media (orientation: portrait) {
+  .map-view {
+    flex-direction: column;
+  }
+  .map-view-map {
+    flex-basis: 38.2%;
+  }
+  .map-view-legend {
+    flex-basis: 61.8%;
+  }
+}
 </style>
