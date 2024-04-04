@@ -40,7 +40,7 @@ onMounted(() => {
     const anchors = legendRef.value.$el.querySelectorAll('a')
     for (const anchor of anchors) {
       const targetElement = queryMapSelector(anchor.hash)
-      if (anchor.hash.startsWith('#') && !targetElement) {
+      if (!targetElement) {
         highlightBrokenAnchor(anchor)
       }
     }
