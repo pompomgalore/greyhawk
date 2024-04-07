@@ -18,12 +18,12 @@ function queryMapSelector(hash: string) {
   }
 }
 
-function isAnchor(target: EventTarget | null): target is HTMLAnchorElement {
+function isTargetAnchor(target: EventTarget | null): target is HTMLAnchorElement {
   return target instanceof HTMLAnchorElement && target.hash.startsWith('#')
 }
 
 function onClickLegend(event: MouseEvent) {
-  if (isAnchor(event.target)) {
+  if (isTargetAnchor(event.target)) {
     event.preventDefault()
     focusOnElement(event.target.hash)
   }
@@ -34,9 +34,10 @@ function highlightBrokenAnchor(target: HTMLAnchorElement) {
 }
 
 onMounted(() => {
-  if (legendRef.value) {
-    const anchors: HTMLAnchorElement[] = legendRef.value.$el.querySelectorAll('a').filter(isAnchor)
-    for (const anchor of anchors) {
+  if (legendRef.value && legendRef.value.divRef) {
+    const nodeList = legendRef.value.divRef.querySelectorAll('a')
+    const targetAnchors = Array.from(nodeList).filter(isTargetAnchor)
+    for (const anchor of targetAnchors) {
       const targetElement = queryMapSelector(anchor.hash)
       if (!targetElement) {
         console.warn(`Missing target for ${anchor.hash}`)
