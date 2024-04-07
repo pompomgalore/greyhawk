@@ -29,19 +29,17 @@ function onClickLegend(event: MouseEvent) {
   }
 }
 
-function highlightBrokenAnchor(target: EventTarget | null) {
-  if (isAnchor(target)) {
-    target.style.color = 'red'
-  }
+function highlightBrokenAnchor(target: HTMLAnchorElement) {
+  target.style.color = 'red'
 }
 
 onMounted(() => {
   if (legendRef.value) {
-    const anchors = legendRef.value.$el.querySelectorAll('a')
+    const anchors: HTMLAnchorElement[] = legendRef.value.$el.querySelectorAll('a').filter(isAnchor)
     for (const anchor of anchors) {
       const targetElement = queryMapSelector(anchor.hash)
       if (!targetElement) {
-        console.warn(`Missing Href for ${anchor.hash}`)
+        console.warn(`Missing target for ${anchor.hash}`)
         highlightBrokenAnchor(anchor)
       }
     }
