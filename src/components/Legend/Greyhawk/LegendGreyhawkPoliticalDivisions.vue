@@ -328,7 +328,7 @@ import LegendLink from '@/components/Legend/Link/LegendLink.vue'
     <h2><legend-link>Highfolk</legend-link></h2>
   </header>
 
-  <h3>Independent Town</h3>
+  <header><h3>Independent Town</h3></header>
 
   <p>
     Highfolk is independent and of importance simply because it is the southern outpost of the
@@ -342,7 +342,7 @@ import LegendLink from '@/components/Legend/Link/LegendLink.vue'
     more restless sometimes take service with mercenary bands of Perrenlander soldiery.
   </p>
 
-  <h3>Valley of the Velverdyva</h3>
+  <header><h3>Valley of the Velverdyva</h3></header>
 
   <p>
     As related above for the independent town of the same name, Highfolk is principally an elven
@@ -396,7 +396,8 @@ import LegendLink from '@/components/Legend/Link/LegendLink.vue'
 
   <header>
     <heraldry-icon name="idee" />
-    <h2><legend-link>County of Idee — Member of the Iron League</legend-link></h2>
+    <h2><legend-link>County of Idee</legend-link></h2>
+    <strong>Member of the <legend-link>Iron League</legend-link></strong>
   </header>
 
   <p>
@@ -410,7 +411,8 @@ import LegendLink from '@/components/Legend/Link/LegendLink.vue'
 
   <header>
     <heraldry-icon name="irongate" />
-    <h2><legend-link>Free City of Irongate — Member of the Iron League</legend-link></h2>
+    <h2><legend-link>Free City of Irongate</legend-link></h2>
+    <strong>Member of the <legend-link>Iron League</legend-link></strong>
   </header>
 
   <p>
@@ -507,9 +509,8 @@ import LegendLink from '@/components/Legend/Link/LegendLink.vue'
 
   <header>
     <heraldry-icon name="lordship-isles" />
-    <h2>
-      <legend-link>Lordship of the Isles (Principality) - Member of the Iron League</legend-link>
-    </h2>
+    <h2><legend-link>Lordship of the Isles</legend-link></h2>
+    <strong>Principality — Member of the <legend-link>Iron League</legend-link></strong>
   </header>
 
   <p>
@@ -591,7 +592,8 @@ import LegendLink from '@/components/Legend/Link/LegendLink.vue'
 
   <header>
     <heraldry-icon name="onnwal" />
-    <h2><legend-link>Free State of Onnwal — Member of the Iron League</legend-link></h2>
+    <h2><legend-link>Free State of Onnwal</legend-link></h2>
+    <strong>Member of the <legend-link>Iron League</legend-link></strong>
   </header>
 
   <p>
@@ -1018,7 +1020,8 @@ import LegendLink from '@/components/Legend/Link/LegendLink.vue'
 
   <header>
     <heraldry-icon name="county-sunndi" />
-    <h2><legend-link>County of Sunndi — Member of the Iron League</legend-link></h2>
+    <h2><legend-link>County of Sunndi</legend-link></h2>
+    <strong>Member of the <legend-link>Iron League</legend-link></strong>
   </header>
 
   <p>
@@ -1098,7 +1101,7 @@ import LegendLink from '@/components/Legend/Link/LegendLink.vue'
   </p>
 
   <header>
-    <legend-link>Ulek</legend-link>
+    <h2><legend-link>Ulek</legend-link></h2>
   </header>
 
   <header>
@@ -1389,29 +1392,25 @@ import LegendLink from '@/components/Legend/Link/LegendLink.vue'
 header {
   margin: 1.5em 0 1em;
 
-  &::after {
-    display: block;
-    content: '';
-    clear: both;
-  }
-
   img {
     float: left;
     margin-right: 0.5em;
-    height: 2em;
+    height: 2rem;
   }
 
   img + img {
-    margin-left: -1em;
+    margin-left: -1.5em;
   }
 
   h2,
   h3 {
     margin-bottom: 0;
+    line-height: 1.5rem;
   }
 
   strong {
     display: block;
+    overflow: auto;
   }
 }
 </style>
