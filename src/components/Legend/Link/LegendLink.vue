@@ -3,7 +3,7 @@ import { useSlots } from 'vue'
 
 const BLACKLIST = ['and', 'of', 'the'].map((word) => new RegExp(`\\b${word}\\b`, 'g'))
 
-const mapTargets: [href: string, keys: string[]][] = [
+const MAP_TARGETS: [href: string, keys: string[]][] = [
   ['bissel', ['march-bissel']],
   ['celene', ['kingdom-celene']],
   ['dyvers', ['free-independent-city-dyvers']],
@@ -47,23 +47,22 @@ function sanitize(text: string) {
 }
 
 function getSanitizedText() {
-  if (!slots.default) {
-    return undefined
+  if (slots.default) {
+    const text = slots.default().map(getNodeText).join('-')
+    return sanitize(text)
   }
-  const text = slots.default().map(getNodeText).join('-')
-  return sanitize(text)
 }
 
 function getHref() {
   const key = getSanitizedText()
   if (key) {
-    for (const [href, keys] of mapTargets) {
+    for (const [href, keys] of MAP_TARGETS) {
       if (href === key || keys.includes(key)) {
         return `#${href}`
       }
     }
+    return `#${key}`
   }
-  return `#${key}`
 }
 </script>
 
