@@ -38,7 +38,8 @@ function getHref() {
       return '#fairwind-isle'
     case 'flotsom':
       return '#flotsom-island'
-    case 'frost-barbarians-fruztii':
+    case 'frost-barbarians':
+    case 'kingdom-fruztii':
       return '#frost-barbarians'
     case 'aerdy':
     case 'great-kingdom-aerdy':
@@ -103,3 +104,10 @@ function getHref() {
     <slot />
   </a>
 </template>
+
+<style scoped>
+a {
+  color: var(--color-black);
+  font-family: var(--font-sans);
+}
+</style>

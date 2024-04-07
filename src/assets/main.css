@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@400;700&family=Merriweather:wght@400;700&display=swap');
 
 :root {
   --color-primary: #7b1fa2;
@@ -15,12 +15,15 @@
   --color-dark: #595959;
 
   --color-background: var(--color-white);
-  --color-text: var(--color-black);
+  --color-text: var(--color-dark);
 
   --font-size: 16px;
-  --line-height: 24px;
+  --line-height: 20px;
   --border-width: 2px;
   --border-radius: 4px;
+
+  --font-serif: 'Merriweather', serif;
+  --font-sans: 'Merriweather Sans', sans-serif;
 }
 
 *,
@@ -36,7 +39,7 @@ body {
   background: var(--color-background);
   color: var(--color-text);
 
-  font-family: 'Merriweather', serif;
+  font-family: var(--font-serif);
   font-weight: 400;
   font-style: normal;
 
@@ -50,7 +53,7 @@ h1,
 h2,
 h3,
 .heading {
-  font-family: 'Merriweather', cursive;
+  font-family: var(--font-serif);
   font-weight: 700;
   font-style: normal;
   line-height: 1;

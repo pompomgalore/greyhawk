@@ -41,6 +41,7 @@ onMounted(() => {
     for (const anchor of anchors) {
       const targetElement = queryMapSelector(anchor.hash)
       if (!targetElement) {
+        console.warn(`Missing Href for ${anchor.hash}`)
         highlightBrokenAnchor(anchor)
       }
     }
