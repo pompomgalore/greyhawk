@@ -40,7 +40,6 @@ defineExpose({
 <template>
   <map-frame
     ref="frameRef"
-    class="map-greyhawk"
     v-slot="{ scale }"
     :width="WIDTH"
     :height="HEIGHT"
@@ -48,11 +47,10 @@ defineExpose({
     :minScale="ZOOM['-3']"
     :maxScale="ZOOM['5']"
   >
-    <img class="map-greyhawk-content" src="@/assets/greyhawk/v3/greyhawk-v3-1-background.svg" />
+    <img src="@/assets/greyhawk/v3/greyhawk-v3-1-background.svg" />
 
     <Transition>
       <img
-        class="map-greyhawk-content"
         v-if="scale >= ZOOM['0'] && scale <= ZOOM['4']"
         src="@/assets/greyhawk/v3/greyhawk-v3-2-grid-8448.webp"
         :width="WIDTH"
@@ -62,7 +60,6 @@ defineExpose({
 
     <Transition>
       <img
-        class="map-greyhawk-content"
         v-if="scale >= ZOOM['-1'] && scale <= ZOOM['3']"
         src="@/assets/greyhawk/v3/greyhawk-v3-4-terrain-8448.webp"
         :width="WIDTH"
@@ -70,22 +67,21 @@ defineExpose({
       />
     </Transition>
 
-    <img class="map-greyhawk-content" src="@/assets/greyhawk/v3/greyhawk-v3-6-outline.svg" />
+    <img src="@/assets/greyhawk/v3/greyhawk-v3-6-outline.svg" />
 
     <Transition>
       <img
-        class="map-greyhawk-content"
         v-if="scale >= ZOOM['0'] && scale <= ZOOM['3']"
         src="@/assets/greyhawk/v3/greyhawk-v3-5-details.svg"
       />
     </Transition>
 
-    <map-greyhawk-features class="map-greyhawk-content" />
+    <map-greyhawk-features />
 
-    <map-greyhawk-kingdoms class="map-greyhawk-content" />
+    <map-greyhawk-kingdoms />
 
-    <map-greyhawk-settlements class="map-greyhawk-content" />
+    <map-greyhawk-settlements />
 
-    <img class="map-greyhawk-content" src="@/assets/greyhawk/v3/greyhawk-v3-9-signature.svg" />
+    <img src="@/assets/greyhawk/v3/greyhawk-v3-9-signature.svg" />
   </map-frame>
 </template>
