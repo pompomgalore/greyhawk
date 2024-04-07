@@ -342,7 +342,9 @@ import LegendLink from '@/components/Legend/Link/LegendLink.vue'
     more restless sometimes take service with mercenary bands of Perrenlander soldiery.
   </p>
 
-  <header><h3>Valley of the Velverdyva</h3></header>
+  <header>
+    <h3><legend-link>Valley of the Velverdyva</legend-link></h3>
+  </header>
 
   <p>
     As related above for the independent town of the same name, Highfolk is principally an elven
@@ -1394,7 +1396,7 @@ header {
 
   img {
     float: left;
-    margin-right: 0.5em;
+    margin: -0.125em 0.5em 0.25em 0;
     height: 2rem;
   }
 
@@ -1405,7 +1407,9 @@ header {
   h2,
   h3 {
     margin-bottom: 0;
-    line-height: 1.5rem;
+  }
+  h3 {
+    padding-top: 0.25em;
   }
 
   strong {
