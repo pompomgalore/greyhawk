@@ -7,7 +7,7 @@
         height="17"
       />
     </a>
-    <a href="https://github.com/pompomgalore" target="_blank">Pom Pom Galli</a> 2024
+    <a href="https://www.patreon.com/PomPomGalli" target="_blank">Pom Pom Galli</a> 2024
   </p>
 </template>
 
