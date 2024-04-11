@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { getGridPositions, getHexagonCorners } from '@/libs/grid'
+import { getGridPositions, getHexagonCorners } from '@/utils/grid'
 import { onMounted, onUpdated, ref, watchEffect } from 'vue'
 
 const canvasRef = ref<HTMLCanvasElement>()

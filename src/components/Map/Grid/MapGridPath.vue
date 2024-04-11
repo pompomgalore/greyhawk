@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { getGridPositions, getHexagonCorners } from '@/libs/grid'
+import { getGridPositions, getHexagonCorners } from '@/utils/grid'
 
 const props = defineProps<{
   size: number

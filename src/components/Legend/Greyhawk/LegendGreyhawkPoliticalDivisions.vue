@@ -4,23 +4,25 @@ import LegendLink from '@/components/Legend/Link/LegendLink.vue'
 </script>
 
 <template>
-  <header>
-    <heraldry-icon name="prelacy-almor" />
-    <h2><legend-link>Prelacy of Almor</legend-link></h2>
-  </header>
+  <section>
+    <header>
+      <heraldry-icon name="prelacy-almor" />
+      <h2><legend-link>Prelacy of Almor</legend-link></h2>
+    </header>
 
-  <p>
-    Originally a clerical fief of Aerdy, Almor grew in power and independence as the Great Kingdom
-    became weak and decadent. The various petty nobles and the Lord Mayor of the town of Innspa
-    swear allegiance to the reigning prelate — usually a high priest. The state is only loosely
-    organised, but it has a strong spirit of freedom and justice based upon religious precepts. The
-    peoples are mainly farmers and herdsmen and fisherfolk. In the far north there are some
-    foresters. Militia contingents bear crossbow, spear or polearm (fauchard or glaive most
-    commonly), or longbow or battleaxe (northern contingent). Standing forces number around 5,000
-    total horse and foot, plus the nobility and gentry. The Prelacy is strongly supported by Nyrond
-    as a buffer between that realm and that of the Overking, and pays a stipend to help support the
-    standing army of Almor.
-  </p>
+    <p>
+      Originally a clerical fief of Aerdy, Almor grew in power and independence as the Great Kingdom
+      became weak and decadent. The various petty nobles and the Lord Mayor of the town of Innspa
+      swear allegiance to the reigning prelate — usually a high priest. The state is only loosely
+      organised, but it has a strong spirit of freedom and justice based upon religious precepts.
+      The peoples are mainly farmers and herdsmen and fisherfolk. In the far north there are some
+      foresters. Militia contingents bear crossbow, spear or polearm (fauchard or glaive most
+      commonly), or longbow or battleaxe (northern contingent). Standing forces number around 5,000
+      total horse and foot, plus the nobility and gentry. The Prelacy is strongly supported by
+      Nyrond as a buffer between that realm and that of the Overking, and pays a stipend to help
+      support the standing army of Almor.
+    </p>
+  </section>
 
   <header>
     <heraldry-icon name="bandit-kingdoms-dimre" />

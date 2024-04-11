@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { useSlots } from 'vue'
-
-const BLACKLIST = ['and', 'of', 'the'].map((word) => new RegExp(`\\b${word}\\b`, 'g'))
+import { sanitize } from '@/utils/sanitize'
+import { getNodeText } from '@/utils/nodeText'
 
 const MAP_TARGETS: [href: string, keys: string[]][] = [
   ['bissel', ['march-bissel']],
@@ -28,23 +28,6 @@ const MAP_TARGETS: [href: string, keys: string[]][] = [
 ]
 
 const slots = useSlots()
-
-type DefaultNode = ReturnType<Exclude<typeof slots.default, undefined>>[number]
-function getNodeText(node: DefaultNode) {
-  if (typeof node.children === 'string') {
-    return node.children
-  }
-  return ''
-}
-
-function sanitize(text: string) {
-  const kebabCase = text.toLocaleLowerCase().replace(/\W/g, '-')
-  const filtered = BLACKLIST.reduce(
-    (sanitizedKey, wordRegExp) => sanitizedKey.replace(wordRegExp, '-'),
-    kebabCase
-  )
-  return filtered.replace(/-+/g, '-').replace(/^-|-$/g, '')
-}
 
 function getSanitizedText() {
   if (slots.default) {

@@ -4,15 +4,18 @@ import LegendGreyhawkHeader from './LegendGreyhawkHeader.vue'
 import LegendFooter from '../Footer/LegendFooter.vue'
 import { ref } from 'vue'
 
-const divRef = ref<HTMLDivElement>()
-defineExpose({ divRef })
+const mainRef = ref<HTMLDivElement>()
+defineExpose({ mainRef })
+
+const searchString = ref<string>()
 </script>
 
 <template>
-  <div ref="divRef">
+  <main ref="mainRef">
+    <input v-model="searchString" />
     <legend-greyhawk-header />
     <h1>World of Greyhawk</h1>
     <legend-greyhawk-political-divisions />
     <legend-footer />
-  </div>
+  </main>
 </template>

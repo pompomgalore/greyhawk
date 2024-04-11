@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { icons } from '@/libs/heraldry'
+import { icons } from '@/utils/heraldry'
 
 const { name } = defineProps<{
   name: string
