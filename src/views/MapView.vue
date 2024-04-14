@@ -34,8 +34,8 @@ function highlightBrokenAnchor(target: HTMLAnchorElement) {
 }
 
 onMounted(() => {
-  if (legendRef.value && legendRef.value.divRef) {
-    const nodeList = legendRef.value.divRef.querySelectorAll('a')
+  if (legendRef.value && legendRef.value.mainRef) {
+    const nodeList = legendRef.value.mainRef.querySelectorAll('a')
     const targetAnchors = Array.from(nodeList).filter(isTargetAnchor)
     for (const anchor of targetAnchors) {
       const targetElement = queryMapSelector(anchor.hash)
