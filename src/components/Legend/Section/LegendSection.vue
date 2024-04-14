@@ -2,47 +2,40 @@
 import HeraldryIcon from '@/components/Heraldry/HeraldryIcon.vue'
 import { sanitize } from '@/utils/sanitize'
 import { getNodeText } from '@/utils/nodeText'
-import { onMounted, onUpdated, ref, useSlots } from 'vue'
+import { ref, useSlots } from 'vue'
+import { watchSanitizedSearchString } from '@/store/search'
 
-const props = defineProps<{
+defineProps<{
   heraldry?: string[]
-  sanitizedFilterString?: string
 }>()
 
+const isVisible = ref<boolean>(true)
+const isFeatured = ref<boolean>(false)
+
 const slots = useSlots()
-const contentNodes = slots.default && slots.default()
-const contentText = contentNodes && getNodeText(contentNodes)
 
-const titleNodes = slots.title && slots.title()
-const titleText = titleNodes && getNodeText(titleNodes)
-
-const sanitizedTitle = titleText && sanitize(titleText)
-const sanitizedContent = contentText && sanitize(contentText)
-
-const titleContainsFilter = ref<boolean>(true)
-const contentContainsFilter = ref<boolean>(true)
-
-const containsFilter = () => {
-  titleContainsFilter.value =
-    !props.sanitizedFilterString ||
-    (sanitizedTitle !== undefined && sanitizedTitle.includes(props.sanitizedFilterString))
-  contentContainsFilter.value =
-    !props.sanitizedFilterString ||
-    (sanitizedContent !== undefined && sanitizedContent.includes(props.sanitizedFilterString))
+function getSlotSanitizedText(slotName: string) {
+  const slotNodes = slots[slotName] && slots[slotName]()
+  const slotText = slotNodes && getNodeText(slotNodes)
+  return slotText && sanitize(slotText)
 }
 
-onMounted(containsFilter)
-onUpdated(containsFilter)
+const sanitizedHeader = getSlotSanitizedText('header')
+const sanitizedContent = getSlotSanitizedText('default')
+
+watchSanitizedSearchString((sanitizedSearchString) => {
+  const headerContainsFilter = !!sanitizedHeader && sanitizedHeader.includes(sanitizedSearchString)
+  const contentContainsFilter =
+    !!sanitizedContent && sanitizedContent.includes(sanitizedSearchString)
+  isVisible.value = headerContainsFilter || contentContainsFilter
+  isFeatured.value = headerContainsFilter
+})
 </script>
 
 <template>
-  <section v-if="titleContainsFilter || contentContainsFilter">
+  <section v-if="isVisible" :class="{ featured: isFeatured }">
     <header>
-      <heraldry-icon
-        v-for="heraldryName of props.heraldry"
-        :key="heraldryName"
-        :name="heraldryName"
-      />
+      <heraldry-icon v-for="heraldryName of heraldry" :key="heraldryName" :name="heraldryName" />
       <slot name="header" />
     </header>
     <slot />
@@ -50,6 +43,10 @@ onUpdated(containsFilter)
 </template>
 
 <style scoped>
+.featured {
+  order: -1;
+}
+
 header {
   margin: 1.5em 0 1em;
 

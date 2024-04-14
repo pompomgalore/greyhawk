@@ -3,11 +3,9 @@ import LegendGreyhawkPoliticalDivisions from './LegendGreyhawkPoliticalDivisions
 import LegendGreyhawkHeader from './LegendGreyhawkHeader.vue'
 import LegendFooter from '../Footer/LegendFooter.vue'
 import { ref } from 'vue'
+import { searchString } from '@/store/search'
 
 const mainRef = ref<HTMLDivElement>()
-
-const searchString = ref<string>()
-
 defineExpose({ mainRef })
 </script>
 
@@ -16,7 +14,9 @@ defineExpose({ mainRef })
     <legend-greyhawk-header />
     <h1>World of Greyhawk</h1>
     <input v-model="searchString" name="search" placeholder="Search..." autofocus />
-    <legend-greyhawk-political-divisions :filterString="searchString" />
+    <div class="legend">
+      <legend-greyhawk-political-divisions />
+    </div>
     <legend-footer />
   </main>
 </template>
@@ -24,5 +24,15 @@ defineExpose({ mainRef })
 <style scoped>
 input {
   font-size: 20px;
+}
+
+.legend {
+  display: flex;
+  flex-direction: column;
+}
+.legend:empty::after {
+  content: 'No results found.';
+  text-align: center;
+  padding: 1em;
 }
 </style>

@@ -1,19 +1,10 @@
 <script setup lang="ts">
 import LegendSection from '@/components/Legend/Section/LegendSection.vue'
 import LegendLink from '@/components/Legend/Link/LegendLink.vue'
-import { sanitize } from '@/utils/sanitize'
-import { onUpdated, ref } from 'vue'
-
-const props = defineProps<{ filterString?: string }>()
-const sanitizedFilterString = ref<string | undefined>()
-
-onUpdated(() => {
-  sanitizedFilterString.value = props.filterString && sanitize(props.filterString)
-})
 </script>
 
 <template>
-  <legend-section :sanitizedFilterString="sanitizedFilterString" :heraldry="['prelacy-almor']">
+  <legend-section :heraldry="['prelacy-almor']">
     <template #header>
       <h2><legend-link>Prelacy of Almor</legend-link></h2>
     </template>
@@ -32,7 +23,6 @@ onUpdated(() => {
   </legend-section>
 
   <legend-section
-    :sanitizedFilterString="sanitizedFilterString"
     :heraldry="[
       'bandit-kingdoms-dimre',
       'bandit-kingdoms-grosskopf',
@@ -66,7 +56,7 @@ onUpdated(() => {
     </p>
   </legend-section>
 
-  <legend-section :sanitizedFilterString="sanitizedFilterString" :heraldry="['bissel']">
+  <legend-section :heraldry="['bissel']">
     <template #header>
       <h2><legend-link>March of Bissel</legend-link></h2>
     </template>
@@ -90,7 +80,7 @@ onUpdated(() => {
     </p>
   </legend-section>
 
-  <legend-section :sanitizedFilterString="sanitizedFilterString" :heraldry="['blackmoor']">
+  <legend-section :heraldry="['blackmoor']">
     <template #header>
       <h2><legend-link>Blackmoor</legend-link></h2>
     </template>
@@ -107,7 +97,7 @@ onUpdated(() => {
     </p>
   </legend-section>
 
-  <legend-section :sanitizedFilterString="sanitizedFilterString" :heraldry="['bone-march']">
+  <legend-section :heraldry="['bone-march']">
     <template #header>
       <h2><legend-link>Bone March</legend-link></h2>
     </template>
@@ -139,7 +129,7 @@ onUpdated(() => {
     </p>
   </legend-section>
 
-  <legend-section :sanitizedFilterString="sanitizedFilterString" :heraldry="['celene']">
+  <legend-section :heraldry="['celene']">
     <template #header>
       <h2><legend-link>Kingdom of Celene</legend-link></h2>
     </template>
@@ -155,7 +145,7 @@ onUpdated(() => {
     </p>
   </legend-section>
 
-  <legend-section :sanitizedFilterString="sanitizedFilterString" :heraldry="['dyvers']">
+  <legend-section :heraldry="['dyvers']">
     <template #header>
       <h2><legend-link>Free and Independent City of Dyvers</legend-link></h2>
     </template>
@@ -175,7 +165,7 @@ onUpdated(() => {
     </p>
   </legend-section>
 
-  <legend-section :sanitizedFilterString="sanitizedFilterString" :heraldry="['caliphate-ekbir']">
+  <legend-section :heraldry="['caliphate-ekbir']">
     <template #header>
       <h2><legend-link>Caliphate of Ekbir</legend-link></h2>
     </template>
@@ -189,10 +179,10 @@ onUpdated(() => {
     </p>
   </legend-section>
 
-  <legend-section :sanitizedFilterString="sanitizedFilterString" :heraldry="['frost-barbarians']">
+  <legend-section :heraldry="['frost-barbarians']">
     <template #header>
       <h2><legend-link>Frost Barbarians</legend-link></h2>
-      <strong>Kingdom of Fruztii</strong>
+      <strong><legend-link>Kingdom of Fruztii</legend-link></strong>
     </template>
     <p>
       The Frost Barbarians are the weakest of the three nations (of Suel peoples) inhabiting the
@@ -206,7 +196,7 @@ onUpdated(() => {
     </p>
   </legend-section>
 
-  <legend-section :sanitizedFilterString="sanitizedFilterString" :heraldry="['kingdom-furyondy']">
+  <legend-section :heraldry="['kingdom-furyondy']">
     <template #header>
       <h2><legend-link>Kingdom of Furyondy</legend-link></h2>
     </template>
@@ -233,7 +223,7 @@ onUpdated(() => {
     </p>
   </legend-section>
 
-  <legend-section :sanitizedFilterString="sanitizedFilterString" :heraldry="['grand-duchy-geoff']">
+  <legend-section :heraldry="['grand-duchy-geoff']">
     <template #header>
       <h2><legend-link>Grand Duchy of Geoff</legend-link></h2>
     </template>
@@ -252,7 +242,7 @@ onUpdated(() => {
     </p>
   </legend-section>
 
-  <legend-section :sanitizedFilterString="sanitizedFilterString" :heraldry="['gran-march']">
+  <legend-section :heraldry="['gran-march']">
     <template #header>
       <h2><legend-link>Gran March</legend-link></h2>
     </template>
@@ -271,10 +261,10 @@ onUpdated(() => {
     </p>
   </legend-section>
 
-  <legend-section :sanitizedFilterString="sanitizedFilterString" :heraldry="['great-kingdom']">
+  <legend-section :heraldry="['great-kingdom']">
     <template #header>
       <h2><legend-link>Great Kingdom</legend-link></h2>
-      <strong>The Kingdom of Aerdy</strong>
+      <strong><legend-link>The Kingdom of Aerdy</legend-link></strong>
     </template>
     <p>
       The history of the Great Kingdom is too well known to dwell upon here. Once the most powerful
@@ -301,7 +291,7 @@ onUpdated(() => {
     </p>
   </legend-section>
 
-  <legend-section :sanitizedFilterString="sanitizedFilterString" :heraldry="['greyhawk']">
+  <legend-section :heraldry="['greyhawk']">
     <template #header>
       <h2><legend-link>Free City of Greyhawk</legend-link></h2>
     </template>
@@ -342,11 +332,11 @@ onUpdated(() => {
     </p>
   </legend-section>
 
-  <legend-section :sanitizedFilterString="sanitizedFilterString" :heraldry="['highfolk']">
+  <legend-section :heraldry="['highfolk']">
     <template #header>
       <h2><legend-link>Highfolk</legend-link></h2>
     </template>
-    <legend-section :sanitizedFilterString="sanitizedFilterString">
+    <legend-section>
       <template #header>
         <h3>Independent Town</h3>
       </template>
@@ -363,7 +353,7 @@ onUpdated(() => {
         Perrenlander soldiery.
       </p>
     </legend-section>
-    <legend-section :sanitizedFilterString="sanitizedFilterString">
+    <legend-section>
       <template #header>
         <h3>
           <legend-link>Valley of the Velverdyva</legend-link>
@@ -385,7 +375,7 @@ onUpdated(() => {
     </legend-section>
   </legend-section>
 
-  <legend-section :sanitizedFilterString="sanitizedFilterString" :heraldry="['horned-society']">
+  <legend-section :heraldry="['horned-society']">
     <template #header>
       <h2><legend-link>Horned Society</legend-link></h2>
     </template>
@@ -404,10 +394,10 @@ onUpdated(() => {
     </p>
   </legend-section>
 
-  <legend-section :sanitizedFilterString="sanitizedFilterString" :heraldry="['ice-barbarians']">
+  <legend-section :heraldry="['ice-barbarians']">
     <template #header>
       <h2><legend-link>Ice Barbarians</legend-link></h2>
-      <strong>Kingdom of Cruski</strong>
+      <strong><legend-link>Kingdom of Cruski</legend-link></strong>
     </template>
     <p>
       The Ice Barbarians inhabit the bleak shores of the Thillonrian Peninsula's north and east
@@ -421,7 +411,7 @@ onUpdated(() => {
     </p>
   </legend-section>
 
-  <legend-section :sanitizedFilterString="sanitizedFilterString" :heraldry="['idee']">
+  <legend-section :heraldry="['idee']">
     <template #header>
       <h2><legend-link>County of Idee</legend-link></h2>
       <strong>Member of the <legend-link>Iron League</legend-link></strong>
@@ -436,7 +426,7 @@ onUpdated(() => {
     </p>
   </legend-section>
 
-  <legend-section :sanitizedFilterString="sanitizedFilterString" :heraldry="['irongate']">
+  <legend-section :heraldry="['irongate']">
     <template #header>
       <h2><legend-link>Free City of Irongate</legend-link></h2>
       <strong>Member of the <legend-link>Iron League</legend-link></strong>
@@ -457,7 +447,7 @@ onUpdated(() => {
     </p>
   </legend-section>
 
-  <legend-section :sanitizedFilterString="sanitizedFilterString" :heraldry="['iuz']">
+  <legend-section :heraldry="['iuz']">
     <template #header>
       <h2><legend-link>Land of Iuz</legend-link></h2>
     </template>
@@ -483,7 +473,7 @@ onUpdated(() => {
     </p>
   </legend-section>
 
-  <legend-section :sanitizedFilterString="sanitizedFilterString" :heraldry="['kingdom-keoland']">
+  <legend-section :heraldry="['kingdom-keoland']">
     <template #header>
       <h2><legend-link>Kingdom of Keoland</legend-link></h2>
     </template>
@@ -517,7 +507,7 @@ onUpdated(() => {
     </p>
   </legend-section>
 
-  <legend-section :sanitizedFilterString="sanitizedFilterString" :heraldry="['ket']">
+  <legend-section :heraldry="['ket']">
     <template #header>
       <h2><legend-link>Ket</legend-link></h2>
     </template>
@@ -536,7 +526,7 @@ onUpdated(() => {
     </p>
   </legend-section>
 
-  <legend-section :sanitizedFilterString="sanitizedFilterString" :heraldry="['lordship-isles']">
+  <legend-section :heraldry="['lordship-isles']">
     <template #header>
       <h2><legend-link>Lordship of the Isles</legend-link></h2>
       <strong>Principality — Member of the <legend-link>Iron League</legend-link></strong>
@@ -554,7 +544,7 @@ onUpdated(() => {
     </p>
   </legend-section>
 
-  <legend-section :sanitizedFilterString="sanitizedFilterString" :heraldry="['see-medegia']">
+  <legend-section :heraldry="['see-medegia']">
     <template #header>
       <h2><legend-link>See of Medegia</legend-link></h2>
     </template>
@@ -571,7 +561,7 @@ onUpdated(() => {
     </p>
   </legend-section>
 
-  <legend-section :sanitizedFilterString="sanitizedFilterString" :heraldry="['north-province']">
+  <legend-section :heraldry="['north-province']">
     <template #header>
       <h2><legend-link>North Province</legend-link></h2>
     </template>
@@ -589,7 +579,7 @@ onUpdated(() => {
     </p>
   </legend-section>
 
-  <legend-section :sanitizedFilterString="sanitizedFilterString" :heraldry="['kingdom-nyrond']">
+  <legend-section :heraldry="['kingdom-nyrond']">
     <template #header>
       <h2><legend-link>Kingdom of Nyrond</legend-link></h2>
     </template>
@@ -620,7 +610,7 @@ onUpdated(() => {
     </p>
   </legend-section>
 
-  <legend-section :sanitizedFilterString="sanitizedFilterString" :heraldry="['onnwal']">
+  <legend-section :heraldry="['onnwal']">
     <template #header>
       <h2><legend-link>Free State of Onnwal</legend-link></h2>
       <strong>Member of the <legend-link>Iron League</legend-link></strong>
@@ -643,7 +633,7 @@ onUpdated(() => {
     </p>
   </legend-section>
 
-  <legend-section :sanitizedFilterString="sanitizedFilterString" :heraldry="['theocracy-pale']">
+  <legend-section :heraldry="['theocracy-pale']">
     <template #header>
       <h2><legend-link>Theocracy of the Pale</legend-link></h2>
     </template>
@@ -661,7 +651,7 @@ onUpdated(() => {
     <p>The Pale is not noted for religious tolerance.</p>
   </legend-section>
 
-  <legend-section :sanitizedFilterString="sanitizedFilterString" :heraldry="['perrenland']">
+  <legend-section :heraldry="['perrenland']">
     <template #header>
       <h2><legend-link>Concatenated Cantons of Perrenland</legend-link></h2>
     </template>
@@ -697,10 +687,10 @@ onUpdated(() => {
     </p>
   </legend-section>
 
-  <legend-section :sanitizedFilterString="sanitizedFilterString" :heraldry="['plains-paynims']">
+  <legend-section :heraldry="['plains-paynims']">
     <template #header>
       <h2><legend-link>Plains of the Paynims</legend-link></h2>
-      <strong>Tribes of the Paynims</strong>
+      <strong><legend-link>Tribes of the Paynims</legend-link></strong>
     </template>
     <p>
       Only a small portion of the rolling plains inhabited by nomadic Baklunish tribes falls within
@@ -723,7 +713,7 @@ onUpdated(() => {
     </p>
   </legend-section>
 
-  <legend-section :sanitizedFilterString="sanitizedFilterString" :heraldry="['pomarj']">
+  <legend-section :heraldry="['pomarj']">
     <template #header>
       <h2><legend-link>Pomarj</legend-link></h2>
     </template>
@@ -748,7 +738,7 @@ onUpdated(() => {
     </p>
   </legend-section>
 
-  <legend-section :sanitizedFilterString="sanitizedFilterString" :heraldry="['ratik']">
+  <legend-section :heraldry="['ratik']">
     <template #header>
       <h2><legend-link>Archbarony of Ratik</legend-link></h2>
     </template>
@@ -779,7 +769,7 @@ onUpdated(() => {
     </p>
   </legend-section>
 
-  <legend-section :sanitizedFilterString="sanitizedFilterString" :heraldry="['rel-astra']">
+  <legend-section :heraldry="['rel-astra']">
     <template #header>
       <h2><legend-link>City of Rel Astra</legend-link></h2>
     </template>
@@ -805,7 +795,7 @@ onUpdated(() => {
     </p>
   </legend-section>
 
-  <legend-section :sanitizedFilterString="sanitizedFilterString" :heraldry="['rovers-barrens']">
+  <legend-section :heraldry="['rovers-barrens']">
     <template #header>
       <h2><legend-link>Rovers of the Barrens</legend-link></h2>
     </template>
@@ -831,10 +821,7 @@ onUpdated(() => {
     </p>
   </legend-section>
 
-  <legend-section
-    :sanitizedFilterString="sanitizedFilterString"
-    :heraldry="['scarlet-brotherhood']"
-  >
+  <legend-section :heraldry="['scarlet-brotherhood']">
     <template #header>
       <h2><legend-link>Scarlet Brotherhood</legend-link></h2>
     </template>
@@ -856,7 +843,7 @@ onUpdated(() => {
     </p>
   </legend-section>
 
-  <legend-section :sanitizedFilterString="sanitizedFilterString" :heraldry="['sea-barons']">
+  <legend-section :heraldry="['sea-barons']">
     <template #header>
       <h2><legend-link>Sea Barons</legend-link></h2>
     </template>
@@ -874,7 +861,7 @@ onUpdated(() => {
     </p>
   </legend-section>
 
-  <legend-section :sanitizedFilterString="sanitizedFilterString" :heraldry="['hold-sea-princes']">
+  <legend-section :heraldry="['hold-sea-princes']">
     <template #header>
       <h2><legend-link>Hold of the Sea Princes</legend-link></h2>
     </template>
@@ -904,7 +891,7 @@ onUpdated(() => {
     </p>
   </legend-section>
 
-  <legend-section :sanitizedFilterString="sanitizedFilterString" :heraldry="['shield-lands']">
+  <legend-section :heraldry="['shield-lands']">
     <template #header>
       <h2><legend-link>Shield Lands</legend-link></h2>
     </template>
@@ -922,10 +909,10 @@ onUpdated(() => {
     </p>
   </legend-section>
 
-  <legend-section :sanitizedFilterString="sanitizedFilterString" :heraldry="['snow-barbarians']">
+  <legend-section :heraldry="['snow-barbarians']">
     <template #header>
       <h2><legend-link>Snow Barbarians</legend-link></h2>
-      <strong>Kingdom of Schnai</strong>
+      <strong><legend-link>Kingdom of Schnai</legend-link></strong>
     </template>
     <p>
       The Snow Barbarians are the strongest and most numerous of the northern peoples. Several
@@ -944,9 +931,10 @@ onUpdated(() => {
     </p>
   </legend-section>
 
-  <legend-section :sanitizedFilterString="sanitizedFilterString" :heraldry="['south-province']">
+  <legend-section :heraldry="['south-province']">
     <template #header>
-      <h2><legend-link>South Province (<legend-link>Ahlissa</legend-link>)</legend-link></h2>
+      <h2><legend-link>South Province</legend-link></h2>
+      <strong><legend-link>Ahlissa</legend-link></strong>
     </template>
     <p>
       The ruler of South Province, a cousin of the Overking in Rauxes, is in disfavour. All previous
@@ -968,7 +956,7 @@ onUpdated(() => {
     </p>
   </legend-section>
 
-  <legend-section :sanitizedFilterString="sanitizedFilterString" :heraldry="['spindrift-isles']">
+  <legend-section :heraldry="['spindrift-isles']">
     <template #header>
       <h2><legend-link>Spindrift Isles</legend-link></h2>
     </template>
@@ -999,7 +987,7 @@ onUpdated(() => {
     </p>
   </legend-section>
 
-  <legend-section :sanitizedFilterString="sanitizedFilterString" :heraldry="['sterich']">
+  <legend-section :heraldry="['sterich']">
     <template #header>
       <h2><legend-link>Earldom of Sterich</legend-link></h2>
     </template>
@@ -1018,7 +1006,7 @@ onUpdated(() => {
     </p>
   </legend-section>
 
-  <legend-section :sanitizedFilterString="sanitizedFilterString" :heraldry="['hold-stonefist']">
+  <legend-section :heraldry="['hold-stonefist']">
     <template #header>
       <h2><legend-link>Hold of Stonefist</legend-link></h2>
     </template>
@@ -1054,7 +1042,7 @@ onUpdated(() => {
     </p>
   </legend-section>
 
-  <legend-section :sanitizedFilterString="sanitizedFilterString" :heraldry="['county-sunndi']">
+  <legend-section :heraldry="['county-sunndi']">
     <template #header>
       <h2><legend-link>County of Sunndi</legend-link></h2>
       <strong>Member of the <legend-link>Iron League</legend-link></strong>
@@ -1081,7 +1069,7 @@ onUpdated(() => {
     </p>
   </legend-section>
 
-  <legend-section :sanitizedFilterString="sanitizedFilterString" :heraldry="['duchy-tenh']">
+  <legend-section :heraldry="['duchy-tenh']">
     <template #header>
       <h2><legend-link>Duchy of Tenh</legend-link></h2>
     </template>
@@ -1098,10 +1086,10 @@ onUpdated(() => {
     </p>
   </legend-section>
 
-  <legend-section :sanitizedFilterString="sanitizedFilterString" :heraldry="['tiger-nomads']">
+  <legend-section :heraldry="['tiger-nomads']">
     <template #header>
       <h2><legend-link>Tiger Nomads</legend-link></h2>
-      <strong>Chakyik</strong>
+      <strong><legend-link>Chakyik</legend-link></strong>
     </template>
     <p>
       The Tiger Nomads are tough and hardy horsemen who dwell on the prairies above the Yatil
@@ -1122,7 +1110,7 @@ onUpdated(() => {
     </p>
   </legend-section>
 
-  <legend-section :sanitizedFilterString="sanitizedFilterString" :heraldry="['tusmit']">
+  <legend-section :heraldry="['tusmit']">
     <template #header>
       <h2><legend-link>Tusmit</legend-link></h2>
     </template>
@@ -1137,13 +1125,13 @@ onUpdated(() => {
       soldiery of Tusmit is similar to that of Ekbir in most respects.
     </p>
   </legend-section>
-  <legend-section :sanitizedFilterString="sanitizedFilterString">
+  <legend-section>
     <template #header>
       <h2>
         <legend-link>Ulek</legend-link>
       </h2>
     </template>
-    <legend-section :sanitizedFilterString="sanitizedFilterString" :heraldry="['county-ulek']">
+    <legend-section :heraldry="['county-ulek']">
       <template #header>
         <h3><legend-link>County of Ulek</legend-link></h3>
       </template>
@@ -1163,7 +1151,7 @@ onUpdated(() => {
       </p>
     </legend-section>
 
-    <legend-section :sanitizedFilterString="sanitizedFilterString" :heraldry="['duchy-ulek']">
+    <legend-section :heraldry="['duchy-ulek']">
       <template #header>
         <h3><legend-link>Duchy of Ulek</legend-link></h3>
       </template>
@@ -1181,10 +1169,7 @@ onUpdated(() => {
       </p>
     </legend-section>
 
-    <legend-section
-      :sanitizedFilterString="sanitizedFilterString"
-      :heraldry="['principality-ulek']"
-    >
+    <legend-section :heraldry="['principality-ulek']">
       <template #header>
         <h3><legend-link>Principality of Ulek</legend-link></h3>
       </template>
@@ -1207,7 +1192,7 @@ onUpdated(() => {
     </legend-section>
   </legend-section>
 
-  <legend-section :sanitizedFilterString="sanitizedFilterString" :heraldry="['ull']">
+  <legend-section :heraldry="['ull']">
     <template #header>
       <h2><legend-link>Ull</legend-link></h2>
     </template>
@@ -1225,13 +1210,13 @@ onUpdated(() => {
       warlike, and highly unpredictable otherwise.
     </p>
   </legend-section>
-  <legend-section :sanitizedFilterString="sanitizedFilterString">
+  <legend-section>
     <template #header>
       <h2>
         <legend-link>Urnst</legend-link>
       </h2>
     </template>
-    <legend-section :sanitizedFilterString="sanitizedFilterString" :heraldry="['county-urnst']">
+    <legend-section :heraldry="['county-urnst']">
       <template #header>
         <h3><legend-link>County of Urnst</legend-link></h3>
       </template>
@@ -1250,7 +1235,7 @@ onUpdated(() => {
       </p>
     </legend-section>
 
-    <legend-section :sanitizedFilterString="sanitizedFilterString" :heraldry="['duchy-urnst']">
+    <legend-section :heraldry="['duchy-urnst']">
       <template #header>
         <h3><legend-link>Duchy of Urnst</legend-link></h3>
       </template>
@@ -1269,7 +1254,7 @@ onUpdated(() => {
     </legend-section>
   </legend-section>
 
-  <legend-section :sanitizedFilterString="sanitizedFilterString" :heraldry="['valley-mage']">
+  <legend-section :heraldry="['valley-mage']">
     <template #header>
       <h2><legend-link>Valley of the Mage</legend-link></h2>
     </template>
@@ -1288,7 +1273,7 @@ onUpdated(() => {
     </p>
   </legend-section>
 
-  <legend-section :sanitizedFilterString="sanitizedFilterString" :heraldry="['veluna']">
+  <legend-section :heraldry="['veluna']">
     <template #header>
       <h2><legend-link>Archclericy of Veluna</legend-link></h2>
     </template>
@@ -1307,7 +1292,7 @@ onUpdated(() => {
     </p>
   </legend-section>
 
-  <legend-section :sanitizedFilterString="sanitizedFilterString" :heraldry="['verbobonc']">
+  <legend-section :heraldry="['verbobonc']">
     <template #header>
       <h2><legend-link>Viscounty and Town of Verbobonc</legend-link></h2>
     </template>
@@ -1327,7 +1312,6 @@ onUpdated(() => {
   </legend-section>
 
   <legend-section
-    :sanitizedFilterString="sanitizedFilterString"
     :heraldry="['wild-coast-elredd', 'wild-coast-fax', 'wild-coast-narwell', 'wild-coast-safeton']"
   >
     <template #header>
@@ -1361,10 +1345,10 @@ onUpdated(() => {
     </p>
   </legend-section>
 
-  <legend-section :sanitizedFilterString="sanitizedFilterString" :heraldry="['wolf-nomads']">
+  <legend-section :heraldry="['wolf-nomads']">
     <template #header>
       <h2><legend-link>Wolf Nomads</legend-link></h2>
-      <strong>Wegwiur</strong>
+      <strong><legend-link>Wegwiur</legend-link></strong>
     </template>
     <p>
       Much as their western kin have done, the Wolf Nomads have assumed a few civilised
@@ -1380,7 +1364,7 @@ onUpdated(() => {
     </p>
   </legend-section>
 
-  <legend-section :sanitizedFilterString="sanitizedFilterString" :heraldry="['yeomanry']">
+  <legend-section :heraldry="['yeomanry']">
     <template #header>
       <h2><legend-link>The Yeomanry</legend-link></h2>
     </template>
@@ -1417,7 +1401,7 @@ onUpdated(() => {
     </p>
   </legend-section>
 
-  <legend-section :sanitizedFilterString="sanitizedFilterString" :heraldry="['sultanate-zeif']">
+  <legend-section :heraldry="['sultanate-zeif']">
     <template #header>
       <h2><legend-link>Sultanate of Zeif</legend-link></h2>
     </template>
@@ -1435,32 +1419,3 @@ onUpdated(() => {
     </p>
   </legend-section>
 </template>
-
-<style scoped>
-header {
-  margin: 1.5em 0 1em;
-
-  img {
-    float: left;
-    margin: -0.125em 0.5em 0.25em 0;
-    height: 2rem;
-  }
-
-  img + img {
-    margin-left: -1.5em;
-  }
-
-  h2,
-  h3 {
-    margin-bottom: 0;
-  }
-  h3 {
-    padding-top: 0.25em;
-  }
-
-  strong {
-    display: block;
-    overflow: auto;
-  }
-}
-</style>
