@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useSlots } from 'vue'
+import { onMounted, ref, useSlots } from 'vue'
 import { sanitize } from '@/utils/sanitize'
 import { getNodeText } from '@/utils/nodeText'
 
@@ -10,6 +10,7 @@ const MAP_TARGETS: [href: string, keys: string[]][] = [
   ['frost-barbarians', ['kingdom-fruztii']],
   ['great-kingdom', ['kingdom-aerdy']],
   ['greyhawk', ['free-city-greyhawk']],
+  ['highfolk', ['valley-velverdyva']],
   ['ice-barbarians', ['kingdom-cruski']],
   ['idee', ['county-idee']],
   ['irongate', ['free-city-irongate']],
@@ -27,30 +28,30 @@ const MAP_TARGETS: [href: string, keys: string[]][] = [
   ['wolf-nomads', ['wegwiur']]
 ]
 
-const slots = useSlots()
-
-function getSanitizedText() {
-  if (slots.default) {
-    const text = slots.default().map(getNodeText).join('-')
-    return sanitize(text)
-  }
-}
-
-function getHref() {
-  const key = getSanitizedText()
-  if (key) {
-    for (const [href, keys] of MAP_TARGETS) {
-      if (href === key || keys.includes(key)) {
-        return `#${href}`
-      }
+function getTargetHref(contentText: string) {
+  const sanitizedContent = sanitize(contentText)
+  for (const [targetHref, targetKeys] of MAP_TARGETS) {
+    if (targetHref === sanitizedContent || targetKeys.includes(sanitizedContent)) {
+      return `#${targetHref}`
     }
-    return `#${key}`
   }
+  return `#${sanitizedContent}`
 }
+
+const slots = useSlots()
+const href = ref<string>()
+
+onMounted(() => {
+  const contentNodes = slots.default && slots.default()
+  const contentText = contentNodes && getNodeText(contentNodes)
+  if (contentText) {
+    href.value = getTargetHref(contentText)
+  }
+})
 </script>
 
 <template>
-  <a :href="getHref()">
+  <a :href="href">
     <slot />
   </a>
 </template>

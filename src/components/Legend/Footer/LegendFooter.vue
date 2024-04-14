@@ -1,5 +1,5 @@
 <template>
-  <p><a href="https://www.patreon.com/PomPomGalli" target="_blank">Pom Pom Galli</a> 2024</p>
+  <p><a href="https://www.patreon.com/PomPomGalli" target="_blank">PomPomGalli</a> 2024</p>
 </template>
 
 <style scoped>
