@@ -2,6 +2,7 @@
 import { ref } from 'vue'
 import MapFrame from '../Frame/MapFrame.vue'
 import MapGreyhawkFeatures from './MapGreyhawkFeatures.vue'
+import MapGreyhawkRivers from './MapGreyhawkRivers.vue'
 import MapGreyhawkKingdoms from './MapGreyhawkKingdoms.vue'
 import MapGreyhawkSettlements from './MapGreyhawkSettlements.vue'
 
@@ -22,18 +23,12 @@ const ZOOM = {
 const frameRef = ref<InstanceType<typeof MapFrame>>()
 function focusOnElement(hash: string) {
   if (frameRef.value && frameRef.value.focusOnElement) {
-    frameRef.value.focusOnElement(hash)
-  }
-}
-function queryMapSelector(hash: string) {
-  if (frameRef.value && frameRef.value.queryMapSelector) {
-    return frameRef.value.queryMapSelector(hash)
+    return frameRef.value.focusOnElement(hash)
   }
 }
 
 defineExpose({
-  focusOnElement,
-  queryMapSelector
+  focusOnElement
 })
 </script>
 
@@ -68,13 +63,9 @@ defineExpose({
     </Transition>
 
     <img src="@/assets/greyhawk/v3/greyhawk-v3-6-outline.svg" />
+    <img src="@/assets/greyhawk/v3/greyhawk-v3-5-roads.svg" />
 
-    <Transition>
-      <img
-        v-if="scale >= ZOOM['0'] && scale <= ZOOM['3']"
-        src="@/assets/greyhawk/v3/greyhawk-v3-5-details.svg"
-      />
-    </Transition>
+    <map-greyhawk-rivers />
 
     <map-greyhawk-features />
 

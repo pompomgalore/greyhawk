@@ -2,34 +2,22 @@
 import { onMounted, ref, useSlots } from 'vue'
 import { sanitize } from '@/utils/sanitize'
 import { getNodeText } from '@/utils/nodeText'
+import { MAP_TARGETS } from '@/utils/mapTarget'
 
-const MAP_TARGETS: [href: string, keys: string[]][] = [
-  ['bissel', ['march-bissel']],
-  ['celene', ['kingdom-celene']],
-  ['dyvers', ['free-independent-city-dyvers']],
-  ['frost-barbarians', ['kingdom-fruztii']],
-  ['great-kingdom', ['kingdom-aerdy']],
-  ['greyhawk', ['free-city-greyhawk']],
-  ['highfolk', ['valley-velverdyva']],
-  ['ice-barbarians', ['kingdom-cruski']],
-  ['idee', ['county-idee']],
-  ['irongate', ['free-city-irongate']],
-  ['iuz', ['land-iuz']],
-  ['onnwal', ['free-state-onnwal']],
-  ['perrenland', ['concatenated-cantons-perrenland']],
-  ['plains-paynims', ['tribes-paynims']],
-  ['ratik', ['archbarony-ratik']],
-  ['rel-astra', ['city-rel-astra']],
-  ['snow-barbarians', ['kingdom-schnai']],
-  ['sterich', ['earldom-sterich']],
-  ['tiger-nomads', ['chakyik']],
-  ['veluna', ['archclericy-veluna']],
-  ['verbobonc', ['viscounty-town-verbobonc']],
-  ['wolf-nomads', ['wegwiur']]
-]
+const slots = useSlots()
+const anchorRef = ref<HTMLAnchorElement>()
+const href = ref<string>()
+const props = defineProps<{
+  target?: string
+}>()
 
-function getTargetHref(contentText: string) {
-  const sanitizedContent = sanitize(contentText)
+function getContentText() {
+  const contentNodes = slots.default && slots.default()
+  return contentNodes && getNodeText(contentNodes)
+}
+
+function getTargetHref(targetText: string) {
+  const sanitizedContent = sanitize(targetText)
   for (const [targetHref, targetKeys] of MAP_TARGETS) {
     if (targetHref === sanitizedContent || targetKeys.includes(sanitizedContent)) {
       return `#${targetHref}`
@@ -38,20 +26,24 @@ function getTargetHref(contentText: string) {
   return `#${sanitizedContent}`
 }
 
-const slots = useSlots()
-const href = ref<string>()
+// function highlightBrokenAnchor(href: string) {
+//   const targetElement = document.querySelector(href)
+//   if (!targetElement && anchorRef.value) {
+//     anchorRef.value.style.color = 'red'
+//   }
+// }
 
 onMounted(() => {
-  const contentNodes = slots.default && slots.default()
-  const contentText = contentNodes && getNodeText(contentNodes)
-  if (contentText) {
-    href.value = getTargetHref(contentText)
+  const targetText = props.target || getContentText()
+  if (targetText) {
+    href.value = getTargetHref(targetText)
+    // highlightBrokenAnchor(href.value)
   }
 })
 </script>
 
 <template>
-  <a :href="href">
+  <a ref="anchorRef" :href="href">
     <slot />
   </a>
 </template>

@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import LegendGreyhawk from '@/components/Legend/Greyhawk/LegendGreyhawk.vue'
 import MapGreyhawk from '@/components/Map/Greyhawk/MapGreyhawk.vue'
-import { onMounted, ref } from 'vue'
+import { ref } from 'vue'
 
 const mapRef = ref<InstanceType<typeof MapGreyhawk>>()
 const legendRef = ref<InstanceType<typeof LegendGreyhawk>>()
@@ -9,12 +9,6 @@ const legendRef = ref<InstanceType<typeof LegendGreyhawk>>()
 function focusOnElement(hash: string) {
   if (mapRef.value && mapRef.value.focusOnElement) {
     mapRef.value.focusOnElement(hash)
-  }
-}
-
-function queryMapSelector(hash: string) {
-  if (mapRef.value && mapRef.value.queryMapSelector) {
-    return mapRef.value.queryMapSelector(hash)
   }
 }
 
@@ -28,24 +22,6 @@ function onClickLegend(event: MouseEvent) {
     focusOnElement(event.target.hash)
   }
 }
-
-function highlightBrokenAnchor(target: HTMLAnchorElement) {
-  target.style.color = 'red'
-}
-
-onMounted(() => {
-  if (legendRef.value && legendRef.value.mainRef) {
-    const nodeList = legendRef.value.mainRef.querySelectorAll('a')
-    const targetAnchors = Array.from(nodeList).filter(isTargetAnchor)
-    for (const anchor of targetAnchors) {
-      const targetElement = queryMapSelector(anchor.hash)
-      if (!targetElement) {
-        console.warn(`Missing target for ${anchor.hash}`)
-        highlightBrokenAnchor(anchor)
-      }
-    }
-  }
-})
 </script>
 
 <template>
