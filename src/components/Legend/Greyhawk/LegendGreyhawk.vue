@@ -13,7 +13,13 @@ defineExpose({ mainRef })
   <main ref="mainRef">
     <legend-greyhawk-header />
     <h1>World of Greyhawk</h1>
-    <input v-model="searchString" name="search" placeholder="Search..." autofocus />
+    <input
+      v-model="searchString"
+      name="search"
+      placeholder="Search..."
+      autocomplete="off"
+      autofocus
+    />
     <div class="legend">
       <legend-greyhawk-political-divisions />
     </div>

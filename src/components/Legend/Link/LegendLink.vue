@@ -26,18 +26,18 @@ function getTargetHref(targetText: string) {
   return `#${sanitizedContent}`
 }
 
-function highlightBrokenAnchor(href: string) {
-  const targetElement = document.querySelector(href)
-  if (!targetElement && anchorRef.value) {
-    anchorRef.value.style.color = 'red'
-  }
-}
+// function highlightBrokenAnchor(href: string) {
+//   const targetElement = document.querySelector(href)
+//   if (!targetElement && anchorRef.value) {
+//     anchorRef.value.style.color = 'red'
+//   }
+// }
 
 onMounted(() => {
   const targetText = props.target || getContentText()
   if (targetText) {
     href.value = getTargetHref(targetText)
-    highlightBrokenAnchor(href.value)
+    // highlightBrokenAnchor(href.value)
   }
 })
 </script>

@@ -306,7 +306,7 @@ import L from '@/components/Legend/Link/LegendLink.vue'
       <h2><l>Free City of Greyhawk</l></h2>
     </template>
     <p>
-      <l>Greyhawk</l> was established as a trading post on the <l>Selintan</l> River during the
+      <l>Greyhawk</l> was established as a trading post on the <l>Selintan River</l> during the
       period of early migrations. As it flourished, a local warlord built a small keep on the hills
       above the village called <l>Greyhawk</l> which had sprung up around the trading centre,
       extracting taxes from the trade and occasionally raiding caravans (particularly those coming
@@ -498,7 +498,7 @@ import L from '@/components/Legend/Link/LegendLink.vue'
       benign leadership, a line of monarchs upon the Keoish Throne became ambitious and embarked
       upon a policy of conquest. At the peak of this imperialism, <l>Keoland</l> held sway from the
       <l>Pomarj</l> to the Crystalmist Mountains, while her armies pushed into <l>Ket</l> and
-      threatened <l>Verbobonc</l> and <l>Veluna</l> City (c. 350-360 CY). The Ketite expedition came
+      threatened <l>Verbobonc</l> and <l>Veluna City</l> (c. 350-360 CY). The Ketite expedition came
       to grief in successive battles (<l>Molvar</l>, <l>Lopolla</l>), while an alliance between
       <l>Veluna</l> and <l>Furyondy</l> ended the Keoish threat in that quarter (Short War).
     </p>
@@ -1171,6 +1171,7 @@ import L from '@/components/Legend/Link/LegendLink.vue'
       <l>Ekbir</l> in most respects.
     </p>
   </legend-section>
+
   <legend-section>
     <template #header>
       <h2><l>Ulek</l></h2>
@@ -1182,7 +1183,7 @@ import L from '@/components/Legend/Link/LegendLink.vue'
       <p>
         Humans and demi-humans have long sought safety in the lands in and around the
         <l>Lortmils</l>. Flan tribes, dwarves, elves, and so forth settled permanently in the area
-        which has been known as the <l>Ulek</l> States for centuries. These territories were under
+        which has been known as the <l>Ulek States</l> for centuries. These territories were under
         Keoish rule for a short period, but have been independent for a considerable period since.
         Although each is separate and distinct, they have a community of interest which allies them
         in the face of outside aggression or time of need. The County Palatine is on good terms with
@@ -1195,7 +1196,6 @@ import L from '@/components/Legend/Link/LegendLink.vue'
         <l>Courwood</l> in the <l>Suss Forest</l>.
       </p>
     </legend-section>
-
     <legend-section :heraldry="['duchy-ulek']">
       <template #header>
         <h3><l>Duchy of Ulek</l></h3>
@@ -1214,7 +1214,6 @@ import L from '@/components/Legend/Link/LegendLink.vue'
         elves, and gnomes can be raised speedily.
       </p>
     </legend-section>
-
     <legend-section :heraldry="['principality-ulek']">
       <template #header>
         <h3><l>Principality of Ulek</l></h3>
@@ -1258,6 +1257,7 @@ import L from '@/components/Legend/Link/LegendLink.vue'
       unpredictable otherwise.
     </p>
   </legend-section>
+
   <legend-section>
     <template #header>
       <h2><l>Urnst</l></h2>
@@ -1281,7 +1281,6 @@ import L from '@/components/Legend/Link/LegendLink.vue'
         troops in a week or two.
       </p>
     </legend-section>
-
     <legend-section :heraldry="['duchy-urnst']">
       <template #header>
         <h3><l>Duchy of Urnst</l></h3>
@@ -1354,7 +1353,7 @@ import L from '@/components/Legend/Link/LegendLink.vue'
       when it became apparent that evil had grown strong. The Right Worshipful Mayor of the town
       called up the trained levies, and the Viscount brought all of his retainers and the militia,
       and these forces were in the forefront of the ensuing battle which broke the hordes of the
-      Temple. The viscounty is a large one. extending from the <l>Velverdyva</l>'s south bank some
+      Temple. The viscounty is a large one, extending from the <l>Velverdyva</l>'s south bank some
       15 leagues into the <l>Kron Hills</l>, being over 50 leagues in breadth. <l>Verbobonc</l> is
       situated in the approximate centre of its east-west axis.
     </p>
@@ -1375,7 +1374,7 @@ import L from '@/components/Legend/Link/LegendLink.vue'
       <l>Suss Forest</l> are considered as being in this region. The <l>Wild Coast</l> remains a
       free territory comprised of petty nobles, robber barons, guildheld towns, fishing and forest
       villages, freebooters, mercenaries, and displaced persons of all sorts. This is due to the
-      remote and isolated position it holds, its lack of resources. and the fact that it has never
+      remote and isolated position it holds, its lack of resources, and the fact that it has never
       been a desirable position strategically. Portions of the area have been under the control of
       <l>Celene</l>, the Prince of <l>Ulek</l>, the Gynarch of <l>Hardby</l>, and the
       <l>Free City of Greyhawk</l> at various times. The inhabitants, being of a mind otherwise,
@@ -1385,7 +1384,7 @@ import L from '@/components/Legend/Link/LegendLink.vue'
       There is no question that the <l>Wild Coast</l> is known throughout the Flanaess as a place of
       sanctuary, albeit a highly dangerous one, filled with adventure at the very least. Its
       racially mixed peoples are well known as mercenaries and adventurers themselves. The area
-      gives rise to many outstanding clerics, fighters. magic-users, and thieves. Legendary natives
+      gives rise to many outstanding clerics, fighters, magic-users, and thieves. Legendary natives
       of the <l>Wild Coast</l> include such persons as Mordenkainen, Robilar, and Tenser, to name
       but a few. Tales relate that somewhere within the <l>Suss</l> there exists a lost city of the
       Old Suloise from which the <l>Jewel River</l> gained its name. It has never been found, and
