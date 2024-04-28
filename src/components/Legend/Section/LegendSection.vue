@@ -2,7 +2,7 @@
 import HeraldryIcon from '@/components/Heraldry/HeraldryIcon.vue'
 import { sanitize } from '@/utils/sanitize'
 import { getNodeText } from '@/utils/nodeText'
-import { ref, useSlots, type Slot } from 'vue'
+import { ref, useSlots } from 'vue'
 import { watchSanitizedSearchString } from '@/store/search'
 
 defineProps<{
@@ -14,10 +14,9 @@ const isFeatured = ref<boolean>(false)
 
 const slots = useSlots()
 
-function getSlotSanitizedText(slotName: string) {
+function getSlotSanitizedText(slotName: keyof typeof slots) {
   if (slots[slotName]) {
-    // Using "as" to avoid a troubling ts2722 error on build
-    const slot = slots[slotName] as Slot
+    const slot = slots[slotName]
     const slotNodes = slot()
     const slotText = slotNodes && getNodeText(slotNodes)
     return slotText && sanitize(slotText)
