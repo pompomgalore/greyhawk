@@ -58,9 +58,7 @@ import L from '@/components/Legend/Link/LegendLink.vue'
 
   <legend-section :heraldry="['bissel']">
     <template #header>
-      <h2>
-        <l>March of Bissel</l>
-      </h2>
+      <h2><l>March of Bissel</l></h2>
     </template>
     <p>
       The <l>Lirtlemark</l>, or <l>March of Bissel</l>, was the northernmost frontier of the kingdom
@@ -68,19 +66,19 @@ import L from '@/components/Legend/Link/LegendLink.vue'
       vs. <l>Keoland</l>) which ended Keoish influence in <l>Veluna</l> (438 CY).
       <l>Bissel</l> became a tributary state of <l>Furyondy</l> for a few decades, but when humanoid
       invasions swept over the latter realm, the Margrave Rollo established the independence of the
-      territory by bravery in service of the King of <l>Furyondy</l> (the <l>Bissel</l>ites
-      slaughtered a horde of Jebli (goblins) which lay in ambush for King Hugh III, who was guarded
-      by but a small train.) The King granted the brave Rollo palatinate status for the deeds
-      performed, and <l>Bissel</l> has enjoyed self-rule since. The March now stands as a bulwark
-      between the <l>Ket</l> masses and the rest of the east. It likewise guards <l>Keoland</l> and
-      the south. Because of its strategic position, both <l>Furyondy</l>-<l>Veluna</l> and
-      <l>Keoland</l> now support the principality, and adventurers and mercenaries from all of the
-      Flanaess can be found in the ranks of the "Border Companies'' which comprise the standing army
-      of the Margrave. There are four regular companies and four reserve companies; each is 1,000
-      strong and contains contingents of horse, foot and archers. Favoured weapons are the lance,
-      crossbow, pike, fauchard-fork, flail, and sword. <l>Bissel</l>ite soldiers are very well
-      equipped and well-armoured. Each company has a special squad of scouts (numbering 30 to 50)
-      attached when on border duty.
+      territory by bravery in service of the King of <l>Furyondy</l> (the Bisselites slaughtered a
+      horde of Jebli (goblins) which lay in ambush for King Hugh III, who was guarded by but a small
+      train.) The King granted the brave Rollo palatinate status for the deeds performed, and
+      <l>Bissel</l> has enjoyed self-rule since. The March now stands as a bulwark between the
+      <l>Ket</l> masses and the rest of the east. It likewise guards <l>Keoland</l> and the south.
+      Because of its strategic position, both <l>Furyondy</l>-<l>Veluna</l> and <l>Keoland</l> now
+      support the principality, and adventurers and mercenaries from all of the Flanaess can be
+      found in the ranks of the "Border Companies'' which comprise the standing army of the
+      Margrave. There are four regular companies and four reserve companies; each is 1,000 strong
+      and contains contingents of horse, foot and archers. Favoured weapons are the lance, crossbow,
+      pike, fauchard-fork, flail, and sword. Bisselite soldiers are very well equipped and
+      well-armoured. Each company has a special squad of scouts (numbering 30 to 50) attached when
+      on border duty.
     </p>
   </legend-section>
 
@@ -103,14 +101,12 @@ import L from '@/components/Legend/Link/LegendLink.vue'
 
   <legend-section :heraldry="['bone-march']">
     <template #header>
-      <h2>
-        <l>Bone March</l>
-      </h2>
+      <h2><l>Bone March</l></h2>
     </template>
     <p>
       When the Kingdom of <l>Aerdy</l> became an empire, its leaders determined to crush the
-      troublesome barbarians pushing down from the <l>Thillonrian Peninsula</l> and settling in the
-      strip of land between the <l>Rakers</l> and <l>Grendep Bay</l>. Being indifferent sailors, the
+      troublesome barbarians pushing down from the Thillonrian Peninsula and settling in the strip
+      of land between the <l>Rakers</l> and <l>Grendep Bay</l>. Being indifferent sailors, the
       Aerdians opted to attack overland, and began sending strong parties northward to drive the
       invaders from the north back to their homeland. After many sharp skirmishes, a large
       contingent of imperial troops was routed, and full-scale warfare began.
@@ -121,7 +117,7 @@ import L from '@/components/Legend/Link/LegendLink.vue'
       Over 10,000 assembled and attacked the works under construction at <l>Spinecastle</l>. A
       relief force fought a pitched battle with these barbarians, most of whom were slain — along
       with several thousand imperial soldiers. The newly won fief was named for the remains of this
-      struggle, the Battle of the <l>Shamblefield</l>, or Caldni Vir's Charge. In 560 CY hordes of
+      struggle, the Battle of the Shamblefield, or Caldni Vir's Charge. In 560 CY hordes of
       humanoids (Euroz, Kell, Eiger, and others) began making forays into the <l>Bone March</l>, and
       these raids turned into a full scale invasion the next year. In 563 the land fell to these
       invaders, its lord was slain, and its army slain or enslaved. Humans in the area were likewise
@@ -158,19 +154,19 @@ import L from '@/components/Legend/Link/LegendLink.vue'
       <h2><l>Free and Independent City of Dyvers</l></h2>
     </template>
     <p>
-      <l>Dyvers</l>' position at the mouth of the <l>Velverdyva River</l> on the coast of the
-      <l>Lake of Unknown Depths</l> (<l>Nyr Dyv</l>) makes it an important trading centre and busy
-      port, with lake and river traffic from as far away as <l>Perrenland</l>, <l>Bissel</l>,
-      <l>Nyrond</l>, <l>Urnst</l>, the <l>Pale</l>, <l>Tenh</l>, and even occasional missions from
-      <l>Iuz</l>. The city was originally a part of the <l>Viceroyalty of Ferrond</l> and
-      contributed heavily in money, goods, and men to the war which saw the institution of the
-      <l>Kingdom of Furyondy</l>. Because of the alliance and close ties with <l>Veluna</l>, whose
-      policies the Gentry of <l>Dyvers</l> see as restrictive, the city declared its independence in
-      526 CY, King Thrommel II allowing this act to pass unchallenged. <l>Dyvers</l> claims some
-      2,000 square miles of land, including the islands at the mouth of the <l>Velverdyva</l>, as
-      its sovereign territory — although the Magisters have been careful not to claim any of the
-      land on the north band of the river. The free city boasts a marine force of 1,000 men and an
-      army twice as numerous. These troops are very well armed and equipped.
+      <l>Dyvers</l>' position at the mouth of the <l>Velverdyva River</l> on the coast of the Lake
+      of Unknown Depths (<l>Nyr Dyv</l>) makes it an important trading centre and busy port, with
+      lake and river traffic from as far away as <l>Perrenland</l>, <l>Bissel</l>, <l>Nyrond</l>,
+      <l>Urnst</l>, the <l>Pale</l>, <l>Tenh</l>, and even occasional missions from <l>Iuz</l>. The
+      city was originally a part of the <l>Viceroyalty of Ferrond</l> and contributed heavily in
+      money, goods, and men to the war which saw the institution of the <l>Kingdom of Furyondy</l>.
+      Because of the alliance and close ties with <l>Veluna</l>, whose policies the Gentry of
+      <l>Dyvers</l> see as restrictive, the city declared its independence in 526 CY, King Thrommel
+      II allowing this act to pass unchallenged. <l>Dyvers</l> claims some 2,000 square miles of
+      land, including the islands at the mouth of the <l>Velverdyva</l>, as its sovereign territory
+      — although the Magisters have been careful not to claim any of the land on the north band of
+      the river. The free city boasts a marine force of 1,000 men and an army twice as numerous.
+      These troops are very well armed and equipped.
     </p>
   </legend-section>
 
@@ -179,9 +175,9 @@ import L from '@/components/Legend/Link/LegendLink.vue'
       <h2><l>Caliphate of Ekbir</l></h2>
     </template>
     <p>
-      <l>Ekbir</l> is the strongest city of the <l>Bakluni</l> in the Flanaess. Founded by survivors
-      of the Invoked Devastation, the small port quickly grew into a place for nomads' goods as
-      well. The original village grew into a walled town, and town grew into thriving city.
+      <l>Ekbir</l> is the strongest city of the Bakluni in the Flanaess. Founded by survivors of the
+      Invoked Devastation, the small port quickly grew into a place for nomads' goods as well. The
+      original village grew into a walled town, and town grew into thriving city.
       <l>Ekbir</l> controls a sizable territory and has a large war fleet. Her forces consist
       principally of light and medium cavalry, although there are 1,000 heavy foot in her standing
       army, which is reported to number some 5,000 soldiers.
@@ -195,14 +191,13 @@ import L from '@/components/Legend/Link/LegendLink.vue'
     </template>
     <p>
       The <l>Frost Barbarians</l> are the weakest of the three nations (of Suel peoples) inhabiting
-      the <l>Thillonrian Peninsula</l>, called Rhizia by these peoples. They have never recovered
-      from the Battle of <l>Shamblefield</l>, and have been under the suzerainty of the
-      <l>Schnai</l> for the past two decades and several times previously as well. The supposed
-      figurehead placed upon the throne of the <l>Fruztii</l> has, however, built his kingdom
-      carefully, and in actuality it is now independent in all but oath. A recent pact concluded
-      between <l>Fruztii</l> and <l>Ratik</l> saw a joint army wreak havoc in the <l>Bone March</l>,
-      and during the next campaigning season clear the north pass of the “Fists” (see
-      <l>Hold of Stonefist</l>).
+      the Thillonrian Peninsula, called Rhizia by these peoples. They have never recovered from the
+      Battle of Shamblefield, and have been under the suzerainty of the <l>Schnai</l> for the past
+      two decades and several times previously as well. The supposed figurehead placed upon the
+      throne of the <l>Fruztii</l> has, however, built his kingdom carefully, and in actuality it is
+      now independent in all but oath. A recent pact concluded between <l>Fruztii</l> and
+      <l>Ratik</l> saw a joint army wreak havoc in the <l>Bone March</l>, and during the next
+      campaigning season clear the north pass of the “Fists” (see <l>Hold of Stonefist</l>).
     </p>
   </legend-section>
 
@@ -243,14 +238,14 @@ import L from '@/components/Legend/Link/LegendLink.vue'
       The isolated position of <l>Geoff</l>, surrounded on all sides by mountains, hills, and
       forests, has made it virtually immune to the normal warfare of the Flanaess although at one
       time a brief conflict with <l>Keoland</l> was fought (c. 450 CY). <l>Rushmoor</l> forms the
-      nominal eastern boundary of the realm. The inhabitants of the <l>Grand Duchy</l> are of
+      nominal eastern boundary of the realm. The inhabitants of the Grand Duchy are of
       Flan-Suel-Oerid mixture, seemingly combining the best features of each race. This is
       fortunate, as they are continually threatened by incursions of formidable ogres and giants
-      coming down the <l>Crystalmists</l>. The <l>Geoff</l>ites dwell in harmony with the olvenfolk
-      in the realm, and these two peoples often combine to combat the invading monsters. The Grand
-      Duke, Owen I, is a clever and valorous leader, on friendly terms with the Earl of
-      <l>Sterich</l> and the King of <l>Keoland</l> alike. The forces of the Grand Duke include
-      horse, bowmen, and contingents of pikemen from the mountain holdings.
+      coming down the <l>Crystalmists</l>. The Geoffites dwell in harmony with the olvenfolk in the
+      realm, and these two peoples often combine to combat the invading monsters. The Grand Duke,
+      Owen I, is a clever and valorous leader, on friendly terms with the Earl of <l>Sterich</l> and
+      the King of <l>Keoland</l> alike. The forces of the Grand Duke include horse, bowmen, and
+      contingents of pikemen from the mountain holdings.
     </p>
   </legend-section>
 
@@ -301,17 +296,14 @@ import L from '@/components/Legend/Link/LegendLink.vue'
       the Herzog of the North to fall into line, as the difficulties with the
       <l>Iron League</l> brought his southern counterpart into closer cooperation with the Malachite
       Throne (see <l>North Province</l>, <l>South Province</l>, and also <l>See of Medegia</l>.) The
-      <l>Sea Barons</l>
-      pay a token tribute to the Overking and conduct their piratical operations under letters of
-      marque bearing the Overking's Seal.
+      <l>Sea Barons</l> pay a token tribute to the Overking and conduct their piratical operations
+      under letters of marque bearing the Overking's Seal.
     </p>
   </legend-section>
 
   <legend-section :heraldry="['greyhawk']">
     <template #header>
-      <h2>
-        <l>Free City of Greyhawk</l>
-      </h2>
+      <h2><l>Free City of Greyhawk</l></h2>
     </template>
     <p>
       <l>Greyhawk</l> was established as a trading post on the <l>Selintan</l> River during the
@@ -354,23 +346,21 @@ import L from '@/components/Legend/Link/LegendLink.vue'
 
   <legend-section :heraldry="['highfolk']">
     <template #header>
-      <h2>
-        <l>Highfolk</l>
-      </h2>
+      <h2><l>Highfolk</l></h2>
     </template>
     <legend-section>
       <template #header> <h3>Independent Town</h3> </template>
       <p>
         <l>Highfolk</l> is independent and of importance simply because it is the southern outpost
-        of the Olvenfolk of the <l>Quagflow Valley</l> (the Fairdells in Olven). The town itself is
-        a trading centre and home to some 2,000 humankind. It is well fortified and protects the
+        of the Olvenfolk of the Quagflow Valley (the Fairdells in Olven). The town itself is a
+        trading centre and home to some 2,000 humankind. It is well fortified and protects the
         homeland-the 100-mile stretch of valley above, which lies between the southern arm of the
         <l>Yatils</l> and the <l>Vesve Forest</l> to the east. There are many thorps set in
         beautiful dales along the banks of the river, and the Lord of the High Elves dwells in the
         region, along with some 10,000 of his kin and numerous Sylvan Elves as well (the latter in
         the fringes of the Vesve on the east bank). The folk of <l>Highfolk</l> and the valley above
         are at peace with their neighbours to the north and south. The more restless sometimes take
-        service with mercenary bands of <l>Perrenland</l>er soldiery.
+        service with mercenary bands of Perrenlander soldiery.
       </p>
     </legend-section>
     <legend-section>
@@ -396,9 +386,7 @@ import L from '@/components/Legend/Link/LegendLink.vue'
 
   <legend-section :heraldry="['horned-society']">
     <template #header>
-      <h2>
-        <l>Horned Society</l>
-      </h2>
+      <h2><l>Horned Society</l></h2>
     </template>
     <p>
       Originally a stronghold of the more organised of the humanoid tribes, the area came under the
@@ -422,14 +410,14 @@ import L from '@/components/Legend/Link/LegendLink.vue'
       <strong><l>Kingdom of Cruski</l></strong>
     </template>
     <p>
-      The Ice Barbarians inhabit the bleak shores of the <l>Thillonrian Peninsula</l>'s north and
-      east coasts. They will raid their cousins to the south, the Snow and Frost barbarians, or raid
-      with them into <l>Ratik</l> or the more tempting <l>Great Kingdom</l>. In high summer they
-      often find fighting by rounding the coasts of the <l>Hold of Stonefist</l>, and the
+      The Ice Barbarians inhabit the bleak shores of the Thillonrian Peninsula's north and east
+      coasts. They will raid their cousins to the south, the Snow and Frost barbarians, or raid with
+      them into <l>Ratik</l> or the more tempting <l>Great Kingdom</l>. In high summer they often
+      find fighting by rounding the coasts of the <l>Hold of Stonefist</l>, and the
       <l>Cruskii</l> have both hatred and respect for the dour inhabitants of that land. Their most
       despised enemy, however, is the <l>Sea Barons</l>, whose ships they attack on sight, and whose
       isles they often attack and plunder — usually at a price. Of late these raiders have joined
-      with <l target="frost-barabarians">Frost</l> and
+      with <l target="frost-barbarians">Frost</l> and
       <l target="snow-barbarians">Snow</l> barbarians in order to counter the growing strength of
       the coastal defenders of the <l>Great Kingdom</l> and the <l>Sea Barons</l>.
     </p>
@@ -437,9 +425,7 @@ import L from '@/components/Legend/Link/LegendLink.vue'
 
   <legend-section :heraldry="['idee']">
     <template #header>
-      <h2>
-        <l>County of Idee</l>
-      </h2>
+      <h2><l>County of Idee</l></h2>
       <strong>Member of the <l>Iron League</l></strong>
     </template>
     <p>
@@ -454,9 +440,7 @@ import L from '@/components/Legend/Link/LegendLink.vue'
 
   <legend-section :heraldry="['irongate']">
     <template #header>
-      <h2>
-        <l>Free City of Irongate</l>
-      </h2>
+      <h2><l>Free City of Irongate</l></h2>
       <strong>Member of the <l>Iron League</l></strong>
     </template>
     <p>
@@ -477,16 +461,14 @@ import L from '@/components/Legend/Link/LegendLink.vue'
 
   <legend-section :heraldry="['iuz']">
     <template #header>
-      <h2>
-        <l>Land of Iuz</l>
-      </h2>
+      <h2><l>Land of Iuz</l></h2>
     </template>
     <p>
       <l>Iuz</l>, old <l>Iuz</l> of fearbabe talk, may be human-or may once have been human, but
       this is not known for certain one way or another. He has ruled the lands from the
       <l>Howling Hills</l> south to the <l>Lake of Whyestil</l> for ages longer than any man can
-      live. The lands between the <l>Dulsi</l> and the <l>Opicm River</l>s are steeped in wickedness
-      and evil, so much so that the otherwise fearless <l>Wolf Nomads</l> and
+      live. The lands between the <l>Dulsi</l> and the Opicm Rivers are steeped in wickedness and
+      evil, so much so that the otherwise fearless <l>Wolf Nomads</l> and
       <l>Rovers of the Barrens</l> pass through the <l>Cold Marshes</l> rather than cross even the
       edge of the <l>Land of Iuz</l>. For a time the land was leaderless, for <l>Iuz</l> himself was
       missing. For many decades the evil of the place was in relative quietude for lack of evil
@@ -507,9 +489,7 @@ import L from '@/components/Legend/Link/LegendLink.vue'
 
   <legend-section :heraldry="['kingdom-keoland']">
     <template #header>
-      <h2>
-        <l>Kingdom of Keoland</l>
-      </h2>
+      <h2><l>Kingdom of Keoland</l></h2>
     </template>
     <p>
       <l>Keoland</l> was the first major kingdom to be established in the Flanaess, the Oeridians
@@ -518,10 +498,9 @@ import L from '@/components/Legend/Link/LegendLink.vue'
       benign leadership, a line of monarchs upon the Keoish Throne became ambitious and embarked
       upon a policy of conquest. At the peak of this imperialism, <l>Keoland</l> held sway from the
       <l>Pomarj</l> to the Crystalmist Mountains, while her armies pushed into <l>Ket</l> and
-      threatened <l>Verbobonc</l> and <l>Veluna</l> City (c. 350-360 CY). The <l>Ket</l>ite
-      expedition came to grief in successive battles (<l>Molvar</l>, <l>Lopolla</l>), while an
-      alliance between <l>Veluna</l> and <l>Furyondy</l> ended the Keoish threat in that quarter
-      (Short War).
+      threatened <l>Verbobonc</l> and <l>Veluna</l> City (c. 350-360 CY). The Ketite expedition came
+      to grief in successive battles (<l>Molvar</l>, <l>Lopolla</l>), while an alliance between
+      <l>Veluna</l> and <l>Furyondy</l> ended the Keoish threat in that quarter (Short War).
     </p>
     <p>
       Coincidentally, the Olvenfolk within the boundaries of <l>Keoland</l> objected to the warlike
@@ -535,12 +514,11 @@ import L from '@/components/Legend/Link/LegendLink.vue'
       <l>Ulek</l> states were granted autonomy, and <l>Keoland</l> returned to its former state of
       tolerance and prosperity thereafter. The semi-independent <l>Gran March</l> and Earldom of
       <l>Sterich</l> are loyal to the crown and furnish strong contingents to the royal army. The
-      <l>Keoland</l>ers are well known for their light cavalry employing javelins, crossbows, and
-      lances. The bulk of the army consists of footmen armed with pole arms and long spears, while
-      the nobility comprises the heavy cavalry portion of the force. There are typically small
-      companies of elves, gnomes, halflings, and/or dwarves included in muster. The fleet is
-      battleworthy but small, and conflict with the <l>Sea Princes</l> continues to plague the
-      realm.
+      Keolanders are well known for their light cavalry employing javelins, crossbows, and lances.
+      The bulk of the army consists of footmen armed with pole arms and long spears, while the
+      nobility comprises the heavy cavalry portion of the force. There are typically small companies
+      of elves, gnomes, halflings, and/or dwarves included in muster. The fleet is battleworthy but
+      small, and conflict with the <l>Sea Princes</l> continues to plague the realm.
     </p>
   </legend-section>
 
@@ -549,26 +527,24 @@ import L from '@/components/Legend/Link/LegendLink.vue'
       <h2><l>Ket</l></h2>
     </template>
     <p>
-      <l>Ket</l> is the frontier state of the <l>Bakluni</l>sh and a trading centre between eastern
+      <l>Ket</l> is the frontier state of the Baklunish and a trading centre between eastern
       Flanaess and the world beyond. For many decades it has alternately menaced the
       Oeridian/Suloise states east and south and threatened them by invasion. Despite this continual
       warfare, the land flourished due to the rich trade with the <l>Paynim</l> tribes,
       <l>Tusmit</l>, <l>Ekbir</l>, <l>Perrenland</l>, <l>Bissel</l>, and <l>Veluna</l>. Goods from
       <l>Zeif</l> and <l>Wintershiven</l> pass through <l>Lopolla</l>. This mixture of cultures
-      includes the people themselves, for the <l>Ket</l>ites are of mixed racial stock, albeit of
-      <l>Bakluni</l>sh culture for the most part. The court of the <l>Beygraf</l> is a strange
-      mixture of eastern and western influences. This admixture pervades the military as well, for
-      the <l>Ket</l>ites field a strong force of pikes and crossbows along with their light horse
-      archers and medium lancers. The army is well honed, for despite racial ties and trade, the
-      <l>Paynim</l> clans often raid the border country west of the <l>Tuflik River</l>.
+      includes the people themselves, for the Ketites are of mixed racial stock, albeit of Baklunish
+      culture for the most part. The court of the Beygraf is a strange mixture of eastern and
+      western influences. This admixture pervades the military as well, for the Ketites field a
+      strong force of pikes and crossbows along with their light horse archers and medium lancers.
+      The army is well honed, for despite racial ties and trade, the <l>Paynim</l> clans often raid
+      the border country west of the <l>Tuflik River</l>.
     </p>
   </legend-section>
 
   <legend-section :heraldry="['lordship-isles']">
     <template #header>
-      <h2>
-        <l>Lordship of the Isles</l>
-      </h2>
+      <h2><l>Lordship of the Isles</l></h2>
       <strong>Principality — Member of the <l>Iron League</l></strong>
     </template>
     <p>
@@ -579,17 +555,15 @@ import L from '@/components/Legend/Link/LegendLink.vue'
       states which wish to use the Tilva Straits in commerce. The rulers of <l>Duxchan</l> gave up
       piracy in favour of more lucrative methods of extracting money from merchants. There is
       particular enmity between the <l>Sea Barons</l> and the Lord of the Isles for rather obvious
-      reasons. The <l>Duxchan</l>ers are still smarting from the Battle of <l>Medegia</l> (572 CY),
-      wherein the <l>Sea Barons</l> sank four of their warships and made prizes of three loaded cogs
-      before they could gain safety in <l>Pontylver</l>.
+      reasons. The Duxchaners are still smarting from the Battle of <l>Medegia</l> (572 CY), wherein
+      the <l>Sea Barons</l> sank four of their warships and made prizes of three loaded cogs before
+      they could gain safety in <l>Pontylver</l>.
     </p>
   </legend-section>
 
   <legend-section :heraldry="['see-medegia']">
     <template #header>
-      <h2>
-        <l>See of Medegia</l>
-      </h2>
+      <h2><l>See of Medegia</l></h2>
     </template>
     <p>
       The Holy Censor was originally the chief cleric of the <l>Great Kingdom</l>. Clerical holdings
@@ -618,10 +592,10 @@ import L from '@/components/Legend/Link/LegendLink.vue'
       <l>Bone March</l>, and the capture of <l>Knurl</l> by these forces, coupled with continuing
       incursions by humanoids from across the <l>Teesar Torrent</l>, have troubled
       <l>North Province</l>. A punitive force of mercenaries was defeated in the hills above
-      <l>Belport</l>
-      recently, and it is now reported that the Herzog is seeking Imperial funding of a huge army to
-      recapture the southern portion of <l>Bone March</l>. This force would undoubtedly contain both
-      mercenary men-at-arms and humanoids enlisted from the upper portion of the march.
+      <l>Bellport</l> recently, and it is now reported that the Herzog is seeking Imperial funding
+      of a huge army to recapture the southern portion of <l>Bone March</l>. This force would
+      undoubtedly contain both mercenary men-at-arms and humanoids enlisted from the upper portion
+      of the march.
     </p>
   </legend-section>
 
@@ -638,33 +612,30 @@ import L from '@/components/Legend/Link/LegendLink.vue'
       when the wise King Dustan I, called Crafty, saw his realm threatened by internal strife and
       exterior enemies and called up the Great Council of <l>Rel Mord</l>. Here, the king met with
       ambassadors from <l>Almor</l>, the <l>Iron League</l>, the <l>Pale</l>, and <l>Urnst</l>. All
-      troops were withdrawn from the <l>Pale</l> and <l>Urnst</l> thereafter, the <l>Nyrond</l>ese
-      allowing both areas self-determination, and both, in turn, agreeing to a concord entailing
-      mutual trade and military support. <l>Almor</l> was treated somewhat similarly, and aid was
-      granted to the <l>Iron League</l> in the form of loans and treaties which assured the League
-      of survival against the common enemy.
+      troops were withdrawn from the <l>Pale</l> and <l>Urnst</l> thereafter, the Nyrondese allowing
+      both areas self-determination, and both, in turn, agreeing to a concord entailing mutual trade
+      and military support. <l>Almor</l> was treated somewhat similarly, and aid was granted to the
+      <l>Iron League</l> in the form of loans and treaties which assured the League of survival
+      against the common enemy.
     </p>
     <p>
       The current boundaries of <l>Nyrond</l> are: <l>Nesser River</l> — <l>Franz River</l> —
       <l>Artonsamay River</l> — <l>Nutherwood</l> — <l>Gamboge Forest</l> (northern terminus) —
-      <l>Rakers</l> — <l>Flint Hills</l> (lower) <l>Harp River</l> — <l>Relmor</l> bay.
-      <l>Nyrond</l>al contingents assist <l>Urnst</l> and the <l>Pale</l> against the
-      <l>Bandit Kingdoms</l>, and a squadron of their warships sails <l>Relmor Bay</l> and the
-      <l>Sea of Gearnat</l> in support of the <l>Iron League</l>. Strong garrisons of the
-      <l>Nyrond</l>ese Army are stationed in strategic positions to move to the aid of either
-      <l>Almor</l> or the <l>Pale</l> in time of need. In addition to human forces,
-      <l>Nyrond</l> has special demi-human scouting troops. In time of need, pacts call for support
-      from <l>Urnst</l> (County and Duchy) et al. <l>Nyrond</l>al heavy cavalry and armoured footmen
-      comprise the majority of the realm's army, with lesser numbers of bowmen and light hillman
-      infantry as support.
+      <l>Rakers</l> — <l>Flint Hills</l> — (lower) <l>Harp River</l> — <l>Relmor Bay</l>. Nyrondal
+      contingents assist <l>Urnst</l> and the <l>Pale</l> against the <l>Bandit Kingdoms</l>, and a
+      squadron of their warships sails <l>Relmor Bay</l> and the <l>Sea of Gearnat</l> in support of
+      the <l>Iron League</l>. Strong garrisons of the Nyrondese Army are stationed in strategic
+      positions to move to the aid of either <l>Almor</l> or the <l>Pale</l> in time of need. In
+      addition to human forces, <l>Nyrond</l> has special demi-human scouting troops. In time of
+      need, pacts call for support from <l>Urnst</l> (County and Duchy) et al. Nyrondal heavy
+      cavalry and armoured footmen comprise the majority of the realm's army, with lesser numbers of
+      bowmen and light hillman infantry as support.
     </p>
   </legend-section>
 
   <legend-section :heraldry="['onnwal']">
     <template #header>
-      <h2>
-        <l>Free State of Onnwal</l>
-      </h2>
+      <h2><l>Free State of Onnwal</l></h2>
       <strong>Member of the <l>Iron League</l></strong>
     </template>
     <p>
@@ -712,7 +683,7 @@ import L from '@/components/Legend/Link/LegendLink.vue'
     <p>
       The original Flan tribes dwelling in the <l>Yatil Mountains</l> were far more warlike and
       fierce than most of their fellows elsewhere in the Flanaess. The would-be invaders were
-      absorbed by these powerful clans — Oerids, Suloise, and even a few of <l>Bakluni</l>sh stock.
+      absorbed by these powerful clans — Oerids, Suloise, and even a few of Baklunish stock.
       Attempts at expansion into <l>Perrenland</l> by Furyondy and later <l>Ket</l> were vigorously
       resisted by the inhabitants, strong mountaineers and valley-dwelling folk alike. These
       attempts, as well as nomadic incursions into the area, brought the various clans together in a
@@ -721,17 +692,17 @@ import L from '@/components/Legend/Link/LegendLink.vue'
       an executive head, like unto a king with limited powers to rule for an eight year period, with
       counsel from the assembled clan leaders. This system has proven workable for the nation, and
       <l>Perrenland</l> is relatively prosperous through trade with the northern nomads, the
-      <l>Bakluni</l>sh states, and <l>Veluna</l>-<l>Furyondy</l>. Her chief export is her
-      well-trained mercenary bands, however. Such a force is typically made up of pikemen (30%) and
-      pole armed mountaineers (20%), with lowland crossbowmen (30%) and other infantry (10%) armed
-      with battleaxe, flail, etc. rounding out the infantry contingent; the remaining 10% is
-      cavalry. Half of the horse is heavy, coming mainly from the <l>Schwartzenbruin</l> area, while
-      the remainder is medium, bow armed cavalry from the <l>Clatspur</l> region. Although
-      <l>Perrenland</l> does not claim the valley of the <l>Quagflow River</l> below the
+      Baklunish states, and <l>Veluna</l>-<l>Furyondy</l>. Her chief export is her well-trained
+      mercenary bands, however. Such a force is typically made up of pikemen (30%) and pole armed
+      mountaineers (20%), with lowland crossbowmen (30%) and other infantry (10%) armed with
+      battleaxe, flail, etc. rounding out the infantry contingent; the remaining 10% is cavalry.
+      Half of the horse is heavy, coming mainly from the <l>Schwartzenbruin</l> area, while the
+      remainder is medium, bow armed cavalry from the <l>Clatspur</l> region. Although
+      <l>Perrenland</l> does not claim the valley of the Quagflow River below the
       <l>Clatspur Range</l>, the High Elves from that region will often be seen in service with a
-      band of <l>Perrenland</l>ers. (Such forces serve as scouts and light infantry and are bow
-      armed; such an addition is typically equal to 10% of the human force.) Bands of mercenaries of
-      this sort will be found in armies fielded by <l>Veluna</l>, Furyondy, and <l>Bissel</l>. Even
+      band of Perrenlanders. (Such forces serve as scouts and light infantry and are bow armed; such
+      an addition is typically equal to 10% of the human force.) Bands of mercenaries of this sort
+      will be found in armies fielded by <l>Veluna</l>, Furyondy, and <l>Bissel</l>. Even
       <l>Ket</l> has used them in a dispute with <l>Tusmit</l>.
     </p>
     <p>
@@ -745,30 +716,27 @@ import L from '@/components/Legend/Link/LegendLink.vue'
 
   <legend-section :heraldry="['plains-paynims']">
     <template #header>
-      <h2>
-        <l>Plains of the Paynims</l>
-      </h2>
+      <h2><l>Plains of the Paynims</l></h2>
       <strong><l>Tribes of the Paynims</l></strong>
     </template>
     <p>
-      Only a small portion of the rolling plains inhabited by nomadic <l>Bakluni</l>sh tribes falls
-      within the Flanaess. The pair which is on our portion of the continent is sometimes nearly
-      empty of human life, and at other times it is reported to swarm with horsemen. These nomads
-      evidently move out of the <l>Dry Steppes</l> region when summer makes the area an arid waste,
-      and return there in the rainy season. Of course, the tribe of <l>Ull</l> (q.v.) has a
-      permanent territory and the northern parts of the plains are held by the more civilised states
-      bordering the <l><l>Dramidj</l> Ocean</l>. Each tribe is ruled by a noble, variously called
-      Amir or Khan. Greater nobles are called Ilkhan, Orakhon, or Shah. Leaders of the royal rank
-      are known as Tarkhan, Padishah or Kha Khan. The northern and western tribes use the titles
-      Amir, Shah, and Padishah, while those from the south (<l>Dry Steppes</l>) favour Khan, Ilkhan,
-      etc. These horsed nomads are poorly armoured but very mobile troops. The most lightly
-      protected wield short, powerful horn bows and light curved swords, while the remainder (20% to
-      30%) employ light lance and mace or flail. Little else is known. The western states such as
-      <l>Ket</l>, <l>Tusmit</l>, and <l>Ekbir</l> will often employ forces of mercenary
-      <l>Paynim</l> nomads against each other or other marauding nomads. As the Tiger and
-      <l>Wolf Nomads</l> (qq.v.) also used the title of Khan et al., it is speculated that these
-      peoples are branches of the same race separated by an influx of later nomads (those using the
-      titles Amir et al).
+      Only a small portion of the rolling plains inhabited by nomadic Baklunish tribes falls within
+      the Flanaess. The pair which is on our portion of the continent is sometimes nearly empty of
+      human life, and at other times it is reported to swarm with horsemen. These nomads evidently
+      move out of the <l>Dry Steppes</l> region when summer makes the area an arid waste, and return
+      there in the rainy season. Of course, the tribe of <l>Ull</l> (q.v.) has a permanent territory
+      and the northern parts of the plains are held by the more civilised states bordering the
+      <l>Dramidj Ocean</l>. Each tribe is ruled by a noble, variously called Amir or Khan. Greater
+      nobles are called Ilkhan, Orakhon, or Shah. Leaders of the royal rank are known as Tarkhan,
+      Padishah or Kha Khan. The northern and western tribes use the titles Amir, Shah, and Padishah,
+      while those from the south (<l>Dry Steppes</l>) favour Khan, Ilkhan, etc. These horsed nomads
+      are poorly armoured but very mobile troops. The most lightly protected wield short, powerful
+      horn bows and light curved swords, while the remainder (20% to 30%) employ light lance and
+      mace or flail. Little else is known. The western states such as <l>Ket</l>, <l>Tusmit</l>, and
+      <l>Ekbir</l> will often employ forces of mercenary <l>Paynim</l> nomads against each other or
+      other marauding nomads. As the Tiger and <l>Wolf Nomads</l> (qq.v.) also used the title of
+      Khan et al., it is speculated that these peoples are branches of the same race separated by an
+      influx of later nomads (those using the titles Amir et al).
     </p>
   </legend-section>
 
@@ -793,8 +761,8 @@ import L from '@/components/Legend/Link/LegendLink.vue'
       invaders, and mercenaries as well-bought and paid for by the gold from the
       <l>Stoneheim</l> mines and the moonstones and cairngorms from the high peaks as well. A relief
       force of dwarves and men from the Prince crossed the <l>Jewel River</l> but were turned back
-      after a fierce battle below the <l>Hilly Pastures</l>. The humanoids have not often dared to
-      cross into <l>Ulek</l>, but their raiders cause much trouble in the <l>Wild Coast</l>.
+      after a fierce battle below the Hilly Pastures. The humanoids have not often dared to cross
+      into <l>Ulek</l>, but their raiders cause much trouble in the <l>Wild Coast</l>.
     </p>
   </legend-section>
 
@@ -832,9 +800,7 @@ import L from '@/components/Legend/Link/LegendLink.vue'
 
   <legend-section :heraldry="['rel-astra']">
     <template #header>
-      <h2>
-        <l>City of Rel Astra</l>
-      </h2>
+      <h2><l>City of Rel Astra</l></h2>
     </template>
     <p>
       The city and constabular fief of <l>Rel Astra</l> extends from the precincts of the city
@@ -854,17 +820,15 @@ import L from '@/components/Legend/Link/LegendLink.vue'
       esquires and sergeants add some 400 medium cavalry; light horse contingents round the number
       to a full 1,000. There are an equal number of men-at-arms, about half of whom are crossbowmen.
       Levies and militia numbering 1,000 horse and 6,000 foot can be called up from
-      <l>Rel Astra</l>, <l>Ountsy</l>, and the surrounding lands on short notice. Recently the
-      <l>Rel Astra</l>ns have employed mixed human and orcish scouting bands as light troops in the
+      <l>Rel Astra</l>, <l>Ountsy</l>, and the surrounding lands on short notice. Recently the Rel
+      Astrans have employed mixed human and orcish scouting bands as light troops in the
       <l>Grandwood</l> and similar groups on the Lone Heath.
     </p>
   </legend-section>
 
   <legend-section :heraldry="['rovers-barrens']">
     <template #header>
-      <h2>
-        <l>Rovers of the Barrens</l>
-      </h2>
+      <h2><l>Rovers of the Barrens</l></h2>
     </template>
     <p>
       The tribes of nomadic peoples who dwell between the <l>Wastes</l> below the <l>Icy Sea</l> and
@@ -892,9 +856,7 @@ import L from '@/components/Legend/Link/LegendLink.vue'
 
   <legend-section :heraldry="['scarlet-brotherhood']">
     <template #header>
-      <h2>
-        <l>Scarlet Brotherhood</l>
-      </h2>
+      <h2><l>Scarlet Brotherhood</l></h2>
     </template>
     <p>
       It is said that an order of monastic religious militarists was founded long ago on the remote
@@ -916,9 +878,7 @@ import L from '@/components/Legend/Link/LegendLink.vue'
 
   <legend-section :heraldry="['sea-barons']">
     <template #header>
-      <h2>
-        <l>Sea Barons</l>
-      </h2>
+      <h2><l>Sea Barons</l></h2>
     </template>
     <p>
       The Aerdi power spread to the islands off the shores of the <l>Gullcliffs</l>, where the
@@ -936,9 +896,7 @@ import L from '@/components/Legend/Link/LegendLink.vue'
 
   <legend-section :heraldry="['hold-sea-princes']">
     <template #header>
-      <h2>
-        <l>Hold of the Sea Princes</l>
-      </h2>
+      <h2><l>Hold of the Sea Princes</l></h2>
     </template>
     <p>
       The buccaneers of the <l>Azure Sea</l> and <l>Jeklea Bay</l> grew strong and wealthy when
@@ -974,24 +932,22 @@ import L from '@/components/Legend/Link/LegendLink.vue'
     </template>
     <p>
       When the <l>Bandit Kingdoms</l> began to grow powerful, the petty nobles of the north shores
-      of the <l>Nyr Dyv</l> banded together in a mutual protection society. The small
-      <l>Earldom of Walworth</l> had the advantage of possessing a sizable island upon which was
-      built the only city in the whole district, so its Lord was chosen as Knight Commander of the
-      combined forces of the nobles. A headquarters was established at <l>Admundfort</l>, and a holy
-      order of religious knights begun. The <l>Shield Lands</l> are still ruled by many small
-      noblemen, while the Earl of <l>Walworth</l> is hereditary general of their combined military
-      and naval forces. Their military activity brings contributions from <l>Furyondy</l> and
-      <l>Urnst</l>, as well as many esquires and knights to serve in the core of the army, the
-      Knights of Holy Shielding. This area currently is in desperate straits with the growing might
-      of the <l>Horned Society</l> menacing the delicate balance.
+      of the <l>Nyr Dyv</l> banded together in a mutual protection society. The small Earldom of
+      Walworth had the advantage of possessing a sizable island upon which was built the only city
+      in the whole district, so its Lord was chosen as Knight Commander of the combined forces of
+      the nobles. A headquarters was established at <l>Admundfort</l>, and a holy order of religious
+      knights begun. The <l>Shield Lands</l> are still ruled by many small noblemen, while the Earl
+      of Walworth is hereditary general of their combined military and naval forces. Their military
+      activity brings contributions from <l>Furyondy</l> and <l>Urnst</l>, as well as many esquires
+      and knights to serve in the core of the army, the Knights of Holy Shielding. This area
+      currently is in desperate straits with the growing might of the <l>Horned Society</l> menacing
+      the delicate balance.
     </p>
   </legend-section>
 
   <legend-section :heraldry="['snow-barbarians']">
     <template #header>
-      <h2>
-        <l>Snow Barbarians</l>
-      </h2>
+      <h2><l>Snow Barbarians</l></h2>
       <strong><l>Kingdom of Schnai</l></strong>
     </template>
     <p>
@@ -1009,16 +965,13 @@ import L from '@/components/Legend/Link/LegendLink.vue'
       <l>Fruztii</l> and <l>Cruski</l> would divide the Hold, part of <l>Timberway</l> would be
       returned to the <l>Frost Barbarians</l>, and <l>Ratik</l> would rule <l>Bone March</l>. The
       reaction to these proposals can not be guessed, but the <l>Schnai</l> are undoubtedly keeping
-      an eye on the joint <l>Fruztii</l>-<l>Ratik</l>
-      ventures of late.
+      an eye on the joint <l>Fruztii</l>-<l>Ratik</l> ventures of late.
     </p>
   </legend-section>
 
   <legend-section :heraldry="['south-province']">
     <template #header>
-      <h2>
-        <l>South Province</l>
-      </h2>
+      <h2><l>South Province</l></h2>
       <strong><l>Ahlissa</l></strong>
     </template>
     <p>
@@ -1048,29 +1001,29 @@ import L from '@/components/Legend/Link/LegendLink.vue'
     </template>
     <p>
       The islands furthest east in the Asperdi <l>Duxchan</l> chain are the <l>Spindrifts</l>, some
-      100 leagues east of the <l>Medegia</l>n coast. Exact information is not available, as neither
-      the Sea Barons nor the <l>Duxchan</l> captains have reported upon them both groups likely
-      desiring to expand their holdings by acquiring these islands. There are tales that numerous
-      Olvenfolk dwell in the <l>Spindrifts</l>, and the reason that neither seafaring nation reports
-      anything about them is because these elves capture and imprison any sailor so bold as to enter
-      their domain. The isle furthest to the south was once ruled by a mighty wizard, one Lendore
+      100 leagues east of the Medegian coast. Exact information is not available, as neither the Sea
+      Barons nor the <l>Duxchan</l> captains have reported upon them both groups likely desiring to
+      expand their holdings by acquiring these islands. There are tales that numerous Olvenfolk
+      dwell in the <l>Spindrifts</l>, and the reason that neither seafaring nation reports anything
+      about them is because these elves capture and imprison any sailor so bold as to enter their
+      domain. The isle furthest to the south was once ruled by a mighty wizard, one Lendore
       according to stories.
     </p>
     <p>
       The <l>Spindrifts</l> are known to be divided into two parts, the northern islands of the High
-      Elves, and the single southern <l>Lendore Isle</l>. The three northern islands are supposedly
+      Elves, and the single southern Lendore Isle. The three northern islands are supposedly
       overseen by five elven wizards supported by numerous elven lords and half-elven clergy. Ships
       from the <l>Lordship of the Isles</l> as well as from the <l>Sea Barons</l> who have ventured
       there have yet to return! There are no reported towns or villages in the northern islands and
-      seclusion is all these demi-humans seem to require. <l>Lendore Isle</l>, on the other hand,
-      has much trade with the continent and pays, through the Council of Seven of
-      <l>Lo Reltarma</l>, a liberal sum to both the <l>Lordship of the Isles</l> and the
-      <l>Sea Barons</l> to pass without incident. This immunity has been ignored on occasion by an
-      enterprising pirate who is then later exterminated whether by an agent of the Council or by
-      someone else is unknown. The humans of <l>Lendore Isle</l> pray almost exclusively to the
-      ancient gods of the Suloise, but how this religion became dominant on this faraway isle is a
-      mystery. <l>Lendore Isle</l> is named for the Arch-Mage who founded its civilization, but
-      tales of him and the fellowship he brought to the <l>Spindrifts</l> are all but lost.
+      seclusion is all these demi-humans seem to require. Lendore Isle, on the other hand, has much
+      trade with the continent and pays, through the Council of Seven of <l>Lo Reltarma</l>, a
+      liberal sum to both the <l>Lordship of the Isles</l> and the <l>Sea Barons</l> to pass without
+      incident. This immunity has been ignored on occasion by an enterprising pirate who is then
+      later exterminated whether by an agent of the Council or by someone else is unknown. The
+      humans of Lendore Isle pray almost exclusively to the ancient gods of the Suloise, but how
+      this religion became dominant on this faraway isle is a mystery. Lendore Isle is named for the
+      Arch-Mage who founded its civilization, but tales of him and the fellowship he brought to the
+      <l>Spindrifts</l> are all but lost.
     </p>
   </legend-section>
 
@@ -1086,26 +1039,23 @@ import L from '@/components/Legend/Link/LegendLink.vue'
       by companies of stout heavy dwarvish infantry from the <l>Crystalmists</l>. A good portion of
       the levies of <l>Sterich</l> must always remain on guard to the west, however, for many
       humanoids, giants, and even worse monsters tend to follow the headwaters of the
-      <l>Davish River</l>
-      down into the fertile low country to loot and pillage. The halberdiers and medium horse of
-      <l>Sterich</l> are thus seldom seen outside their native land. The Earl maintains good
-      relations with the <l>Grand Duchy of Geoff</l> (being of the same bloodline as the Grand Duke,
-      this is not too surprising), and some trade is carried on with the <l>Yeomanry</l> via the
-      <l>Javan River</l>.
+      <l>Davish River</l> down into the fertile low country to loot and pillage. The halberdiers and
+      medium horse of <l>Sterich</l> are thus seldom seen outside their native land. The Earl
+      maintains good relations with the <l>Grand Duchy of Geoff</l> (being of the same bloodline as
+      the Grand Duke, this is not too surprising), and some trade is carried on with the
+      <l>Yeomanry</l> via the <l>Javan River</l>.
     </p>
   </legend-section>
 
   <legend-section :heraldry="['hold-stonefist']">
     <template #header>
-      <h2>
-        <l>Hold of Stonefist</l>
-      </h2>
+      <h2><l>Hold of Stonefist</l></h2>
     </template>
     <p>
-      <l>Stonefist</l>, then Vlek Col Vlekzed, founded his chiefdom in approximately 430 CY. Vlek
-      was cast out from the <l>Rovers of the Barrens</l> for banditry and lying, but a small number
-      of warriors and their families followed him as leader. For several years he wandered around
-      the fringes of his homeland, raiding and stealing from everyone without prejudice. These minor
+      Stonefist, then Vlek Col Vlekzed, founded his chiefdom in approximately 430 CY. Vlek was cast
+      out from the <l>Rovers of the Barrens</l> for banditry and lying, but a small number of
+      warriors and their families followed him as leader. For several years he wandered around the
+      fringes of his homeland, raiding and stealing from everyone without prejudice. These minor
       successes attracted a growing following of fellow outcasts, bandits, criminals and like
       unsavoury types. Yet with this strange mixture of fighters, he mounted a highly successful
       raid into <l>Tenh</l>, swung down into the <l>Bandit Kingdoms</l> and recruited more
@@ -1117,8 +1067,8 @@ import L from '@/components/Legend/Link/LegendLink.vue'
       were tricked into negotiation with Vlek. These negotiators and their escorting force were
       slaughtered, the remainder of the Coltens host routed by surprise and ferocity, and Vlek
       settled down to rule over the whole territory. As Vlek's infamy spread, malcontents from many
-      nations came to his standard, despite his new name of <l>Stonefist</l> (implying both a
-      terrible foeman and an inflexible ruler).
+      nations came to his standard, despite his new name of Stonefist (implying both a terrible
+      foeman and an inflexible ruler).
     </p>
     <p>
       The Mastership of the Hold is a semi-hereditary position and title. The descendants of Vlek
@@ -1136,9 +1086,7 @@ import L from '@/components/Legend/Link/LegendLink.vue'
 
   <legend-section :heraldry="['county-sunndi']">
     <template #header>
-      <h2>
-        <l>County of Sunndi</l>
-      </h2>
+      <h2><l>County of Sunndi</l></h2>
       <strong>Member of the <l>Iron League</l></strong>
     </template>
     <p>
@@ -1148,18 +1096,18 @@ import L from '@/components/Legend/Link/LegendLink.vue'
       and harrying of its demi-human inhabitants, the nobles of human and non-human folk in the area
       joined the general uprising against Aerdian rule, and in 455 CY became a part of the
       <l>Iron League</l>. The county is well protected by natural barriers which enable it to be
-      defended — the dense <l>Rieuwood</l> and hills to east and west. The neck of the
-      <l>Tilvanot Peninsula</l> below <l>Sunndi</l> is corked with a great, semi-salt swamp. (This
-      is a mixed blessing, as there are numbers of very unpleasant creatures dwelling therein.) The
-      county benefits both from its natural resources (including agriculture) and from trade
-      overland with <l>Idee</l>, by sea with <l>Duxchan</l>. It is threatened continually, however,
-      from the north by the Herzog's legions, from the east by the forces of the Holy Censor of
-      <l>Medegia</l>, and by the <l>Sea Barons</l> along its coasts. Sunnd troops are always in arms
-      human and dwarven contingents in the <l>Glorioles</l>, human and gnome companies guarding the
-      eastern hills, human and elven foresters ranging the northern woodlands. The Sunnd hillmen
-      employ slings and morningstars, while the men of the interior prefer crossbows and bardiches.
-      Except for the nobles and their equerries, Sunnd horse is medium or light, and not numerous in
-      any event for they rely upon their confederates to the west (<l>Idee</l>) to provide cavalry.
+      defended — the dense <l>Rieuwood</l> and hills to east and west. The neck of the Tilvanot
+      Peninsula below <l>Sunndi</l> is corked with a great, semi-salt swamp. (This is a mixed
+      blessing, as there are numbers of very unpleasant creatures dwelling therein.) The county
+      benefits both from its natural resources (including agriculture) and from trade overland with
+      <l>Idee</l>, by sea with <l>Duxchan</l>. It is threatened continually, however, from the north
+      by the Herzog's legions, from the east by the forces of the Holy Censor of <l>Medegia</l>, and
+      by the <l>Sea Barons</l> along its coasts. Sunnd troops are always in arms human and dwarven
+      contingents in the <l>Glorioles</l>, human and gnome companies guarding the eastern hills,
+      human and elven foresters ranging the northern woodlands. The Sunnd hillmen employ slings and
+      morningstars, while the men of the interior prefer crossbows and bardiches. Except for the
+      nobles and their equerries, Sunnd horse is medium or light, and not numerous in any event for
+      they rely upon their confederates to the west (<l>Idee</l>) to provide cavalry.
     </p>
   </legend-section>
 
@@ -1183,44 +1131,40 @@ import L from '@/components/Legend/Link/LegendLink.vue'
 
   <legend-section :heraldry="['tiger-nomads']">
     <template #header>
-      <h2>
-        <l>Tiger Nomads</l>
-      </h2>
+      <h2><l>Tiger Nomads</l></h2>
       <strong><l>Chakyik</l></strong>
     </template>
     <p>
       The <l>Tiger Nomads</l> are tough and hardy horsemen who dwell on the prairies above the
       <l>Yatil Mountains</l>. They are herdsmen and hunters, roaming from the
-      <l>Burneal Forest</l> to the foothills of the <l>Yatils</l>, the
-      <l><l>Dramidj</l> Ocean</l> to the banks of the <l>Fler</l>. Because of their proximity to
-      more civilised states, these nomads have established a few towns and villages, mine silver and
-      gems, and conduct a fair amount of trade with both <l>Ekbir</l> and <l>Perrenland</l>.
-      Naturally, they likewise raid both places and war continually with the tribes of the
-      <l>Burneal</l> and their cousins to the east, the <l>Wolf Nomads</l>. These people are
-      <l>Bakluni</l>sh, and most do not even speak the common tongue of the Flanaess. Their banners
-      bear the likeness of a tiger, tiger tails, etc. The Ilkhan's robe of state is a tiger skin,
-      reportedly that from a sabre-tooth, while the lesser khans wear the pelts of normal tigers.
-      <l>Tiger Nomads</l> move about on horseback, with carts carrying tents and other possessions.
-      Their main force consists of light cavalry armed with horn bows and lances. There is a small
-      percentage of better-protected cavalry which is comparable to medium. Infantry never
-      accompanies a tuman or horde on the march, except if the whole people is moving. Small
-      garrison forces of footmen are stationed in permanent settlements such as <l>Yecha</l>.
+      <l>Burneal Forest</l> to the foothills of the <l>Yatils</l>, the <l>Dramidj Ocean</l> to the
+      banks of the <l>Fler</l>. Because of their proximity to more civilised states, these nomads
+      have established a few towns and villages, mine silver and gems, and conduct a fair amount of
+      trade with both <l>Ekbir</l> and <l>Perrenland</l>. Naturally, they likewise raid both places
+      and war continually with the tribes of the <l>Burneal</l> and their cousins to the east, the
+      <l>Wolf Nomads</l>. These people are Baklunish, and most do not even speak the common tongue
+      of the Flanaess. Their banners bear the likeness of a tiger, tiger tails, etc. The Ilkhan's
+      robe of state is a tiger skin, reportedly that from a sabre-tooth, while the lesser khans wear
+      the pelts of normal tigers. <l>Tiger Nomads</l> move about on horseback, with carts carrying
+      tents and other possessions. Their main force consists of light cavalry armed with horn bows
+      and lances. There is a small percentage of better-protected cavalry which is comparable to
+      medium. Infantry never accompanies a tuman or horde on the march, except if the whole people
+      is moving. Small garrison forces of footmen are stationed in permanent settlements such as
+      <l>Yecha</l>.
     </p>
   </legend-section>
 
   <legend-section :heraldry="['tusmit']">
     <template #header>
-      <h2>
-        <l>Tusmit</l>
-      </h2>
+      <h2><l>Tusmit</l></h2>
     </template>
     <p>
       The state of <l>Tusmit</l> is maintained through the crafty playing off of one neighbour
       against the other — <l>Ekbir</l> against <l>Zeif</l>, <l>Zeif</l> against
-      <l>Paynim</l> nomads, <l>Paynim</l>s against <l>Ket</l>, and so forth. By such careful
-      diplomacy, <l>Tusmit</l> maintains her rich holdings south of the <l>Tuflik</l> and avoids
-      costly warfare of an open nature. Of course, her forces are engaged in frequent border clashes
-      with <l>Ekbir</l> and <l>Ket</l>, as well as skirmishes with raiding tumans of
+      <l>Paynim</l> nomads, Paynims against <l>Ket</l>, and so forth. By such careful diplomacy,
+      <l>Tusmit</l> maintains her rich holdings south of the <l>Tuflik</l> and avoids costly warfare
+      of an open nature. Of course, her forces are engaged in frequent border clashes with
+      <l>Ekbir</l> and <l>Ket</l>, as well as skirmishes with raiding tumans of
       <l>Paynim</l> horsemen. The Pasha fears absorption by <l>Ekbir</l>, and most of the politics
       he engages in reflect this. It is said that the Pasha plans to hire both Perrender and Uli
       mercenaries to settle the problem. The soldiery of <l>Tusmit</l> is similar to that of
@@ -1229,15 +1173,11 @@ import L from '@/components/Legend/Link/LegendLink.vue'
   </legend-section>
   <legend-section>
     <template #header>
-      <h2>
-        <l>Ulek</l>
-      </h2>
+      <h2><l>Ulek</l></h2>
     </template>
     <legend-section :heraldry="['county-ulek']">
       <template #header>
-        <h3>
-          <l>County of Ulek</l>
-        </h3>
+        <h3><l>County of Ulek</l></h3>
       </template>
       <p>
         Humans and demi-humans have long sought safety in the lands in and around the
@@ -1251,16 +1191,14 @@ import L from '@/components/Legend/Link/LegendLink.vue'
         <l>Lortmils</l>, the land has enjoyed considerable prosperity. Its troops are mixed human
         and demi-human companies. Cavalry is solely human, as are the heavy infantry. Lighter
         infantry and missile troops are typically gnome and halfling companies. The county extends
-        between the <l>Kewl</l> and <l>Old River</l>s through the <l>Lortmils</l> to
+        between the <l>Kewl</l> and <l>Old</l> Rivers through the <l>Lortmils</l> to
         <l>Courwood</l> in the <l>Suss Forest</l>.
       </p>
     </legend-section>
 
     <legend-section :heraldry="['duchy-ulek']">
       <template #header>
-        <h3>
-          <l>Duchy of Ulek</l>
-        </h3>
+        <h3><l>Duchy of Ulek</l></h3>
       </template>
       <p>
         The elven realm of <l>Ulek</l> is ruled by a wise and intelligent Duke of High Elven race.
@@ -1279,9 +1217,7 @@ import L from '@/components/Legend/Link/LegendLink.vue'
 
     <legend-section :heraldry="['principality-ulek']">
       <template #header>
-        <h3>
-          <l>Principality of Ulek</l>
-        </h3>
+        <h3><l>Principality of Ulek</l></h3>
       </template>
       <p>
         Dwarves and other demi-humans are more numerous than are humans except in the city of
@@ -1305,9 +1241,7 @@ import L from '@/components/Legend/Link/LegendLink.vue'
 
   <legend-section :heraldry="['ull']">
     <template #header>
-      <h2>
-        <l>Ull</l>
-      </h2>
+      <h2><l>Ull</l></h2>
     </template>
     <p>
       A strong tribal clan of the <l>Paynim</l> nomads found the rich area between the
@@ -1334,17 +1268,17 @@ import L from '@/components/Legend/Link/LegendLink.vue'
       </template>
       <p>
         The County of <l>Urnst</l> is populated by a mixture of peoples, most being of Oerid stock,
-        but hostile toward the Aerdi, unwilling to serve a <l>Nyrond</l>al monarch. The Palatine
-        Duke of <l>Urnst</l> long encouraged separatists in the county above, and eventually the
-        King of <l>Nyrond</l> was forced to agree to a separation of this state from the kingdom.
-        The land to the great bend of the <l>Artonsamay</l>, south to the <l>Franz</l>, to the
-        shores of <l>Nyr Dyv</l> is ruled by the House of Gellor, whose current representative is
-        the Countess Belissica. The county is allied to and under the protection of the
-        <l>Duchy of Urnst</l>, but its ruler is by no means subservient to the duke (who is seeking
-        to marry his eldest son to the Countess and thus permanently unite the lands into one
-        realm). The county maintains a small but efficient squadron of warships on the
-        <l>Nyr Dyv</l>. An army of some 2,000 horse and foot garrisons the key strongholds, and
-        noble levies can raise 10 times that number of troops in a week or two.
+        but hostile toward the Aerdi, unwilling to serve a Nyrondal monarch. The Palatine Duke of
+        <l>Urnst</l> long encouraged separatists in the county above, and eventually the King of
+        <l>Nyrond</l> was forced to agree to a separation of this state from the kingdom. The land
+        to the great bend of the <l>Artonsamay</l>, south to the <l>Franz</l>, to the shores of
+        <l>Nyr Dyv</l> is ruled by the House of Gellor, whose current representative is the Countess
+        Belissica. The county is allied to and under the protection of the <l>Duchy of Urnst</l>,
+        but its ruler is by no means subservient to the duke (who is seeking to marry his eldest son
+        to the Countess and thus permanently unite the lands into one realm). The county maintains a
+        small but efficient squadron of warships on the <l>Nyr Dyv</l>. An army of some 2,000 horse
+        and foot garrisons the key strongholds, and noble levies can raise 10 times that number of
+        troops in a week or two.
       </p>
     </legend-section>
 
@@ -1355,14 +1289,14 @@ import L from '@/components/Legend/Link/LegendLink.vue'
       <p>
         The riches of this area are great indeed, consisting of most sorts of precious metals,
         precious stones, and even the prized corundum gems. Because of this the duchy has been
-        desired by the kingdoms of <l>Aerdy</l> and <l>Nyrond</l> in that order. When the
-        <l>Nyrond</l>el won their independence, they took the County <l>Urnst</l>, and were massing
-        troops to cross the Nesser, but the first crossings were turned back by galleys, and the
-        campaign sputtered later in the year, never to be restarted. <l>Urnst</l> has plenty of
-        other problems of a continuing nature — its <l>Cairn Hills</l> border with <l>Greyhawk</l>,
-        the <l>Abbor-Alz</l> frontier which has desert nomad raiders, and difficulties with the
-        lakemen of the <l>Nyr Dyv</l> (q.v.). The Duke is not idle during all this: he has developed
-        an excellent army of borderers while maintaining a centrally located force of cavalry, as he
+        desired by the kingdoms of <l>Aerdy</l> and <l>Nyrond</l> in that order. When the Nyrondel
+        won their independence, they took the County <l>Urnst</l>, and were massing troops to cross
+        the Nesser, but the first crossings were turned back by galleys, and the campaign sputtered
+        later in the year, never to be restarted. <l>Urnst</l> has plenty of other problems of a
+        continuing nature — its <l>Cairn Hills</l> border with <l>Greyhawk</l>, the
+        <l>Abbor-Alz</l> frontier which has desert nomad raiders, and difficulties with the lakemen
+        of the <l>Nyr Dyv</l> (q.v.). The Duke is not idle during all this: he has developed an
+        excellent army of borderers while maintaining a centrally located force of cavalry, as he
         still distrusts <l>Nyrond</l>.
       </p>
     </legend-section>
@@ -1409,22 +1343,20 @@ import L from '@/components/Legend/Link/LegendLink.vue'
 
   <legend-section :heraldry="['verbobonc']">
     <template #header>
-      <h2>
-        <l>Viscounty and Town of Verbobonc</l>
-      </h2>
+      <h2><l>Viscounty and Town of Verbobonc</l></h2>
     </template>
     <p>
       This small state would hardly be worth mention in a continent-wide work of this nature,
       despite its riches, except that evil forces chose the area to establish a stronghold. A temple
       and fortress were constructed in the wooded hills southeast of the town of <l>Verbobonc</l>.
-      not far from the village of <l>Hommlet</l>. Trade was ravaged, the countryside pillaged, and
-      bands of evil humanoids and men were flocking to the gruesome standards raised. Prompt action
-      was taken when it became apparent that evil had grown strong. The Right Worshipful Mayor of
-      the town called up the trained levies, and the Viscount brought all of his retainers and the
-      militia, and these forces were in the forefront of the ensuing battle which broke the hordes
-      of the Temple. The viscounty is a large one. extending from the <l>Velverdyva</l>'s south bank
-      some 15 leagues into the <l>Kron Hills</l>, being over 50 leagues in breadth.
-      <l>Verbobonc</l> is situated in the approximate centre of its east-west axis.
+      not far from the village of Hommlet. Trade was ravaged, the countryside pillaged, and bands of
+      evil humanoids and men were flocking to the gruesome standards raised. Prompt action was taken
+      when it became apparent that evil had grown strong. The Right Worshipful Mayor of the town
+      called up the trained levies, and the Viscount brought all of his retainers and the militia,
+      and these forces were in the forefront of the ensuing battle which broke the hordes of the
+      Temple. The viscounty is a large one. extending from the <l>Velverdyva</l>'s south bank some
+      15 leagues into the <l>Kron Hills</l>, being over 50 leagues in breadth. <l>Verbobonc</l> is
+      situated in the approximate centre of its east-west axis.
     </p>
   </legend-section>
 
@@ -1466,9 +1398,7 @@ import L from '@/components/Legend/Link/LegendLink.vue'
 
   <legend-section :heraldry="['wolf-nomads']">
     <template #header>
-      <h2>
-        <l>Wolf Nomads</l>
-      </h2>
+      <h2><l>Wolf Nomads</l></h2>
       <strong><l>Wegwiur</l></strong>
     </template>
     <p>
@@ -1488,9 +1418,7 @@ import L from '@/components/Legend/Link/LegendLink.vue'
 
   <legend-section :heraldry="['yeomanry']">
     <template #header>
-      <h2>
-        <l>The Yeomanry</l>
-      </h2>
+      <h2><l>The Yeomanry</l></h2>
     </template>
     <p>
       The peoples who settled the territory west of the <l>Javan River</l>, north of the
@@ -1528,9 +1456,7 @@ import L from '@/components/Legend/Link/LegendLink.vue'
 
   <legend-section :heraldry="['sultanate-zeif']">
     <template #header>
-      <h2>
-        <l>Sultanate of Zeif</l>
-      </h2>
+      <h2><l>Sultanate of Zeif</l></h2>
     </template>
     <p>
       The Sultanate of <l>Zeif</l> is the westernmost state of the Flanaess, a portion of it
