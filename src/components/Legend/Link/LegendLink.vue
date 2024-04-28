@@ -7,14 +7,17 @@ import { MAP_TARGETS } from '@/utils/mapTarget'
 const slots = useSlots()
 const anchorRef = ref<HTMLAnchorElement>()
 const href = ref<string>()
+const props = defineProps<{
+  target?: string
+}>()
 
 function getContentText() {
   const contentNodes = slots.default && slots.default()
   return contentNodes && getNodeText(contentNodes)
 }
 
-function getTargetHref(contentText: string) {
-  const sanitizedContent = sanitize(contentText)
+function getTargetHref(targetText: string) {
+  const sanitizedContent = sanitize(targetText)
   for (const [targetHref, targetKeys] of MAP_TARGETS) {
     if (targetHref === sanitizedContent || targetKeys.includes(sanitizedContent)) {
       return `#${targetHref}`
@@ -24,16 +27,16 @@ function getTargetHref(contentText: string) {
 }
 
 function highlightBrokenAnchor(href: string) {
-  const target = document.querySelector(href)
-  if (!target && anchorRef.value) {
+  const targetElement = document.querySelector(href)
+  if (!targetElement && anchorRef.value) {
     anchorRef.value.style.color = 'red'
   }
 }
 
 onMounted(() => {
-  const contentText = getContentText()
-  if (contentText) {
-    href.value = getTargetHref(contentText)
+  const targetText = props.target || getContentText()
+  if (targetText) {
+    href.value = getTargetHref(targetText)
     highlightBrokenAnchor(href.value)
   }
 })
