@@ -1,11 +1,9 @@
 <script lang="ts" setup>
 import LegendGreyhawk from '@/components/Legend/Greyhawk/LegendGreyhawk.vue'
-// import MapGreyhawk from '@/components/Map/Greyhawk/MapGreyhawk.vue'
-import MapGreyhawkImage from '@/components/Map/Greyhawk/MapGreyhawkImage.vue'
+import MapGreyhawk from '@/components/Map/Greyhawk/MapGreyhawk.vue'
 import { ref } from 'vue'
 
-// const mapRef = ref<InstanceType<typeof MapGreyhawk>>()
-const mapRef = ref<InstanceType<typeof MapGreyhawkImage>>()
+const mapRef = ref<InstanceType<typeof MapGreyhawk>>()
 const legendRef = ref<InstanceType<typeof LegendGreyhawk>>()
 
 function focusOnElement(hash: string) {
@@ -28,8 +26,7 @@ function onClickLegend(event: MouseEvent) {
 
 <template>
   <div class="map-view">
-    <map-greyhawk-image ref="mapRef" class="map-view-map" />
-    <!-- <map-greyhawk ref="mapRef" class="map-view-map" /> -->
+    <map-greyhawk ref="mapRef" class="map-view-map" />
     <legend-greyhawk ref="legendRef" class="map-view-legend" @click="onClickLegend" />
   </div>
 </template>

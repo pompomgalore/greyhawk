@@ -7,6 +7,8 @@ import Panzoom, {
 } from '@panzoom/panzoom'
 import { ref, onMounted, onUnmounted } from 'vue'
 
+type Point = [x: number, y: number]
+
 const contentRef = ref<HTMLDivElement>()
 const frameRef = ref<HTMLDivElement>()
 const panzoom = ref<PanzoomObject>()
@@ -59,14 +61,11 @@ function getCenterPoint(element: Element): Point {
   return [left + width / 2, top + height / 2]
 }
 
-function focusOnPoint(
-  [x, y]: Point,
-  panOptions: PanOptions = {
-    relative: true
-  }
-) {
+function focusOnPoint([x, y]: Point) {
   const { top, left, width, height } = getFrameRect()
-  pan([width / 2 - x + left, height / 2 - y + top], panOptions)
+  pan([width / 2 - x + left, height / 2 - y + top], {
+    relative: true
+  })
 }
 
 function focusOnElement(selector: string) {
@@ -77,7 +76,7 @@ function focusOnElement(selector: string) {
   }
 }
 
-defineExpose({ focusOnElement, focusOnPoint, queryMapSelector })
+defineExpose({ focusOnElement, queryMapSelector })
 
 onMounted(() => {
   if (contentRef.value && frameRef.value) {
