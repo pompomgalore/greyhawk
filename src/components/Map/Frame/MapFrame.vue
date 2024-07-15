@@ -1,6 +1,5 @@
 <script lang="ts" setup>
 import Panzoom, {
-  type PanOptions,
   type PanzoomEventDetail,
   type PanzoomObject,
   type PanzoomOptions
@@ -12,17 +11,11 @@ const frameRef = ref<HTMLDivElement>()
 const panzoom = ref<PanzoomObject>()
 const current = ref<Pick<PanzoomEventDetail, 'scale' | 'x' | 'y'>>({ scale: 1, x: 0, y: 0 })
 
-const {
-  width,
-  height,
-  startScale = 1,
-  minScale,
-  maxScale
-} = defineProps<
+const { width, height, minScale, maxScale } = defineProps<
   {
     width: number
     height: number
-  } & Pick<PanzoomOptions, 'startScale' | 'minScale' | 'maxScale'>
+  } & Pick<PanzoomOptions, 'minScale' | 'maxScale'>
 >()
 
 function onPanzoomChange(event: CustomEvent<PanzoomEventDetail>) {
@@ -32,12 +25,6 @@ function onPanzoomChange(event: CustomEvent<PanzoomEventDetail>) {
 function onWheel(event: WheelEvent) {
   if (panzoom.value) {
     panzoom.value.zoomWithWheel(event)
-  }
-}
-
-function pan([x, y]: Point, panOptions?: PanOptions) {
-  if (panzoom.value && current.value) {
-    panzoom.value.pan(x / current.value.scale, y / current.value.scale, panOptions)
   }
 }
 
@@ -59,14 +46,13 @@ function getCenterPoint(element: Element): Point {
   return [left + width / 2, top + height / 2]
 }
 
-function focusOnPoint(
-  [x, y]: Point,
-  panOptions: PanOptions = {
-    relative: true
+function focusOnPoint([x, y]: Point) {
+  const { width, height } = getFrameRect()
+  if (panzoom.value && current.value) {
+    const startX = width / 2 - x
+    const startY = height / 2 - y
+    panzoom.value.reset({ startX, startY, force: false })
   }
-) {
-  const { top, left, width, height } = getFrameRect()
-  pan([width / 2 - x + left, height / 2 - y + top], panOptions)
 }
 
 function focusOnElement(selector: string) {
@@ -82,17 +68,17 @@ defineExpose({ focusOnElement, focusOnPoint, queryMapSelector })
 onMounted(() => {
   if (contentRef.value && frameRef.value) {
     const { width: frameWidth, height: frameHeight } = getFrameRect()
-    const startX = (frameWidth - width) / 2 / startScale
-    const startY = (frameHeight - height) / 2 / startScale
+    const startX = (frameWidth - width) / 2
+    const startY = (frameHeight - height) / 2
     panzoom.value = Panzoom(contentRef.value, {
       contain: 'outside',
-      startScale,
+      startScale: 1,
       minScale,
       maxScale,
       startX,
       startY,
       animate: true,
-      duration: 800
+      duration: 400
     })
   }
 })
