@@ -1,44 +1,20 @@
 <script lang="ts" setup>
-import Panzoom, {
-  type PanzoomEventDetail,
-  type PanzoomObject,
-  type PanzoomOptions
-} from '@panzoom/panzoom'
-import { ref, onMounted, onUnmounted } from 'vue'
+import { ref, onMounted } from 'vue'
 
-const contentRef = ref<HTMLDivElement>()
-const frameRef = ref<HTMLDivElement>()
-const panzoom = ref<PanzoomObject>()
-const current = ref<Pick<PanzoomEventDetail, 'scale' | 'x' | 'y'>>({ scale: 1, x: 0, y: 0 })
+const { width, height } = defineProps<{
+  width: number
+  height: number
+}>()
 
-const { width, height, minScale, maxScale } = defineProps<
-  {
-    width: number
-    height: number
-  } & Pick<PanzoomOptions, 'minScale' | 'maxScale'>
->()
-
-function onPanzoomChange(event: CustomEvent<PanzoomEventDetail>) {
-  current.value = event.detail
-}
-
-function onWheel(event: WheelEvent) {
-  if (panzoom.value) {
-    panzoom.value.zoomWithWheel(event)
-  }
-}
+const contentRef = ref<HTMLElement>()
+const frameRef = ref<HTMLElement>()
+const transform = ref<{ scale: number; x: number; y: number }>({ scale: 1, x: 0, y: 0 })
+const previousPointerEvent = ref<PointerEvent>()
 
 function queryMapSelector(selector: string) {
   if (contentRef.value && selector) {
     return contentRef.value.querySelector(selector)
   }
-}
-
-function getFrameRect() {
-  if (frameRef.value) {
-    return frameRef.value.getBoundingClientRect()
-  }
-  return { top: 0, left: 0, width: 0, height: 0 }
 }
 
 function getCenterPoint(element: Element): Point {
@@ -47,11 +23,9 @@ function getCenterPoint(element: Element): Point {
 }
 
 function focusOnPoint([x, y]: Point) {
-  const { width, height } = getFrameRect()
-  if (panzoom.value && current.value) {
-    const startX = width / 2 - x
-    const startY = height / 2 - y
-    panzoom.value.reset({ startX, startY, force: false })
+  if (contentRef.value && frameRef.value) {
+    const { width: frameWidth, height: frameHeight } = frameRef.value.getBoundingClientRect()
+    transform.value = { x: x - frameWidth / 2, y: y - frameHeight / 2, scale: 1 }
   }
 }
 
@@ -63,42 +37,50 @@ function focusOnElement(selector: string) {
   }
 }
 
+function handlePointerPosition(event: PointerEvent) {
+  previousPointerEvent.value = event
+}
+function handlePointerMove(event: PointerEvent) {
+  if (event.buttons > 0) {
+    if (previousPointerEvent.value) {
+      const { clientX: lastX, clientY: lastY } = previousPointerEvent.value
+      const { clientX, clientY } = event
+      const { x, y, scale } = transform.value
+      transform.value = {
+        x: x - (clientX - lastX) / scale,
+        y: y - (clientY - lastY) / scale,
+        scale
+      }
+    }
+    previousPointerEvent.value = event
+  }
+}
+
 defineExpose({ focusOnElement, focusOnPoint, queryMapSelector })
 
 onMounted(() => {
-  if (contentRef.value && frameRef.value) {
-    const { width: frameWidth, height: frameHeight } = getFrameRect()
-    const startX = (frameWidth - width) / 2
-    const startY = (frameHeight - height) / 2
-    panzoom.value = Panzoom(contentRef.value, {
-      contain: 'outside',
-      startScale: 1,
-      minScale,
-      maxScale,
-      startX,
-      startY,
-      animate: true,
-      duration: 400
-    })
-  }
-})
-
-onUnmounted(() => {
-  if (panzoom.value) {
-    panzoom.value.destroy()
-  }
+  focusOnPoint([width / 2, height / 2])
 })
 </script>
 
 <template>
-  <div ref="frameRef" class="map-frame">
+  <div
+    ref="frameRef"
+    class="map-frame"
+    @pointerdown.prevent="handlePointerPosition"
+    @pointerenter.prevent="handlePointerPosition"
+    @pointermove.prevent="handlePointerMove"
+  >
     <div
       ref="contentRef"
-      :style="{ width: `${width}px`, height: `${height}px` }"
-      @wheel.prevent="onWheel"
-      @panzoomchange.prevent="onPanzoomChange"
+      class="map-content"
+      :style="{
+        width: `${width}px`,
+        height: `${height}px`,
+        transform: `translate(${-transform.x}px, ${-transform.y}px) scale(${transform.scale})`
+      }"
     >
-      <slot :scale="current.scale" />
+      <slot :scale="transform.scale" />
     </div>
   </div>
 </template>
@@ -108,9 +90,13 @@ onUnmounted(() => {
   display: block;
   position: absolute;
 }
+/* .map-content {
+  transition: transform 0.2s ease-in-out;
+} */
 .map-frame {
   width: 100%;
   height: 100%;
   overflow: hidden;
+  position: relative;
 }
 </style>

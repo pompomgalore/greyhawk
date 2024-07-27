@@ -18,7 +18,6 @@
     "build-storybook": "storybook build"
   },
   "dependencies": {
-    "@panzoom/panzoom": "^4.5.1",
     "lodash": "^4.17.21",
     "vue": "^3.4.15",
     "vue-router": "^4.2.5"
