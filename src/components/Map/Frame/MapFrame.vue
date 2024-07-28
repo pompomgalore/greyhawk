@@ -28,6 +28,28 @@ function getCenterPoint(element: Element): Point {
   return [left + width / 2, top + height / 2]
 }
 
+function animateTransform({ x, y, scale }: MapFrameTransform, timeout = 400) {
+  if (contentRef.value) {
+    contentRef.value.style.transition = `transform ${timeout / 1000}s ease-in-out`
+    applyTransform({ x, y, scale })
+    setTimeout(() => {
+      if (contentRef.value) {
+        contentRef.value.style.transition = ''
+      }
+    }, timeout)
+  }
+}
+function applyTransform({ x, y, scale }: MapFrameTransform) {
+  if (frameRef.value) {
+    const { width: frameWidth, height: frameHeight } = frameRef.value.getBoundingClientRect()
+    transform.value = {
+      x: clamp(x, frameWidth - width * scale, 0),
+      y: clamp(y, frameHeight - height * scale, 0),
+      scale
+    }
+  }
+}
+
 function focusOnElement(selector: string) {
   const mapElement = queryMapSelector(selector)
   if (mapElement) {
@@ -38,39 +60,50 @@ function focusOnElement(selector: string) {
 function focusOnPoint([x, y]: Point) {
   if (frameRef.value) {
     const { width: frameWidth, height: frameHeight } = frameRef.value.getBoundingClientRect()
-    transform.value = { x: frameWidth / 2 - x, y: frameHeight / 2 - y, scale: 1 }
+    animateTransform({ x: frameWidth / 2 - x, y: frameHeight / 2 - y, scale: 1 })
   }
 }
 
 function handlePointerMove(event: PointerEvent) {
   if (event.buttons > 0) {
-    const { x: previousX, y: previousY } = pointerPosition.value
-    translateBy(event.clientX - previousX, event.clientY - previousY)
+    translateBy(event.clientX - pointerPosition.value.x, event.clientY - pointerPosition.value.y)
     handlePointerPosition(event)
   }
 }
 function handlePointerPosition(event: PointerEvent) {
   pointerPosition.value = { x: event.clientX, y: event.clientY }
 }
-
-function translateBy(x: number, y: number) {
-  const { x: currentX, y: currentY, scale } = transform.value
-  transform.value = clampTransform({
-    x: currentX + x / scale,
-    y: currentY + y / scale,
-    scale
-  })
-}
-function clampTransform({ x, y, scale }: MapFrameTransform): MapFrameTransform {
+function handleWheel(event: WheelEvent) {
   if (frameRef.value) {
-    const { width: frameWidth, height: frameHeight } = frameRef.value.getBoundingClientRect()
-    return {
-      x: clamp(x, frameWidth - width, 0),
-      y: clamp(y, frameHeight - height, 0),
-      scale
+    const { top, left } = frameRef.value.getBoundingClientRect()
+    zoomBy(1 - event.deltaY / 1000, [event.clientX - left, event.clientY - top])
+  }
+}
+
+function zoomBy(factor: number, [clientX, clientY]: Point) {
+  if (frameRef.value) {
+    const { x: currentX, y: currentY, scale: currentScale } = transform.value
+    const scale = clamp(currentScale * factor, 0.5, 2)
+    if (scale !== currentScale) {
+      const transformOriginX = (clientX - currentX) / currentScale
+      const transformOriginY = (clientY - currentY) / currentScale
+      const x = clientX - transformOriginX * scale
+      const y = clientY - transformOriginY * scale
+      applyTransform({
+        x,
+        y,
+        scale
+      })
     }
   }
-  return { x, y, scale }
+}
+function translateBy(x: number, y: number) {
+  const { x: currentX, y: currentY, scale } = transform.value
+  applyTransform({
+    x: currentX + x,
+    y: currentY + y,
+    scale
+  })
 }
 
 defineExpose({ focusOnElement, focusOnPoint, queryMapSelector })
@@ -87,6 +120,7 @@ onMounted(() => {
     @pointerdown.prevent="handlePointerPosition"
     @pointerenter.prevent="handlePointerPosition"
     @pointermove.prevent="handlePointerMove"
+    @wheel.prevent="handleWheel"
   >
     <div
       ref="contentRef"
@@ -107,9 +141,9 @@ onMounted(() => {
   display: block;
   position: absolute;
 }
-/* .map-content {
-  transition: transform 0.2s ease-in-out;
-} */
+.map-content {
+  transform-origin: 0 0;
+}
 .map-frame {
   width: 100%;
   height: 100%;
