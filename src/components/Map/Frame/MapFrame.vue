@@ -8,18 +8,16 @@ interface MapFrameTransform {
   scale: number
 }
 
-const { width, height } = defineProps<{
-  width: number
-  height: number
-}>()
+const { width, height } = defineProps<{ width: number; height: number }>()
 
 const contentRef = ref<HTMLDivElement>()
 const frameRef = ref<HTMLDivElement>()
 const transform = ref<MapFrameTransform>({ scale: 1, x: 0, y: 0 })
-const pointerPosition = ref<{ x: number; y: number }>({ x: 0, y: 0 })
+const pointerPosition = ref<Point>([0, 0])
+const timeoutId = ref<ReturnType<typeof setTimeout>>()
 
 function queryMapSelector(selector: string) {
-  if (contentRef.value && selector) {
+  if (contentRef.value && selector.length > 0) {
     return contentRef.value.querySelector(selector)
   }
 }
@@ -28,17 +26,6 @@ function getCenterPoint(element: Element): Point {
   return [left + width / 2, top + height / 2]
 }
 
-function animateTransform({ x, y, scale }: MapFrameTransform, timeout = 400) {
-  if (contentRef.value) {
-    contentRef.value.style.transition = `transform ${timeout / 1000}s ease-in-out`
-    applyTransform({ x, y, scale })
-    setTimeout(() => {
-      if (contentRef.value) {
-        contentRef.value.style.transition = ''
-      }
-    }, timeout)
-  }
-}
 function applyTransform({ x, y, scale }: MapFrameTransform) {
   if (frameRef.value) {
     const { width: frameWidth, height: frameHeight } = frameRef.value.getBoundingClientRect()
@@ -47,6 +34,21 @@ function applyTransform({ x, y, scale }: MapFrameTransform) {
       y: clamp(y, frameHeight - height * scale, 0),
       scale
     }
+  }
+}
+
+function animateTransform(transform: MapFrameTransform, delay = 400) {
+  if (contentRef.value) {
+    contentRef.value.style.transition = `transform ${delay / 1000}s ease-in-out`
+    applyTransform(transform)
+    if (timeoutId.value) {
+      clearTimeout(timeoutId.value)
+    }
+    timeoutId.value = setTimeout(() => {
+      if (contentRef.value) {
+        contentRef.value.style.transition = ''
+      }
+    }, delay)
   }
 }
 
@@ -66,12 +68,15 @@ function focusOnPoint([x, y]: Point) {
 
 function handlePointerMove(event: PointerEvent) {
   if (event.buttons > 0) {
-    translateBy(event.clientX - pointerPosition.value.x, event.clientY - pointerPosition.value.y)
+    const [previousX, previousY] = pointerPosition.value
+    const deltaX = event.clientX - previousX
+    const deltaY = event.clientY - previousY
+    translateBy(deltaX, deltaY)
     handlePointerPosition(event)
   }
 }
 function handlePointerPosition(event: PointerEvent) {
-  pointerPosition.value = { x: event.clientX, y: event.clientY }
+  pointerPosition.value = [event.clientX, event.clientY]
 }
 function handleWheel(event: WheelEvent) {
   if (frameRef.value) {
@@ -81,29 +86,19 @@ function handleWheel(event: WheelEvent) {
 }
 
 function zoomBy(factor: number, [clientX, clientY]: Point) {
-  if (frameRef.value) {
-    const { x: currentX, y: currentY, scale: currentScale } = transform.value
-    const scale = clamp(currentScale * factor, 0.5, 2)
-    if (scale !== currentScale) {
-      const transformOriginX = (clientX - currentX) / currentScale
-      const transformOriginY = (clientY - currentY) / currentScale
-      const x = clientX - transformOriginX * scale
-      const y = clientY - transformOriginY * scale
-      applyTransform({
-        x,
-        y,
-        scale
-      })
-    }
+  const { x: currentX, y: currentY, scale: currentScale } = transform.value
+  const nextScale = clamp(currentScale * factor, 0.5, 2)
+  if (nextScale !== currentScale) {
+    const transformOriginX = (clientX - currentX) / currentScale
+    const transformOriginY = (clientY - currentY) / currentScale
+    const x = clientX - transformOriginX * nextScale
+    const y = clientY - transformOriginY * nextScale
+    applyTransform({ x, y, scale: nextScale })
   }
 }
-function translateBy(x: number, y: number) {
+function translateBy(deltaX: number, deltaY: number) {
   const { x: currentX, y: currentY, scale } = transform.value
-  applyTransform({
-    x: currentX + x,
-    y: currentY + y,
-    scale
-  })
+  applyTransform({ x: currentX + deltaX, y: currentY + deltaY, scale })
 }
 
 defineExpose({ focusOnElement, focusOnPoint, queryMapSelector })
@@ -137,10 +132,6 @@ onMounted(() => {
 </template>
 
 <style scoped>
-:slotted(*) {
-  display: block;
-  position: absolute;
-}
 .map-content {
   transform-origin: 0 0;
 }
